@@ -1,0 +1,23 @@
+<!-- /navbar -->
+<div class="subnavbar" ng-show="featureToggle.trainerDashboard">
+    <div class="subnavbar-inner">
+        <div class="container">
+            <ul class="mainnav">
+                <li ng-class="{active: $state.includes('trainer_dashboard')}" class="dropdown subnavbar-open-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-dashboard"></i><span>Trainer Dashboard &nbsp<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="userInfo.isTrainee" ng-click="userInfo.role = 3"><a href="/#trainee_dashboard">Trainee Dashboard</a></li>
+                        <!-- <li ng-show="userInfo.isTrainer" ng-click="userInfo.role = 2"><a href="/#trainer_dashboard">Trainer Dashboard</a></li> -->
+                        <li ng-show="userInfo.isAdmin" ng-click="userInfo.role = 1"><a href="/#admin_dashboard">Admin Dashboard</a></li>
+                    </ul>
+                </li>
+                </li>
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /subnavbar-inner -->
+</div>
+<!-- /subnavbar -->

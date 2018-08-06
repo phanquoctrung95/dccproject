@@ -1,0 +1,14 @@
+TARGETS = unattended-upgrades apache-htcacheclean uuidd lvm2-lvmetad lxcfs lxd lvm2-lvmpolld open-vm-tools resolvconf apache2 ufw irqbalance mdadm jenkins atd mysql slapd plymouth urandom open-iscsi iscsid sendsigs rsyslog umountnfs.sh hwclock.sh networking umountfs cryptdisks cryptdisks-early umountroot mdadm-waitidle halt reboot
+iscsid: open-iscsi
+sendsigs: iscsid irqbalance mdadm unattended-upgrades uuidd apache-htcacheclean jenkins lxcfs lxd atd mysql plymouth apache2 slapd open-iscsi open-vm-tools
+rsyslog: irqbalance mdadm apache-htcacheclean jenkins atd mysql sendsigs apache2 slapd
+umountnfs.sh: irqbalance unattended-upgrades uuidd apache-htcacheclean sendsigs jenkins lxcfs lxd atd mysql rsyslog plymouth apache2 slapd open-vm-tools
+hwclock.sh: uuidd atd mysql rsyslog
+networking: iscsid umountnfs.sh jenkins mysql apache2 slapd open-iscsi
+umountfs: iscsid irqbalance mdadm unattended-upgrades uuidd apache-htcacheclean umountnfs.sh resolvconf lvm2-lvmetad hwclock.sh jenkins lxcfs lxd atd networking mysql lvm2-lvmpolld urandom plymouth apache2 slapd open-iscsi open-vm-tools
+cryptdisks: umountfs
+cryptdisks-early: umountfs cryptdisks
+umountroot: cryptdisks-early cryptdisks umountfs
+mdadm-waitidle: umountroot
+halt: umountroot mdadm-waitidle
+reboot: umountroot mdadm-waitidle

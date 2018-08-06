@@ -1,0 +1,282 @@
+16:02:55.632 INFO  Post /login 
+16:02:55.685 INFO  User login: qwe@gmail.com 
+16:02:55.891 INFO  Post /login 
+16:02:55.916 INFO  User login: qwe@gmail.com 
+16:02:56.305 INFO  Post /login 
+16:02:56.315 INFO  User login: qwe@gmail.com 
+16:02:56.539 INFO  Post /login 
+16:02:56.550 INFO  User login: qwe@gmail.com 
+16:02:56.870 INFO  Post /login 
+16:02:56.884 INFO  User login: qwe@gmail.com 
+16:02:57.013 INFO  Post /login 
+16:02:57.039 INFO  User login: qwe@gmail.com 
+16:02:57.212 INFO  Post /login 
+16:02:57.222 INFO  User login: qwe@gmail.com 
+16:02:57.308 INFO  Post /login 
+16:02:57.324 INFO  User login: qwe@gmail.com 
+16:02:57.389 INFO  Post /login 
+16:02:57.455 INFO  User login: qwe@gmail.com 
+16:02:57.560 INFO  Post /login 
+16:02:57.583 INFO  User login: qwe@gmail.com 
+16:02:57.607 INFO  /admin/courses/addTrainingProgram: Add Training Program :test create name of new training program 
+16:02:57.699 INFO  Post /login 
+16:02:57.734 INFO  User login: qwe@gmail.com 
+16:02:57.856 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:02:57.871 INFO  Post /login 
+16:02:57.871 INFO  User login: qwe@gmail.com 
+16:02:57.939 INFO  /admin/updateTrainingProgram: Update Training Program :undefined 
+16:02:58.125 INFO  Post /login 
+16:02:58.140 INFO  User login: qwe@gmail.com 
+16:02:58.187 INFO  /admin/updateTrainingProgram: Update Training Program :undefined 
+16:02:58.207 INFO  Post /login 
+16:02:58.245 INFO  User login: qwe@gmail.com 
+16:02:58.280 INFO  Get Delete Command 
+16:02:58.437 INFO  Post /login 
+16:02:58.470 INFO  User login: qwe@gmail.com 
+16:02:58.492 INFO  Get Delete Command 
+16:02:58.510 INFO  Post /login 
+16:02:58.539 INFO  User login: qwe@gmail.com 
+16:02:58.590 INFO  Post /login 
+16:02:58.641 INFO  User login: qwe@gmail.com 
+16:02:58.672 INFO  Post /login 
+16:02:58.688 INFO  User login: qwe@gmail.com 
+16:02:58.710 INFO  Post /login 
+16:02:58.751 INFO  User login: qwe@gmail.com 
+16:02:59.277 INFO  Post /login 
+16:02:59.294 INFO  User login: qwe@gmail.com 
+16:03:00.208 INFO  Post /login 
+16:03:00.218 INFO  User login: qwe@gmail.com 
+16:03:01.730 INFO  Post /login 
+16:03:01.750 INFO  User login: qwe@gmail.com 
+16:03:02.625 INFO  /admin/updateClass: update Class :undefined 
+16:03:02.755 INFO  Post /login 
+16:03:02.765 INFO  User login: qwe@gmail.com 
+16:03:03.505 INFO  Post /login 
+16:03:03.510 INFO  User login: qwe@gmail.com 
+16:03:03.595 INFO  Post /login 
+16:03:03.595 INFO  User login: qwe@gmail.com 
+16:03:03.626 INFO  Post /login 
+16:03:03.673 INFO  User login: qwe@gmail.com 
+16:03:04.296 INFO  Post /login 
+16:03:04.374 INFO  User login: qwe@gmail.com 
+16:03:05.073 INFO  Post /login 
+16:03:05.073 INFO  User login: qwe@gmail.com 
+16:03:05.170 INFO  Post /login 
+16:03:05.230 INFO  User login: qwe@gmail.com 
+16:03:05.299 INFO  Post /login 
+16:03:05.314 INFO  User login: qwe@gmail.com 
+16:03:05.345 INFO  Post /login 
+16:03:05.366 INFO  User login: qwe@gmail.com 
+16:03:05.385 INFO  Post /login 
+16:03:05.414 INFO  User login: qwe@gmail.com 
+16:03:05.449 INFO  Post /login 
+16:03:05.471 INFO  User login: qwe@gmail.com 
+16:03:05.519 INFO  Post /login 
+16:03:05.570 INFO  User login: qwe@gmail.com 
+16:03:05.607 INFO  Post /login 
+16:03:05.627 INFO  User login: qwe@gmail.com 
+16:03:05.667 INFO  Post /login 
+16:03:05.679 INFO  User login: qwe@gmail.com 
+16:03:05.744 INFO  Post /login 
+16:03:05.763 INFO  User login: qwe@gmail.com 
+16:03:05.803 INFO  Post /login 
+16:03:05.822 INFO  User login: qwe@gmail.com 
+16:03:05.871 INFO  Post /login 
+16:03:05.891 INFO  User login: qwe@gmail.com 
+16:03:05.942 INFO  Post /login 
+16:03:05.953 INFO  User login: qwe@gmail.com 
+16:03:06.015 INFO  Post /login 
+16:03:06.027 INFO  User login: qwe@gmail.com 
+16:03:06.063 INFO  /common/course/getClassByCourseID:  
+16:03:06.188 INFO  Post /login 
+16:03:06.233 INFO  User login: qwe@gmail.com 
+16:03:06.288 INFO  Post /login 
+16:03:06.307 INFO  User login: qwe@gmail.com 
+16:03:06.399 INFO  Post /login 
+16:03:06.438 INFO  User login: qwe@gmail.com 
+16:03:06.482 INFO  /common/course/getClassByCourseID:  
+16:03:06.512 INFO  Post /login 
+16:03:06.524 INFO  User login: qwe@gmail.com 
+16:03:06.572 INFO  Post /login 
+16:03:06.583 INFO  User login: qwe@gmail.com 
+16:03:06.642 INFO  Post /login 
+16:03:06.656 INFO  User login: qwe@gmail.com 
+16:03:06.705 INFO  Post /login 
+16:03:06.720 INFO  User login: qwe@gmail.com 
+16:03:06.766 INFO  Post /login 
+16:03:06.775 INFO  User login: qwe@gmail.com 
+16:03:06.909 INFO  Post /login 
+16:03:06.930 INFO  User login: qwe@gmail.com 
+16:03:06.995 INFO  Post /login 
+16:03:07.008 INFO  User login: qwe@gmail.com 
+16:03:07.039 INFO  Post /login 
+16:03:07.064 INFO  User login failed. 
+16:03:07.073 INFO  Post /login 
+16:03:07.125 INFO  User login: s3595082@rmit.edu.vn 
+16:03:07.173 INFO  Post /login 
+16:03:07.199 INFO  User login failed. 
+16:03:07.209 INFO  Post /login 
+16:03:07.222 INFO  User login failed. 
+16:03:07.231 INFO  Post /login 
+16:03:07.260 INFO  User login: nam@gmail.com 
+16:03:07.268 INFO  Post /login 
+16:03:07.284 INFO  User login failed. 
+16:03:07.292 INFO  Post /login 
+16:03:07.312 INFO  User login failed. 
+16:03:07.320 INFO  Post /login 
+16:03:07.334 INFO  User login failed. 
+16:03:07.349 INFO  Post /login 
+16:03:07.361 INFO  User login failed. 
+16:03:07.368 INFO  Post /login 
+16:03:07.383 INFO  User login failed. 
+16:03:07.393 INFO  Post /login 
+16:03:07.406 INFO  User login failed. 
+16:03:07.414 INFO  Post /login 
+16:03:07.424 INFO  User login failed. 
+16:03:07.429 INFO  GET /logout 
+16:03:07.439 INFO  Post /login 
+16:03:07.461 INFO  User login: qwe@gmail.com 
+16:03:07.494 INFO  Post /login 
+16:03:07.510 INFO  User login: qwe@gmail.com 
+16:03:07.939 INFO  Post /login 
+16:03:07.952 INFO  User login: qwe@gmail.com 
+16:03:08.460 INFO  Post /login 
+16:03:08.481 INFO  User login: qwe@gmail.com 
+16:03:08.756 INFO  Post /login 
+16:03:08.772 INFO  User login: qwe@gmail.com 
+16:03:09.127 INFO  Post /login 
+16:03:09.137 INFO  User login: qwe@gmail.com 
+16:03:09.626 INFO  Post /login 
+16:03:09.640 INFO  User login: qwe@gmail.com 
+16:03:10.026 INFO  Post /login 
+16:03:10.051 INFO  User login: qwe@gmail.com 
+16:03:10.208 INFO  Post /login 
+16:03:10.237 INFO  User login: qwe@gmail.com 
+16:03:10.319 INFO  Post /login 
+16:03:10.337 INFO  User login: qwe@gmail.com 
+16:03:10.398 INFO  Post /login 
+16:03:10.422 INFO  User login: qwe@gmail.com 
+16:03:10.454 INFO  Post /login 
+16:03:10.467 INFO  User login: qwe@gmail.com 
+16:03:10.494 INFO  Post /login 
+16:03:10.535 INFO  User login: qwe@gmail.com 
+16:03:10.572 INFO  Post /login 
+16:03:10.608 INFO  User login: qwe@gmail.com 
+16:03:10.648 INFO  Post /login 
+16:03:10.678 INFO  User login: qwe@gmail.com 
+16:03:10.716 INFO  Post /login 
+16:03:10.738 INFO  User login: qwe@gmail.com 
+16:03:10.779 INFO  Post /login 
+16:03:10.817 INFO  User login: qwe@gmail.com 
+16:03:11.039 INFO  Post /login 
+16:03:11.049 INFO  User login: qwe@gmail.com 
+16:03:11.393 INFO  Post /login 
+16:03:11.393 INFO  User login: qwe@gmail.com 
+16:03:11.572 INFO  Post /login 
+16:03:11.572 INFO  User login: qwe@gmail.com 
+16:03:11.809 INFO  Post /login 
+16:03:11.819 INFO  User login: qwe@gmail.com 
+16:03:11.860 INFO  Post /login 
+16:03:11.876 INFO  User login: qwe@gmail.com 
+16:03:11.921 INFO  Post /login 
+16:03:11.957 INFO  User login: qwe@gmail.com 
+16:03:11.972 INFO  Post /login 
+16:03:11.988 INFO  User login: qwe@gmail.com 
+16:03:12.019 INFO  Post /login 
+16:03:12.157 INFO  User login: qwe@gmail.com 
+16:03:12.228 INFO  Post /login 
+16:03:12.268 INFO  User login: qwe@gmail.com 
+16:03:12.408 INFO  Post /login 
+16:03:12.424 INFO  User login: qwe@gmail.com 
+16:03:12.542 INFO  Post /login 
+16:03:12.579 INFO  User login: qwe@gmail.com 
+16:03:12.689 INFO  Post /login 
+16:03:12.704 INFO  User login: qwe@gmail.com 
+16:03:12.825 INFO  Post /login 
+16:03:12.841 INFO  User login: qwe@gmail.com 
+16:03:13.122 INFO  Post /login 
+16:03:13.197 INFO  User login: qwe@gmail.com 
+16:03:13.464 INFO  Post /login 
+16:03:13.480 INFO  User login: qwe@gmail.com 
+16:03:13.765 INFO  Post /login 
+16:03:13.806 INFO  User login: qwe@gmail.com 
+16:03:13.981 INFO  Post /login 
+16:03:14.015 INFO  User login: qwe@gmail.com 
+16:03:14.165 INFO  Post /login 
+16:03:14.265 INFO  User login: qwe@gmail.com 
+16:03:14.514 INFO  Post /login 
+16:03:14.545 INFO  User login: qwe@gmail.com 
+16:03:14.746 INFO  Post /login 
+16:03:14.761 INFO  User login: qwe@gmail.com 
+16:03:15.099 INFO  Post /login 
+16:03:15.115 INFO  User login: qwe@gmail.com 
+16:03:15.600 INFO  Post /login 
+16:03:15.647 INFO  User login: qwe@gmail.com 
+16:03:15.785 INFO  Post /login 
+16:03:15.795 INFO  User login: qwe@gmail.com 
+16:03:16.012 INFO  Post /login 
+16:03:16.021 INFO  User login: qwe@gmail.com 
+16:03:16.133 INFO  Post /login 
+16:03:16.186 INFO  User login: qwe@gmail.com 
+16:03:16.249 INFO  Post /login 
+16:03:16.264 INFO  User login: qwe@gmail.com 
+16:03:16.320 INFO  Post /login 
+16:03:16.328 INFO  User login: qwe@gmail.com 
+16:03:16.373 INFO  Post /login 
+16:03:16.374 INFO  User login: qwe@gmail.com 
+16:03:16.390 INFO  Post /login 
+16:03:16.405 INFO  User login: qwe@gmail.com 
+16:03:16.421 INFO  Post /login 
+16:03:16.452 INFO  User login: qwe@gmail.com 
+16:03:16.518 INFO  Post /login 
+16:03:16.533 INFO  User login: qwe@gmail.com 
+16:03:16.571 INFO  Post /login 
+16:03:16.587 INFO  User login: qwe@gmail.com 
+16:03:16.618 INFO  Post /login 
+16:03:16.665 INFO  User login: qwe@gmail.com 
+16:03:16.734 INFO  Post /login 
+16:03:16.750 INFO  User login: qwe@gmail.com 
+16:03:16.772 INFO  Post /login 
+16:03:16.772 INFO  User login: qwe@gmail.com 
+16:03:16.815 INFO  Post /login 
+16:03:16.824 INFO  User login: qwe@gmail.com 
+16:03:16.861 INFO  Post /login 
+16:03:16.935 INFO  User login: qwe@gmail.com 
+16:03:16.988 INFO  Post /login 
+16:03:16.988 INFO  User login: qwe@gmail.com 
+16:03:17.019 INFO  Post /login 
+16:03:17.035 INFO  User login: qwe@gmail.com 
+16:03:17.066 INFO  Post /login 
+16:03:17.073 INFO  User login: qwe@gmail.com 
+16:03:17.104 INFO  Post /login 
+16:03:17.166 INFO  User login: qwe@gmail.com 
+16:03:17.196 INFO  Post /login 
+16:03:17.202 INFO  User login: qwe@gmail.com 
+16:03:17.211 INFO  Post /login 
+16:03:17.226 INFO  User login: qwe@gmail.com 
+16:03:17.404 INFO  Post /login 
+16:03:17.436 INFO  User login: qwe@gmail.com 
+16:03:17.674 INFO  Post /login 
+16:03:17.690 INFO  User login: qwe@gmail.com 
+16:03:17.861 INFO  Post /login 
+16:03:17.976 INFO  User login: qwe@gmail.com 
+16:03:18.090 INFO  Post /login 
+16:03:18.106 INFO  User login: qwe@gmail.com 
+16:03:18.211 INFO  Post /login 
+16:03:18.227 INFO  User login: qwe@gmail.com 
+16:03:18.316 INFO  Post /login 
+16:03:18.326 INFO  User login: qwe@gmail.com 
+16:03:18.461 INFO  Post /login 
+16:03:18.468 INFO  User login: qwe@gmail.com 
+16:03:18.576 INFO  Post /login 
+16:03:18.576 INFO  User login: qwe@gmail.com 
+16:03:18.623 INFO  Post /login 
+16:03:18.623 INFO  User login: qwe@gmail.com 
+16:03:18.747 INFO  Post /login 
+16:03:18.780 INFO  User login: qwe@gmail.com 
+16:03:18.855 INFO  Post /login 
+16:03:18.864 INFO  User login: qwe@gmail.com 
+16:03:18.878 INFO  Post /login 
+16:03:18.925 INFO  User login: qwe@gmail.com 
+16:03:18.976 INFO  Post /login 
+16:03:18.976 INFO  User login: qwe@gmail.com 

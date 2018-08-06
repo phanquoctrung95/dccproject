@@ -1,0 +1,259 @@
+<link rel="stylesheet" type="text/css" href="css/adminDashboard.css">
+<div ng-include="'partials/common/course/deleteClassModal.html'"></div>
+
+<div class="container" ng-controller="courseDetailCtrl">
+    <div class="container row" ng-controller="MyCoursesCtrl">
+        <br>
+        <div class="span12">
+            <fieldset class="content-border">
+                <legend class="content-border">COURSE DETAIL</legend>
+            <div class="widget-content" style="margin-top: -15px" id="{{courseDetail.name}}">
+                <div class="widget big-stats-container">
+                    <div class="control-group">
+                        <div class="controls">
+                            <div class="panel-group">
+                                <div ng-controller="myChartCtrl" >
+                                        <div>
+                                            <center>
+                                                <h3>{{courseDetail.name}}</h3>
+                                            </center>
+                                            
+                                        <!-- chart + filter -->
+                                            <div ng-show="userInfo.isAdmin">
+                                                <div class="col-xs-9 col-md-9" style="padding-top: 10px;; padding-left: 30px;  font-size: 17px; ">Average Rating:    <b>{{averageRating}}</b></div>
+                                                <div class="col-xs-1 col-md-1" style="padding-top: 10px; padding-left: 45px">Filter: </div>
+                                                <div class="col-xs-2 col-md-2">
+                                                    <select ng-init="selectChart=dataSelectChart[2]" style="width: 90%" class="box-group ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                        name="selectChart" ng-model="selectChart" ng-change="changed()" ng-options="value.data for value in dataSelectChart track by value.id">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style=" margin-left: 130px; height: 400px; display: block; width: 800px; text-align:center" ng-show="userInfo.isAdmin">
+                                            <canvas id='myChart'></canvas>
+                                        </div>
+                                         <!-- modal of datetime picker -->
+                                    <div id="dateTimePicker" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="container">
+                                                <!-- <div class="col-sm-6" style="height:50px;"> -->
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h3 style="text-align: center;" class="title-items">Choose Date</h3>
+                                                            <div class="form-group">
+                                                                <div class="col-md-6">
+                                                                    <p>Start</p>
+                                                                    <div class='input-group date' id='startDate'>
+                                                                        <input type='text' class="form-control" name="startDate" />
+                                                                        <span class="input-group-addon">
+                                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>End</p>
+                                                                    <div class='input-group date' id='endDate'>
+                                                                        <input type='text' class="form-control" name="org_endDate" />
+                                                                        <span class="input-group-addon">
+                                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="btnApplyDate()">Apply</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end of datetime picker-->
+                                    </div>
+                                    <br>
+                                    <uib-tabset active="activeJustified" justified="true" style="margin:10px;">
+                                        <uib-tab index="0">
+                                            <uib-tab-heading>
+                                                <i class="glyphicon glyphicon-edit"></i>&nbsp Description</uib-tab-heading>
+                                            <p ng-bind-html="courseDetail.description"></p>
+                                        </uib-tab>
+                                        <uib-tab index="1">
+                                            <uib-tab-heading>
+                                                <i class="glyphicon glyphicon-equalizer"></i>&nbsp Document</uib-tab-heading>
+                                            <div class="panel-collapse collaps" ng-show="courseDetail.documents != null">
+                                                Click to download documents:
+                                                <ul class="list-group" style="list-style-type:none; margin-top:10px">
+                                                    <li class="row" style="background-color: #fff" ng-repeat="document in getPathDocuments(courseDetail)">
+                                                        <div class="col-md-1"></div>
+                                                        <div class="col-md-8 col-sm-8" style="margin-bottom: 10px" id="forfun2">
+                                                            <blockquote class="blockquote documents">
+                                                                <a style="text-align:center; margin-left:50px" href="{{document}}" href="{{document}}" ng-bind-html="getFileName(document)"></a>
+                                                            </blockquote>
+                                                        </div>
+                                                        <br/>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p ng-show="courseDetail.documents == null"> No documents</p>
+                                        </uib-tab>
+                                        <uib-tab index="2">
+                                            <uib-tab-heading>
+                                                <i class="glyphicon glyphicon-education"></i>&nbsp Test</uib-tab-heading>{{courseDetail.test}}</uib-tab>
+
+                                        <uib-tab index="3" ng-show="userInfo.role == 1">
+                                            <uib-tab-heading>
+                                                <i class="glyphicon glyphicon-th-list"></i>&nbsp All Class</uib-tab-heading>
+                                            <div ng-repeat="class in classList" style="margin-top: 5px">
+
+                                                <div class="round-wrap" data-toggle="collapse" data-target="#collapse{{class.id}}" ng-click="class.traineeList.collapsed = !class.traineeList.collapsed" style="margin-bottom: 15px">
+                                                    <blockquote class="blockquote">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img style="float:left; clear:both; margin-right: 10px; border-radius: 50%" alt="" class="img-responsive" ng-src="{{class.trainerAvatar}}"
+                                                                    width="70px"> Trainer: {{class.trainerName}}
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <div class="col-md-4">
+                                                                    <i class="fa fa-building" aria-hidden="true"></i>
+                                                                    <span>&nbsp {{class.location}}</span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                    <span>&nbsp {{class.startTime | date: "MMM d, y h:mm a"}}</span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <left>
+                                                                        <h5>Happy Average Rating: &nbsp&nbsp&nbsp&nbsp&nbsp
+                                                                            <span class="label" ng-class="{'label-warning': class.happy_ratingAverage<2, 'label-info': class.happy_ratingAverage>=2 && class.happy_ratingAverage<5, 'label-success': class.happy_ratingAverage>=5}">
+                                                                                {{class.happy_ratingAverage}}</span>
+                                                                        </h5>
+                                                                        <h5>Trainer Average Rating: &nbsp&nbsp&nbsp
+                                                                            <span class="label" ng-class="{'label-warning': class.trainer_ratingAverage<2, 'label-info': class.trainer_ratingAverage>=2 && class.trainer_ratingAverage<5, 'label-success': class.trainer_ratingAverage>=5}">
+                                                                                {{class.trainer_ratingAverage}}</span>
+                                                                        </h5>
+                                                                        <h5>Content Average Rating: &nbsp&nbsp
+                                                                            <span class="label" ng-class="{'label-warning': class.content_ratingAverage<2, 'label-info': class.content_ratingAverage>=2 && class.content_ratingAverage<5, 'label-success': class.content_ratingAverage>=5}">
+                                                                                {{class.content_ratingAverage}}</span>
+                                                                        </h5>
+                                                                        <h5>Num of Trainee: &nbsp&nbsp{{class.numTrainee}}
+                                                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                                                        </h5>
+                                                                        <h5>Num of Feedback: &nbsp&nbsp{{class.numOfFeedback}}
+                                                                        </h5>
+                                                                    </left>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <center ng-hide="class.traineeList.collapsed">
+                                                            <span class="glyphicon glyphicon-menu-down"></span>
+                                                        </center>
+                                                        <center ng-show="class.traineeList.collapsed">
+                                                            <span class="glyphicon glyphicon-menu-up"></span>
+                                                        </center>
+                                                    </blockquote>
+
+                                                </div>
+
+                                                <div id="collapse{{class.id}}" class="panel-collapse collapse" ng-show="class.traineeList.length > 0">
+                                                    <ul class="list-group">
+                                                        <li class="row">
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-11 col-sm-8" style="border-left:2px solid">
+                                                                <div style="font-style: Arial; size: 100px;">
+                                                                    <strong>
+                                                                        <div class="col-md-3">Trainee Name</div>
+                                                                        <div class="col-md-1 col-sm-2">Happy Rating</div>
+                                                                        <div class="col-md-1 col-sm-2">Trainer Rating</div>
+                                                                        <div class="col-md-3 col-sm-4">Content Rating</div>
+                                                                        <div class="col-md-4 col-sm-4">Feedback Content</div>
+                                                                    </strong>
+                                                                </div>
+                                                                <br/>
+                                                            </div>
+                                                        </li>
+                                                        <!-- List of trainee -->
+                                                        <li class="row" ng-repeat="trainee in class.traineeList">
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-11 col-sm-8" style="border-left:2px solid;">
+                                                                <blockquote class="blockquote">
+                                                                    <div class="col-md-3">
+                                                                        <img style="float:left; clear:both; margin-right:10px; border-radius: 50%" alt="" class="img-responsive" ng-src="{{trainee.traineeAvatar}}"
+                                                                            width="40px">{{trainee.traineeName}}
+                                                                    </div>
+                                                                    <div class="col-md-1 col-sm-2">
+                                                                        <div ng-if="trainee.happy_rating!=NULL">
+                                                                            <span class="label" ng-class="{'label-warning': trainee.happy_rating<2, 'label-info': trainee.happy_rating>=2 && trainee.happy_rating<5, 'label-success': trainee.happy_rating>=5}">{{trainee.happy_rating}} Stars</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-1 col-sm-2">
+                                                                        <div ng-if="trainee.trainer_rating!=NULL">
+                                                                            <span class="label" ng-class="{'label-warning': trainee.trainer_rating<2, 'label-info': trainee.trainer_rating>=2 && trainee.trainer_rating<5, 'label-success': trainee.trainer_rating>=5}">{{trainee.trainer_rating}} Stars</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-sm-4">
+                                                                        <div ng-if="trainee.content_rating!=NULL">
+                                                                            <span class="label" ng-class="{'label-warning': trainee.content_rating<2, 'label-info': trainee.content_rating>=2 && trainee.content_rating<5, 'label-success': trainee.content_rating>=5}">{{trainee.content_rating}} Stars</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <span style=" word-wrap:break-word; font-size: 15px">{{trainee.improve_comment}}</span>
+                                                                    </div>
+                                                                </blockquote>
+                                                                <br/>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </uib-tab>
+
+                                        <!-- show info member has requested -->
+                                        <uib-tab index="4" ng-show="userInfo.role == 1">
+                                            <uib-tab-heading>
+                                                <i class="	glyphicon glyphicon-user"></i>&nbsp Requester</uib-tab-heading>
+                                            <div ng-repeat="user in userRequestList" style="margin-top: 5px">
+                                                <div class="round-wrap" data-toggle="collapse">
+
+                                                    <blockquote class="blockquote">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <img style="float:left; clear:both; margin-right: 10px; border-radius: 50%" ng-src="{{user.avatar}}" class="img-responsive"
+                                                                    width="70px"> Tranee: {{user.username}}
+                                                            </div>
+                                                            <div class="col-md-9">
+
+                                                                <h5 class="col-md-5">Email: &nbsp {{user.email}}</h5>
+                                                                <h5 class="col-md-4">Phone: &nbsp {{user.phone}}</h5>
+                                                                <h5 class="col-md-3">Team: &nbsp {{user.belong2Team}}</h5>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </blockquote>
+                                                </div>
+
+
+                                            </div>
+                                        </uib-tab>
+                                    </uib-tabset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#collapse_trainingProgram').modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+</script>

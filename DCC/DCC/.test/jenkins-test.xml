@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="153.075" tests="81" failures="25">
+  <testsuite name="Root Suite" timestamp="2017-12-08T04:01:03" tests="0" failures="1" time="0">
+    <testcase name="Uncaught error outside test suite" time="0" classname="Uncaught error outside test suite">
+      <failure><![CDATA[Error: listen EADDRINUSE :::80
+    at Object._errnoException (util.js:1021:11)
+    at _exceptionWithHostPort (util.js:1043:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1344:14)
+    at listenInCluster (net.js:1385:12)
+    at Server.listen (net.js:1469:7)
+    at Object.<anonymous> (app.js:99:3)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (test/routes/admin/courses.js:5:18)
+    at require (internal/module.js:11:18)
+    at Array.forEach (<anonymous>)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for admin-course&gt;" timestamp="2017-12-08T04:01:03" tests="0" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 14 : get /admin/courses/getAllCourse" timestamp="2017-12-08T04:01:03" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.016">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 14 : get /admin/courses/getAllCourse Should return success==true" time="0.016" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 15 : get /admin/courses/getAllTrainer" timestamp="2017-12-08T04:01:03" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.005">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 15 : get /admin/courses/getAllTrainer Should return success==true" time="0.005" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1 : Post /admin/courses/addCourse" timestamp="2017-12-08T04:01:03" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.183">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 1 : Post /admin/courses/addCourse Should return success==true" time="0.183" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.1 : Post /admin/courses/addCourse with courseName is already existed " timestamp="2017-12-08T04:01:03" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="19.008">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 1.1 : Post /admin/courses/addCourse with courseName is already existed  Should return success==true" time="19.008" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Post /admin/courses/updateCourse" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 2 : Post /admin/courses/updateCourse Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected false to equal true
+    at Test.<anonymous> (test/routes/admin/courses.js:137:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3 : Post /admin/courses/deleteCourse" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.01">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 3 : Post /admin/courses/deleteCourse Should return success==true" time="0.01" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5 : get Course Type List" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.004">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 5 : get Course Type List Should return success==true" time="0.004" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 6 : get Training Program List" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.01">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 6 : get Training Program List Should return success==true" time="0.01" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 7 : Post /admin/courses/addTrainingProgram Success" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.009">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 7 : Post /admin/courses/addTrainingProgram Success Should return success==true" time="0.009" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 7.1 : Post /admin/courses/addTrainingProgram fail becuz Name is already existed " timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.008">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 7.1 : Post /admin/courses/addTrainingProgram fail becuz Name is already existed  Should return success==true" time="0.008" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 8 : Post /admin/courses/updateTrainingProgram" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 8 : Post /admin/courses/updateTrainingProgram Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected false to equal true
+    at Test.<anonymous> (test/routes/admin/courses.js:260:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 9 : Post /admin/courses/deleteTrainingProgram" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.022">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 9 : Post /admin/courses/deleteTrainingProgram Should return success==true" time="0.022" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 10 : Get Class List" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.007">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 10 : Get Class List Should return success==true" time="0.007" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 11 : Post /admin/courses/addClass Success" timestamp="2017-12-08T04:01:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="19.007">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 11 : Post /admin/courses/addClass Success Should return success==true" time="19.007" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 11.1 : Post /admin/courses/addClass Fail" timestamp="2017-12-08T04:01:41" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="19.004">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 11.1 : Post /admin/courses/addClass Fail Should return success==false" time="19.004" classname="Should return success==false">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 12 : Post /admin/courses/updateClass" timestamp="2017-12-08T04:02:00" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.055">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 12 : Post /admin/courses/updateClass Should return success==true" time="0.055" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 13 : Post /admin/courses/deleteClass" timestamp="2017-12-08T04:02:00" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.018">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 13 : Post /admin/courses/deleteClass Should return success==true" time="0.018" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 14 : Post /admin/courses/deleteClass" timestamp="2017-12-08T04:02:00" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.012">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 14 : Post /admin/courses/deleteClass Should return success==true" time="0.012" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 15 : get /admin/courses/getAllTP" timestamp="2017-12-08T04:02:00" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="0" time="0.005">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 15 : get /admin/courses/getAllTP Should return success==true" time="0.005" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 16 : Post /admin/courses/deleteClass" timestamp="2017-12-08T04:02:01" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/courses.js" failures="1" time="19.005">
+    <testcase name="&lt;Unit test for admin-course&gt; Test case 16 : Post /admin/courses/deleteClass Should return success==true" time="19.005" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for admin-dashboard&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/admin/dashboard.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get request open course for admin" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/admin/dashboard.js" failures="0" time="0.011">
+    <testcase name="&lt;Unit test for admin-dashboard&gt; Test case 1 : Get request open course for admin Should return success==true" time="0.011" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for common (Class detail)&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/common/class.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get Class All Detail" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/common/class.js" failures="0" time="0.005">
+    <testcase name="&lt;Unit test for common (Class detail)&gt; Test case 1 : Get Class All Detail Should return success==true" time="0.005" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Get Class by ClassId" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/common/class.js" failures="0" time="0.003">
+    <testcase name="&lt;Unit test for common (Class detail)&gt; Test case 2 : Get Class by ClassId Should return success==true" time="0.003" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for common (Course detail)&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/common/course.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get Course Detail" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/common/course.js" failures="0" time="0.003">
+    <testcase name="&lt;Unit test for common (Course detail)&gt; Test case 1 : Get Course Detail Should return success==true" time="0.003" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Get Class by CourseId" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/common/course.js" failures="0" time="0.008">
+    <testcase name="&lt;Unit test for common (Course detail)&gt; Test case 2 : Get Class by CourseId Should return success==true" time="0.008" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for Login&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1.1 : Login success, role = admin" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for Login&gt; Test case 1.1 : Login success, role = admin Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected 3 to equal 1
+    at Test.<anonymous> (test/routes/index/index.js:20:32)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.1.1 : Login failed, role = admin" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.019">
+    <testcase name="&lt;Unit test for Login&gt; Test case 1.1.1 : Login failed, role = admin Should return success==false" time="0.019" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.2 : Login success, role = trainee" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.014">
+    <testcase name="&lt;Unit test for Login&gt; Test case 1.2 : Login success, role = trainee Should return success==true" time="0.014" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.3 : Login success, role = trainer" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.017">
+    <testcase name="&lt;Unit test for Login&gt; Test case 1.3 : Login success, role = trainer Should return success==true" time="0.017" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.4 : Login success, role = newuser" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for Login&gt; Test case 1.4 : Login success, role = newuser Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected false to equal true
+    at Test.<anonymous> (test/routes/index/index.js:99:32)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Login fail, username true, password false" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.015">
+    <testcase name="&lt;Unit test for Login&gt; Test case 2 : Login fail, username true, password false Should return success==false" time="0.015" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3 : Login fail, username false, password true" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.009">
+    <testcase name="&lt;Unit test for Login&gt; Test case 3 : Login fail, username false, password true Should return success==false" time="0.009" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4 : Login fail, username false, password false" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.01">
+    <testcase name="&lt;Unit test for Login&gt; Test case 4 : Login fail, username false, password false Should return success==false" time="0.01" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4.2: isLogin fail" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.002">
+    <testcase name="&lt;Unit test for Login&gt; Test case 4.2: isLogin fail Should return success==false" time="0.002" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5.1 : Login User Manual success, role = trainee" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.006">
+    <testcase name="&lt;Unit test for Login&gt; Test case 5.1 : Login User Manual success, role = trainee Should return success==true" time="0.006" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5.2 : Login User Manual fail, username true, password false" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.008">
+    <testcase name="&lt;Unit test for Login&gt; Test case 5.2 : Login User Manual fail, username true, password false Should return success==false" time="0.008" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5.3 : Login User Manual fail, username false, password true" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.005">
+    <testcase name="&lt;Unit test for Login&gt; Test case 5.3 : Login User Manual fail, username false, password true Should return success==false" time="0.005" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5.4 : Login User Manual fail, username false, password false" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.006">
+    <testcase name="&lt;Unit test for Login&gt; Test case 5.4 : Login User Manual fail, username false, password false Should return success==false" time="0.006" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for Logout&gt;" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.002">
+    <testcase name="&lt;Unit test for Logout&gt; Should return success==true, and destroy client session on server" time="0.002" classname="Should return success==true, and destroy client session on server">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for isLogin success&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 4.1: isLogin success" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for isLogin success&gt; Test case 4.1: isLogin success Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected true to equal false
+    at Test.<anonymous> (test/routes/index/index.js:280:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 0: get homepage" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/index/index.js" failures="0" time="0.003">
+    <testcase name="Test case 0: get homepage Should return success==true" time="0.003" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for notification&gt;" timestamp="2017-12-08T04:02:20" tests="0" file="/home/4M2U/DCC/DCC/test/routes/notification/notification.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1: POST /notification/notification/getNotifications" timestamp="2017-12-08T04:02:20" tests="1" file="/home/4M2U/DCC/DCC/test/routes/notification/notification.js" failures="1" time="19.008">
+    <testcase name="&lt;Unit test for notification&gt; Test case 1: POST /notification/notification/getNotifications Should return length==3" time="19.008" classname="Should return length==3">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2: POST /notification/notification/getNumberofNewNotification" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/notification/notification.js" failures="0" time="0.017">
+    <testcase name="&lt;Unit test for notification&gt; Test case 2: POST /notification/notification/getNumberofNewNotification Should return 2" time="0.017" classname="Should return 2">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3 : POST /notification/notification/updateNotificationStatus" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/notification/notification.js" failures="0" time="0.105">
+    <testcase name="&lt;Unit test for notification&gt; Test case 3 : POST /notification/notification/updateNotificationStatus Should return status==0" time="0.105" classname="Should return status==0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4 : POST /notification/notification/getAllNewNotificationAndUpdateStatus" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/notification/notification.js" failures="0" time="0.062">
+    <testcase name="&lt;Unit test for notification&gt; Test case 4 : POST /notification/notification/getAllNewNotificationAndUpdateStatus Should return notifications==1" time="0.062" classname="Should return notifications==1">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 0: get homepage without logging in" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/testloadout.js" failures="0" time="0.005">
+    <testcase name="Test case 0: get homepage without logging in Should return success==true" time="0.005" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;UNIT TEST FOR ENVIROMENT&gt;" timestamp="2017-12-08T04:02:39" tests="0" file="/home/4M2U/DCC/DCC/test/routes/testonly.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get /user/userProfile/getUserInfo" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/testonly.js" failures="1" time="0">
+    <testcase name="&lt;UNIT TEST FOR ENVIROMENT&gt; Test case 1 : Get /user/userProfile/getUserInfo Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected false to equal true
+    at Test.<anonymous> (test/routes/testonly.js:43:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for trainee-courseRegister&gt;" timestamp="2017-12-08T04:02:39" tests="0" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get training programs" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.006">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 1 : Get training programs Should return success==true" time="0.006" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Get Opening Class" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.007">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 2 : Get Opening Class Should return success==true" time="0.007" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3 : Get Request Course" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.003">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 3 : Get Request Course Should return success==true" time="0.003" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4 : Send Register Request: Request is existed" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.009">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 4 : Send Register Request: Request is existed Should return success==false" time="0.009" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5 : Send Register Request: Request is not existed, request-type is join (class is not opening)" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.05">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 5 : Send Register Request: Request is not existed, request-type is join (class is not opening) Should return success==true" time="0.05" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 6 : Send Register Request: Request is already existed, request-type is register (class is not opening)" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.006">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 6 : Send Register Request: Request is already existed, request-type is register (class is not opening) Should return success==false" time="0.006" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 6.1 : Send Register Request: class is opening, enroll success" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 6.1 : Send Register Request: class is opening, enroll success Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected false to equal true
+    at Test.<anonymous> (test/routes/trainee/courseRegister.js:153:28)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 7 : Send Register Request: Request enroll fail, user aleardy enrolled (class is not opening)" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.003">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 7 : Send Register Request: Request enroll fail, user aleardy enrolled (class is not opening) Should return success==false" time="0.003" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 8 : Delete Request Course" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.013">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 8 : Delete Request Course Should return success==true" time="0.013" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 9 : Un-enroll Course" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.059">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 9 : Un-enroll Course Should return success==true" time="0.059" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 10 : Get my enroll class" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.008">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 10 : Get my enroll class Should return success==true" time="0.008" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 11 : update ClassRecord status from Enrolled to Learned" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="0" time="0.007">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 11 : update ClassRecord status from Enrolled to Learned Should return success==true" time="0.007" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 12: get Course by Name /trainee/courseRegister/getCoursebyName" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/courseRegister.js" failures="1" time="0.003">
+    <testcase name="&lt;Unit test for trainee-courseRegister&gt; Test case 12: get Course by Name /trainee/courseRegister/getCoursebyName Should return id==1" time="0.003" classname="Should return id==1">
+      <failure><![CDATA[TypeError: Cannot read property 'id' of null
+    at Test.<anonymous> (test/routes/trainee/courseRegister.js:263:54)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:692:16)
+    at parser (node_modules/superagent/lib/node/index.js:903:18)
+    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for trainee-dashboard&gt;" timestamp="2017-12-08T04:02:39" tests="0" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1.1 : Get training programs by TP Type: CBA" timestamp="2017-12-08T04:02:39" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="1" time="19.01">
+    <testcase name="&lt;Unit test for trainee-dashboard&gt; Test case 1.1 : Get training programs by TP Type: CBA Should return success==true" time="19.01" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.2 : Get training programs by TP Type: IMS" timestamp="2017-12-08T04:02:58" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for trainee-dashboard&gt; Test case 1.2 : Get training programs by TP Type: IMS Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[TypeError: Cannot read property 'body' of undefined
+    at Test.<anonymous> (test/routes/admin/courses.js:114:34)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at ClientRequest.req.once.err (node_modules/superagent/lib/node/index.js:646:10)
+    at Socket.socketOnEnd (_http_client.js:421:9)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.3 : Get training programs by TP Type: experienced" timestamp="2017-12-08T04:03:03" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="1" time="19.009">
+    <testcase name="&lt;Unit test for trainee-dashboard&gt; Test case 1.3 : Get training programs by TP Type: experienced Should return success==true" time="19.009" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : Get request open course" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="0" time="0.01">
+    <testcase name="&lt;Unit test for trainee-dashboard&gt; Test case 2 : Get request open course Should return success==true" time="0.01" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3: Enroll class" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/dashboard.js" failures="0" time="0.079">
+    <testcase name="&lt;Unit test for trainee-dashboard&gt; Test case 3: Enroll class Should return success = true" time="0.079" classname="Should return success = true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for feedback function&gt;" timestamp="2017-12-08T04:03:22" tests="0" file="/home/4M2U/DCC/DCC/test/routes/trainee/feedback.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Root Suite" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/feedback.js" failures="0" time="0.014">
+    <testcase name="&lt;Unit test for feedback function&gt; Test case 1 : Create a Feedback (cmt &amp; rating) for Class that doesnt have comment " time="0.014" classname="Test case 1 : Create a Feedback (cmt &amp; rating) for Class that doesnt have comment ">
+    </testcase>
+  </testsuite>
+  <testsuite name="Root Suite" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/feedback.js" failures="0" time="0.004">
+    <testcase name="&lt;Unit test for feedback function&gt; Test case 2 : Update Feedback (cmt &amp; rating) for Class having comment already" time="0.004" classname="Test case 2 : Update Feedback (cmt &amp; rating) for Class having comment already">
+    </testcase>
+  </testsuite>
+  <testsuite name="Root Suite" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/feedback.js" failures="0" time="0.002">
+    <testcase name="&lt;Unit test for feedback function&gt; Test case 3 : get feedback POST /trainee/feedback/getMyFeedbackByClass" time="0.002" classname="Test case 3 : get feedback POST /trainee/feedback/getMyFeedbackByClass">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for view schedule function&gt;" timestamp="2017-12-08T04:03:22" tests="0" file="/home/4M2U/DCC/DCC/test/routes/trainee/viewSchedule.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Root Suite" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/trainee/viewSchedule.js" failures="0" time="0.004">
+    <testcase name="&lt;Unit test for view schedule function&gt; It should return true " time="0.004" classname="It should return true ">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for user profile&gt;" timestamp="2017-12-08T04:03:22" tests="0" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : Get /user/userProfile/getUserInfo for currentRole = 1" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 1 : Get /user/userProfile/getUserInfo for currentRole = 1 Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected undefined to equal 1
+    at Test.<anonymous> (test/routes/user/userProfile.js:49:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:903:18)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.1 : Get /user/userProfile/getUserInfo for currentRole = 2 " timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 1.1 : Get /user/userProfile/getUserInfo for currentRole = 2  Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected undefined to equal 2
+    at Test.<anonymous> (test/routes/user/userProfile.js:66:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:903:18)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.2 : Get /user/userProfile/getUserInfo for currentRole = 3 " timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 1.2 : Get /user/userProfile/getUserInfo for currentRole = 3  Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected undefined to equal 3
+    at Test.<anonymous> (test/routes/user/userProfile.js:84:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:903:18)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 1.3 : Get /user/userProfile/getUserInfo for currentRole = 0 " timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 1.3 : Get /user/userProfile/getUserInfo for currentRole = 0  Should return success==true" time="0" classname="Should return success==true">
+      <failure><![CDATA[AssertionError: expected undefined to equal 0
+    at Test.<anonymous> (test/routes/user/userProfile.js:101:24)
+    at Test.assert (node_modules/supertest/lib/test.js:179:6)
+    at assert (node_modules/supertest/lib/test.js:131:12)
+    at node_modules/supertest/lib/test.js:128:5
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:715:3)
+    at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:903:18)
+    at endReadableNT (_stream_readable.js:1057:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4.1 : post /user/userProfile/addUser" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0.023">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 4.1 : post /user/userProfile/addUser Should return success==true" time="0.023" classname="Should return success==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4.2 : create user false post /user/userProfile/addUser" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0.004">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 4.2 : create user false post /user/userProfile/addUser Should return success==false" time="0.004" classname="Should return success==false">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 6: get all users by admin /user/userProfile/getAllUsers" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0.002">
+    <testcase name="&lt;Unit test for user profile&gt; Test case 6: get all users by admin /user/userProfile/getAllUsers Should return sucess==true" time="0.002" classname="Should return sucess==true">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Unit test for manual added user profile&gt;" timestamp="2017-12-08T04:03:22" tests="0" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test case 1 : post /user/userProfile/updateUserProfile" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0.001">
+    <testcase name="&lt;Unit test for manual added user profile&gt; Test case 1 : post /user/userProfile/updateUserProfile Should return success==true" time="0.001" classname="Should return success==true">
+      <failure><![CDATA[Error: "value" required in setHeader("x-access-token", value)
+    at validateHeader (_http_outgoing.js:487:11)
+    at ClientRequest.setHeader (_http_outgoing.js:496:3)
+    at Test.Request.request (node_modules/superagent/lib/node/index.js:663:11)
+    at Test.Request.end (node_modules/superagent/lib/node/index.js:751:8)
+    at Test.end (node_modules/supertest/lib/test.js:125:7)
+    at Context.<anonymous> (test/routes/user/userProfile.js:309:17)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 2 : post /user/userProfile/checkPassword" timestamp="2017-12-08T04:03:22" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="19.008">
+    <testcase name="&lt;Unit test for manual added user profile&gt; Test case 2 : post /user/userProfile/checkPassword Should return success==true" time="19.008" classname="Should return success==true">
+      <failure><![CDATA[Error: Timeout of 19000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 3 : post /user/userProfile/checkPassword" timestamp="2017-12-08T04:03:41" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for manual added user profile&gt; Test case 3 : post /user/userProfile/checkPassword Should return success==false" time="0" classname="Should return success==false">
+      <failure><![CDATA[Error: "value" required in setHeader("x-access-token", value)
+    at validateHeader (_http_outgoing.js:487:11)
+    at ClientRequest.setHeader (_http_outgoing.js:496:3)
+    at Test.Request.request (node_modules/superagent/lib/node/index.js:663:11)
+    at Test.Request.end (node_modules/superagent/lib/node/index.js:751:8)
+    at Test.end (node_modules/supertest/lib/test.js:125:7)
+    at Context.<anonymous> (test/routes/user/userProfile.js:356:17)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 4: post /user/userProfile/changePasswordMd5" timestamp="2017-12-08T04:03:41" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="1" time="0">
+    <testcase name="&lt;Unit test for manual added user profile&gt; Test case 4: post /user/userProfile/changePasswordMd5 Should return success = true" time="0" classname="Should return success = true">
+      <failure><![CDATA[Error: "value" required in setHeader("x-access-token", value)
+    at validateHeader (_http_outgoing.js:487:11)
+    at ClientRequest.setHeader (_http_outgoing.js:496:3)
+    at Test.Request.request (node_modules/superagent/lib/node/index.js:663:11)
+    at Test.Request.end (node_modules/superagent/lib/node/index.js:751:8)
+    at Test.end (node_modules/supertest/lib/test.js:125:7)
+    at Context.<anonymous> (test/routes/user/userProfile.js:375:17)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case 5: post /models/class/getUserInClass" timestamp="2017-12-08T04:03:41" tests="1" file="/home/4M2U/DCC/DCC/test/routes/user/userProfile.js" failures="0" time="0">
+    <testcase name="&lt;Unit test for manual added user profile&gt; Test case 5: post /models/class/getUserInClass Should return success = true" time="0" classname="Should return success = true">
+    </testcase>
+  </testsuite>
+</testsuites>

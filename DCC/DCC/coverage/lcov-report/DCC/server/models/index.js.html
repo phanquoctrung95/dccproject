@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for DCC/server/models/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">DCC/server/models</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>35/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var fs = require("fs"); //module ddojc ghi file (file system)
+var path = require("path");
+var Sequelize = require("sequelize");
+&nbsp;
+var env = process.env.NODE_ENV || <span class="branch-1 cbranch-no" title="branch not covered" >"environment";</span>
+var config = require("../config/config")[env];
+var sequelize = module.exports = new Sequelize(config.database, config.username, config.password, config);
+&nbsp;
+var db = {};
+sequelize.sync();
+&nbsp;
+fs
+    .readdirSync(__dirname)
+    .filter(function (file) {
+        return ((file.indexOf(".") !== 0) &amp;&amp; (file !== "index.js") &amp;&amp; (file !== "DataObjects"));
+    })
+    .forEach(function (file) {
+        var model = sequelize.import(path.join(__dirname, file));
+        db[model.name] = model;
+    });
+/* you might need this later
+Object.keys(db).forEach(function (modelName) {
+    if ("associate" in db[modelName]) {
+        db[modelName].associate(db);
+    }
+});
+*/
+&nbsp;
+&nbsp;
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+&nbsp;
+// define table associations
+&nbsp;
+// association of table session and training_program
+db.Course.belongsTo(db.TrainingProgram, { foreignKey: 'trainingProgramId' });
+db.TrainingProgram.hasMany(db.Course, { foreignKey: 'trainingProgramId' });
+// association of table trainingProgram and CourseType
+db.TrainingProgram.belongsTo(db.CourseType, { foreignKey: 'courseTypeId' });
+db.CourseType.hasMany(db.TrainingProgram, { foreignKey: 'courseTypeId' });
+//association of table class and course
+db.Class.belongsTo(db.Course, { foreignKey: 'courseId' });
+db.Course.hasMany(db.Class, { foreignKey: 'courseId' });
+// //association of table class and user
+db.Class.belongsTo(db.User, { foreignKey: 'trainerId' });
+db.User.hasMany(db.Class, { foreignKey: 'trainerId' });
+//association of table class_record and class
+db.ClassRecord.belongsTo(db.Class, { foreignKey: 'classId' });
+db.Class.hasMany(db.ClassRecord, { foreignKey: 'classId' });
+//association of table class_record and user
+db.ClassRecord.belongsTo(db.User, { foreignKey: 'traineeId' });
+db.User.hasMany(db.ClassRecord, { foreignKey: 'traineeId' });
+//association of table RequestOpening and course
+db.RequestOpening.belongsTo(db.Course, { foreignKey: 'courseId' });
+db.Course.hasMany(db.RequestOpening, { foreignKey: 'courseId' });
+db.RequestOpening.belongsTo(db.User, { foreignKey: 'userId' });
+db.User.hasMany(db.RequestOpening, { foreignKey: 'userId' });
+//association of table notification and user
+db.Notifications.belongsTo(db.User, { foreignKey: 'userId' });
+db.User.hasMany(db.Notifications, { foreignKey: 'userId' });
+// session class time common in this class -- &gt; the same Class and User
+db.sessionClassTime.belongsTo(db.Class, {foreignKey: 'idClass'});
+db.Class.hasMany(db.sessionClassTime, {foreignKey: 'idClass'});
+&nbsp;
+module.exports = db;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 13:43:40 GMT+0700 (SE Asia Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

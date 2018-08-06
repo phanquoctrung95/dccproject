@@ -1,0 +1,33 @@
+{
+  "name": "client",
+  "authors": [
+    "donguyen <donguyen0311@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io-client": "^2.0.3",
+    "angular-bootstrap": "^2.5.0",
+    "angular-bootstrap-toggle": "^0.1.2",
+    "angular-ui-bootstrap": "^2.4.0",
+    "angular-ui-calendar": "^1.0.2",
+    "ng-tags-input": "^3.2.0",
+    "underscore": "^1.8.3",
+    "angular-chart": "^0.5.0",
+    "ng-table": "^4.0.0",
+    "angular-validation": "^1.4.4",
+    "angular-ui-router": "^1.0.10",
+    "font-awesome": "^4.7.0",
+    "angular-bootstrap-calendar": "^0.30.0",
+    "chart.js": "^2.7.2"
+  }
+}

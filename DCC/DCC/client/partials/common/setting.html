@@ -1,0 +1,88 @@
+<link rel="stylesheet" type="text/css" href="css/setting.css">
+
+<div class="container" ng-controller="adminSettingCtrl">
+    <div class="row">
+        <div class="col-xs-12">
+        <!-- tabs -->
+        <p>
+            <font size="5"><span class="glyphicon glyphicon-cog">&nbsp</span>Configuration</font>
+        </p>
+        <br>
+            <div id="myTab" class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class = "active"><a data-target="#courseManagement" data-toggle="tab">Course Management</a></li>
+                    <li ><a data-target="#setting1" data-toggle="tab">Setting 1</a></li>
+                    <li ><a data-target="#setting2" data-toggle="tab">Setting 2</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="courseManagement">
+                        <div class="">
+                            <form>
+                                <h4>A high demand course is a course having at least
+                                  <input style="width: 50px; font-size: 18px; text-align: center" min = "1" id="setNumberHighDemand" value="{{numberHighDemand}}" ng-model="numberUpdateHighDemand" type="number" name="numberHighDemand">
+                                requests course.</h4>
+                            </form>
+                            <button ng-disabled="numberUpdateHighDemand == null || numberUpdateHighDemand == numberHighDemand" type="button" class="btn btn-info" ng-click="updateNumberHighDemand()"data-toggle="modal">Save</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="setting1">
+                        <div class="">
+                            <h1>Setting 1</h1>
+                            <p>meant to identify articles which deserve editor attention because they are the most important for an encyclopedia to have, as determined by the community of participating editors. They may also be of interest to readers as an alternative to lists of overview articles.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="setting2">
+                        <div class="">
+                            <h1>Setting 2</h1>
+                            <p>deserve editor attention because they are the most important for an encyclopedia to have, as determined by the community of participating editors. They may also be of interest to readers as an alternative to lists of overview articles.</p>
+                        </div>
+                    </div>
+              </div>
+          </div>
+      <!-- /tabs -->
+
+      <!-- Modal setting number high demmand -->
+      <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Setting</h4>
+              </div>
+              <div class="modal-body">
+                  <form name="adminSetting" role="form" class="form-horizontal" novalidate>
+                      <div class="modal-body">
+                          <!--Set number to define high demand courses-->
+                          <div class="form-group" ng-class="">
+                              <label style="width:40%" class="col-xs-3 control-label">Number high demand course</label>
+                              <div style="width:50%" class="col-xs-8">
+                                  <input min = "1" id="setNumberHighDemand" ng-model="numberUpdateHighDemand" type="number" class="form-control" name="numberHighDemand" placeholder="Enter a number...">
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button ng-disabled="numberUpdateHighDemand == null || numberUpdateHighDemand == numberHighDemand" type="submit" class="btn btn-success" ng-click="updateNumberHighDemand()" data-dismiss="modal">Save</button>
+              </div>
+          </div>
+          </div>
+      </div>
+      <!-- /end modal -->
+      </div>
+    </div>
+</div>
+
+<script>
+    // get active for tab last
+    $(function() {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            localStorage.setItem('lastTab', $(this).attr('data-target'));
+        });
+        var lastTab = localStorage.getItem('lastTab');
+        if (lastTab) {
+            $('[data-target="' + lastTab + '"]').tab('show');
+        }
+    });
+</script>

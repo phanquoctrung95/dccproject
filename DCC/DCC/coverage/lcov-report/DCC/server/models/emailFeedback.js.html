@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for DCC/server/models/emailFeedback.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">DCC/server/models</a> emailFeedback.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/6</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var _emailFeedbackModel = require("./DataObjects/emailFeedback");
+&nbsp;
+module.exports = function (sequelize) {
+    var emailFeedback = sequelize.define('emailFeedback', _emailFeedbackModel, {
+        charset: 'utf8',
+        collate: 'utf8_unicode_ci',
+        classMethods: {
+            // Info about user is email_user, user id, class_id don't feedback which is value's return
+            getAllInfoAboutUserDontFeedback: function (cb) {
+                sequelize.query('SELECT DISTINCT user.email, user.id as traineeId, class_record.classId FROM class_record, user '
+                    + ' WHERE user.id = class_record.traineeId and class_record.status = "Learned" and user.email '
+                    + ' not in (SELECT DISTINCT user.email '
+                    + ' FROM class_record, user WHERE LENGTH(class_record.improve_comments) &gt;= 0 and user.id = class_record.traineeId) AND (user.id,class_record.classId ) '
+                    + ' NOT IN ( SELECT email_feedback.userID, email_feedback.class_id_not_feedback FROM email_feedback) ', {
+                        type: sequelize.QueryTypes.SELECT
+                    }).then(cb);
+            },
+            // Get user is sent email feedback but don't feedback more than 3 days
+            getAllInfoAboutUserIsSentEmailFeedbacMoreThreeDays: function (cb) {
+                sequelize.query('SELECT DISTINCT email_feedback.email_user, email_feedback.userID, email_feedback.class_id_not_feedback '
+                    + ' FROM email_feedback, class_record '
+                    + ' WHERE DATEDIFF(NOW(),email_feedback.lastdate_sent_emailfeedback) &gt;= 3 '
+                    + ' AND email_feedback.userID not in (SELECT class_record.traineeId '
+                    + ' FROM class_record '
+                    + ' WHERE LENGTH(class_record.improve_comments) &gt;= 0) ', {
+                        type: sequelize.QueryTypes.SELECT
+                    }).then(cb);
+            }
+        },
+        tableName: 'email_feedback',
+        timestamps: false
+    });
+    return emailFeedback;
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 13:43:40 GMT+0700 (SE Asia Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

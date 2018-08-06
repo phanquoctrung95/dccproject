@@ -1,0 +1,13 @@
+10:14:41.125 INFO  Post /login 
+10:14:41.185 INFO  User login: qwe@gmail.com 
+10:42:51.906 INFO  GET /logout 
+10:43:04.336 INFO  Post /login 
+10:43:04.408 INFO  User login failed. 
+10:43:08.198 INFO  Post /login 
+10:43:08.212 INFO  User login: abcs@gmail.com 
+10:45:24.311 INFO  GET /logout 
+10:45:29.813 INFO  Post /login 
+10:45:29.851 INFO  User login: qwe@gmail.com 
+14:41:25.409 INFO  Post /login 
+14:41:25.465 INFO  User login: qwe@gmail.com 
+

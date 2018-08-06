@@ -1,0 +1,139 @@
+<link rel="stylesheet" type="text/css" href="css/adminDashboard.css">
+<div ng-include="'partials/adminModule/EmployeesManagement/register/registerModal.html'"></div>
+<div ng-include="'partials/adminModule/EmployeesManagement/UserActivation.html'"></div>
+<div class="container">
+    <div class="span12">
+        <br>
+        <fieldset class="content-border">
+            <legend class="content-border" style="margin-bottom: -2px">EMPLOYEE LIST</legend>
+        <!--Tab header-->
+        <div class="widget-content" style="padding-right: 23px">
+            <blockquote>
+                <div class="col-xs-7 col-md-6 col-sm-6">
+                    <div class="btn btn-success" data-toggle="modal" data-target="#registerUserModal">
+                        <span class="glyphicon glyphicon-plus"></span>&nbspAdd User
+                    </div>
+                </div>
+                <!-- Search box -->
+                <div class="col-xs-5 col-md-6 col-sm-6">
+                    <input ng-model="userSearchKey"class="box-group col-xs-6 col-md-4 col-sm-6" 
+                       type="text" placeholder="Search" style="height: 26px" name="ng-srch-term" id="ng-srch-term">
+                    <div class="col-xs-6 col-md-4" uib-dropdown>
+                        <select class="box-group col-xs-12 col-md-12" style="width: 147px" ng-model="opt">
+                            <option value="1" selected="selected">Activated</option>
+                            <option value="2">Deactivated</option>
+                            <option value="3">All</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-md-4" uib-dropdown>
+                        <select class="box-group col-xs-12 col-md-12" ng-model="trainOptions">
+                            <option value="1" >Trainer</option>
+                            <option value="2">Trainee</option>
+                            <option value="3"  selected="selected">All</option>
+                        </select>
+                    </div>
+                 </div>
+            </blockquote>
+            <div class="row" style="word-wrap: normal; font-size: 16px;cursor: pointer; margin: 0; padding-top: 40px">
+                <div class="col-md-3 col-xs-3" style="text-indent: 0.7em;">
+                    <a ng-click="sortbyName()"><i class="glyphicon glyphicon-user"></i><b>&nbsp Name</b></a>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <a ng-click="sortbyTeam()"><i class="fa fa-users"></i><b>&nbsp Group</b></a>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <a ng-click="sortbyArea()"><i class="glyphicon glyphicon-th-list"></i><b>&nbsp Area</b></a>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <a><i class="glyphicon glyphicon-envelope"></i><b>&nbsp Mail</b></a>
+                </div>
+                <div class="col-md-1 col-xs-1" ng-show="opt==3" style="padding: 0; margin-left: -30px; white-space: nowrap;">
+                    <a ng-click="sortbyStatus()"><i class="glyphicon glyphicon-ok"></i><b>&nbsp Status</b></a>
+                </div>
+            </div>
+            <br>
+                <!--Employees list-->
+                <div ng-repeat="user in UsersList" style="margin-top: 5px;">
+                    <div class="round-wrap" ng-show="userListFilterCondition(user)" style="cursor: pointer; margin-bottom: 15px">
+                        <div class="row" id="shady-lady" style="padding: 0.7em; margin: 0;">    
+                            <div class="col-md-3 col-xs-3" data-toggle="collapse" data-target="#collapse{{user.id}}" ng-click="user.collapsed = !user.collapsed">
+                                <img style="float:left; clear:both; margin-right: 10px; border-radius: 50%; width:45px !important; height:45px !important"
+                                      class="img-responsive" ng-src="{{user.avatar}}" onerror="this.src='/img/profiles/nonExistImg.jpg';">
+                                    <font ng-bind-html="highlight(user.username, userSearchKey)"></font>
+                            </div>
+                            <div class="col-md-2 col-xs-2" style="display: flex; align-items: center;" data-toggle="collapse" data-target="#collapse{{user.id}}"
+                                ng-click="user.collapsed = !user.collapsed">
+                                <i aria-hidden="true"></i><span>&nbsp <font ng-bind-html="highlight(user.belong2Team, userSearchKey)"></font></span>
+                            </div>
+                            <div class="col-md-2 col-xs-2" data-toggle="collapse" data-target="#collapse{{user.id}}" ng-click="user.collapsed = !user.collapsed">
+                                <i aria-hidden="true"></i><span>&nbsp <font ng-bind-html="highlight(user.userType, userSearchKey)"></font></span>
+                            </div>
+                            <div class="col-md-4 col-xs-4" data-toggle="collapse" data-target="#collapse{{user.id}}" ng-click="user.collapsed = !user.collapsed">
+                                <i aria-hidden="true"></i><span><font ng-bind-html="highlight(user.email, userSearchKey)"></font></span>
+                            </div>
+                            <div class="col-md-1 col-xs-1" style="padding-left: 0px">
+                                <!--deactivate user, not delete-->
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#ActivationModal" ng-show="user.status=='activated'" ng-click="showUserActivationForm(user)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                                <a class="btn btn-success" data-toggle="modal" data-target="#ActivationModal" ng-show="user.status=='deactivated'" ng-click="showUserActivationForm(user)">
+                                    <span class="glyphicon glyphicon-repeat"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!--User full information-->
+                <div id="collapse{{user.id}}" class="panel-collapse collapse">
+                    <div class="row" ng-show="userListFilterCondition(user)">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9 col-sm-8" style="border-left:2px none;" class="row" style="padding-bottom:10px; margin-left: 90px;
+                            margin-right: 10px; border: 2px solid; border-radius: 100px 5px 5px 100px; background-color: #f7f7f7;">
+                            <div class="panel-body" >
+                                <div class=" col-md-8 col-lg-8 col-sm-7" style="border-left: 4px solid #D3D3D3">
+                                    <table class="table" id="shady-lady">
+                                        <tbody>
+                                            <tr style="border: hidden">
+                                                <td width="169"><b>Date of Birth</b></td>
+                                                <td><font ng-bind-html="highlight(user.dob, userSearchKey)"></font></td>
+                                            </tr>
+                                            <tr style="border: hidden">
+                                                <td width="169"><b>Phone</b></td>
+                                                <td><font ng-bind-html="highlight(user.phone, userSearchKey)"></font></td>
+                                            </tr>
+                                            <tr style="border: hidden">
+                                                <td width="169"><b>Location</b></td>
+                                                <td><font ng-bind-html="highlight(user.location, userSearchKey)"></font></td>
+                                            </tr>
+                                           
+                                            <tr style="border: hidden" ng-show = "user.isTrainer" >
+                                                <td><b>Average Rating</b></td>
+                                                <td><font ng-bind-html="user.isTrainer === true? GPA(user.id) : 0"></font></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-sm-4" ng-show="user.status=='activated'">
+                                    <label class="control-label"><input type="checkbox" name="RoleSetting" ng-model="user.isAdmin">&nbsp Admin</label></br>
+                                    <label class="control-label"><input type="checkbox" name="RoleSetting" ng-model="user.isTrainer">&nbsp Trainer</label></br>
+                                    <label class="control-label"><input type="checkbox" name="RoleSetting" ng-model="user.isExperienced">&nbsp Experienced</label></br>
+                                    <b>Area &nbsp</b>
+                                    <select class="box-group" ng-model="user.userType">
+                                        <option value="AXE">AXE</option>
+                                        <option value="CBA">CBA</option>
+                                        <option value="IMS">IMS</option>
+                                        <option value="Intern">Intern</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1 col-lg-1 col-sm-1" ng-show="user.status=='activated'">
+                                    <br/>
+                                    <button type="button" class="btn btn-success" ng-click="updateUserRole(user)">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </fieldset>
+    </div>
+</div>

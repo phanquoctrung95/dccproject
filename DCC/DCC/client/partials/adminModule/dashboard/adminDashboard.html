@@ -1,0 +1,278 @@
+<link rel="stylesheet" type="text/css" href="css/adminDashboard.css">
+<div ng-include="'partials/traineeModule/dashboard/feedbackModal.html'"></div>
+<dix ng-include"'partials/adminModule/openingclass/openingclass.html'"></div>
+<div ng-include="'partials/adminModule/EmployeesManagement/register/registerModal.html'"></div>
+<div ng-include="'partials/calendarModule/calendarModal.html'"></div>
+<div class="container container-resize" ng-controller="adminDashboardCtrl">
+    <div>
+      <br>
+      <div class="admin-dashboard-content" ng-controller="courseManagementCtrl">
+          <fieldset class="content-border">
+              <legend class="content-border"> HIGHLIGHTS </legend>
+                  <!-- Request open courses -->
+                  <div class="dropdown" style="float:left">
+                      <a ng-click="LoadDefaultadminRequestOpenCourseList()" data-toggle="modal" data-target="#collapse_request">
+                          <blockquote class="blockquote mostRequestedCourses">
+                              <p class="list-content">Most requested courses</p>
+                              <p style="margin-left:70px; color:black"><i>Have </i><b> {{adminRequestOpenCourseList.length}} </b> <i>courses requested </i></p>
+
+                          </blockquote>
+                      </a>
+                  </div>
+                  <!-- <div class="dropdown" ng-controller="NotiController" style="float:right; margin-right:30px">
+                      <a class="btn btn-info btn-pending" data-toggle="dropdown" data-target="" ng-click="getNotificationsRequestCourseList()" ng-show="userInfo.NumberofNewNotificationRequestCourse == 1"><span>{{userInfo.NumberofNewNotificationRequestCourse}} <i>new request</i></span></a>
+                      <a class="btn btn-info btn-pending" data-toggle="dropdown" data-target="" ng-click="getNotificationsRequestCourseList()" ng-show="userInfo.NumberofNewNotificationRequestCourse > 1"><span>{{userInfo.NumberofNewNotificationRequestCourse}} <i>new requests</i></span></a> -->
+                      <!-- <a class="btn btn-info btn-pending-dark" data-toggle="dropdown" data-target="" ng-click="getNotificationsRequestCourseList()" ng-show="userInfo.NumberofNewNotificationRequestCourse == 0" ><span><i>Recent requests</i></span></a> -->
+                      <!-- <ul class="dropdown-menu" id="NotificationCard">
+                          <li id="NotificationCardHeader">
+                              <center><span style="font-size: 18px;color:black">Recent request course</span></center>
+                          </li>
+                          <li ng-show="userInfo.userNotificationsRequestCourse.length == 0">
+                              <center>No request unseen</center>
+                          </li>
+                          <li class="divider" style="margin: 0;"></li>
+                          <a>
+                          <div id="CardContent" style="max-height: 300px; overflow-y: auto">
+                              <li ng-show="userInfo.userNotifications.length == 0">
+                                  <center>No notification</center>
+                              </li>
+                              <li ng-repeat="notification in userInfo.userNotificationsRequestCourse" ng-style="{'background-color': notification.status == 3 ? '#EAEAEF' : 'white'}"
+                                  ng-click="UpdateNotificationStatus(notification)">
+                                  <div style="padding-left: 20px; padding-right: 20px;">
+                                      <font>{{notification.title}}</font>
+                                      <p class="pull-right">{{notification.time}}</p>
+                                      <p style="color:darkgrey;" ng-bind-html="notification.content"></p>
+                                  </div>
+                                  <div class="divider" style="margin: 0;"></div>
+                              </li>
+                          </div>
+                        </a>
+                      </ul> -->
+                  <!-- </div> -->
+          </fieldset>
+          <fieldset class="content-border">
+              <legend class="content-border"> MANAGEMENT </legend>
+                  <!-- Show add new class -->
+                  <!-- <div>
+                    <a data-toggle="modal" data-target="#addEditClassModal" ng-click="showAddFastClassForm()">
+                        <blockquote class="blockquote addTPAndCourse">
+                            <p class="list-content">Add new class old</p>
+                        </blockquote>
+                    </a>
+                </div>
+              <br> -->
+                  <div>
+                        <a  href="#/admin_classAdding" >
+                            <blockquote class="blockquote addClass">
+                                <p class="list-content">Add new class</p>
+                            </blockquote>
+                        </a>
+                    </div>
+                  <br>
+
+                  <!-- Show add new training program & course -->
+                  <div>
+                      <a ui-sref="admin_courseManagement" href="#/admin_courseManagement">
+                          <blockquote class="blockquote addTPAndCourse">
+                              <p class="list-content">Training management</p>
+                          </blockquote>
+                      </a>
+                  </div>
+                  <br>
+
+                  <!-- Show class management-->
+                  <div>
+                      <a ui-sref="OpeningClass">
+                        <blockquote class="blockquote classManagement">
+                            <p class="list-content">Class management</p>
+                        </blockquote>
+                      </a>
+                  </div>
+                  <br>
+
+                  <!-- Show employee management-->
+                  <div>
+                      <a ui-sref="EmployeesManagement">
+                        <blockquote class="blockquote employeeManagement">
+                            <p class="list-content">Employee management</p>
+                        </blockquote>
+                      </a>
+                  </div>
+                  <br>
+
+                  <!-- Show training program overview -->
+                  <div>
+                      <a ng-click="LoadDefaultTrainingProgram()" data-toggle="modal" data-target="#collapse_trainingProgram">
+                          <blockquote class="blockquote trainingProgramOverview">
+                              <p class="list-content">Training program overview</p>
+                          </blockquote>
+                      </a>
+                  </div>
+          </fieldset>
+      </div>
+
+      <!--Show calendar-->
+      <div class="widget-content round-wrap mini-calendar" ng-controller="modifiedCalendarController">
+          <div ui-calendar="uiModifiedConfig.calendar" class="container-fluid calendar" ng-model="eventSources" calendar="myCalendar"></div>
+          <div ng-show="data.error" class="alert">
+              <strong>Error!</strong> {{data.errorMsg}}
+          </div>
+          <a class="container-fluid entire-calendar-modal" data-toggle="modal" data-target="#calendarModal">
+              <span class="glyphicon glyphicon-calendar"></span> Show entire calendar
+          </a>
+      </div>
+    </div>
+
+    <!-- Modal for functions -->
+    <!-- Modal Most Requested courses -->
+    <div id="collapse_request" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 style="text-align: center;" class="title-items">Most requested courses</h3>
+                  </div>
+                  <div class="modal-body">
+                      <center ng-show="adminRequestOpenCourseList.length == 0">
+                          <h4>Requested courses are not available.</h4>
+                      </center>
+                      <div class="widget-content" style="background-color: #fff">
+                          <div class="modal-content-round-wrap" ng-repeat="adminRequestOpenCourse in adminRequestOpenCourseListLimit">
+                              <div class="row" style="padding-bottom: 10px; margin: 0px">
+                                  <div class="col-sm-10 col-xs-9">
+                                      <blockquote class="blockquote" style="border-left: none; padding-left:0px;">
+                                          <a ui-sref="courseDetail({courseId: adminRequestOpenCourse.course.id})" style=" word-wrap: break-word">
+                                              <img style="float:left; clear:both; margin:8px;" alt="course-icon" class="img-responsive" ng-src="{{adminRequestOpenCourse.course.imgLink}}"
+                                              width="70px">
+                                              {{adminRequestOpenCourse.course.name}}
+                                              <p class="ClassItemsDescription" style="color: black; margin-left:85px" ng-bind-html="adminRequestOpenCourse.course.description"></p>
+                                          </a>
+                                      </blockquote>
+                                  </div>
+                                  <div class="col-sm-2 col-xs-3">
+                                      <center>
+                                          <br>
+                                          <div>{{adminRequestOpenCourse.numberOfRequest}} <i class="glyphicon glyphicon-user"></i></div>
+                                          <br>
+                                      </center>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div ng-hide="DemandOpenCourseList.length <= 3" ng-show="DemandOpenCourseListLimit.length != DemandOpenCourseList.length"  style="text-align: center; max-height: 200px; overflow-y: auto">
+                  <div ng-hide="adminRequestOpenCourseList.length <= 3" ng-show="adminRequestOpenCourseListLimit.length != adminRequestOpenCourseList.length"  style="text-align: center; max-height: 200px; overflow-y: auto">
+                      <span style="color: blue; font-size: 13px; font-weight: 100; cursor: pointer" id="see-more" ng-click="LoadMoreadminRequestOpenCourseList()">See more</span>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+              </div>
+          </div>
+    </div>
+
+    <!-- Modal Training Program Overview -->
+    <div id="collapse_trainingProgram" class="modal fade" ng-controller="courseManagementCtrl" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 style="text-align: center;" class="title-items">Training program overview</h3>
+                  </div>
+                  <div class="modal-body">
+                    <center ng-show="adminTrainingProgramList.length == 0">
+                        <h4>Training program is not available.</h4>
+                    </center>
+                    <div ng-repeat="trainingProgram in adminTrainingProgramListLimit" style="margin-top: 5px">
+                        <div class="modal-content-round-wrap" style="background-color: #fff">
+                            <a data-toggle="collapse" data-target="#collapse{{trainingProgram.id}}" ng-click="trainingProgram.collapsed = !trainingProgram.collapsed">
+                                <blockquote class="blockquote">
+                                    <img style="float:left; clear:both; margin-right: 10px;" alt="training-program-icon" class="img-responsive" ng-src="{{trainingProgram.imgLink}}"
+                                        width="70px"> {{trainingProgram.name}}
+                                        <p class="TrainingItemsDescription" ng-bind-html="trainingProgram.description"></p>
+                                        {{trainingProgram.CourseType.name}}
+                                        <center ng-hide="trainingProgram.collapsed"><span class="glyphicon glyphicon-menu-down"></span></center>
+                                        <center ng-show="trainingProgram.collapsed"><span class="glyphicon glyphicon-menu-up"></span></center>
+                                </blockquote>
+                            </a>
+                        </div>
+                        <div id="collapse{{trainingProgram.id}}" class="panel-collapse collapse">
+                            <ul class="list-group" style="list-style-type:none">
+                                <li class="row" style="background-color: #fff" ng-repeat="myCourse in trainingProgram.Courses" >
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-8 col-sm-8" style="border-left:2px solid {{myCourse.backgroundColor}}; margin-bottom: 10px ;Width: 80%" id="forfun2">
+                                        <blockquote class="blockquote">
+                                            <a ui-sref="courseDetail({courseId: myCourse.id})" data-dismiss="modal">
+                                                <img style="float:left; clear:both; margin-right:10px;" alt="course-icon" class="img-responsive" ng-src="{{myCourse.imgLink}}"
+                                                    width="70px"> {{myCourse.name}}
+                                                <p class="ClassItemsDescription" ng-bind-html="myCourse.description"></p>
+                                            </a>
+                                        </blockquote>
+                                    </div>
+                                    <br/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+                  <div ng-hide="adminTrainingProgramList.length <= 3" ng-show="adminTrainingProgramListLimit.length != adminTrainingProgramList.length"  style="text-align: center; max-height: 200px; overflow-y: auto">
+                      <span style="color: blue; font-size: 13px; font-weight: 100; cursor: pointer" id="see-more" ng-click="LoadMoreTrainingProgram()">See more</span>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+    </div>
+
+    <!-- Modal show info request course when click on notification  -->
+    <div id="requestNotiModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 style="text-align: center;" class="title-items">Notification Information</h3>
+                  </div>
+                  <div class="modal-body">
+                      <div class="widget-content" style="background-color: #fff">
+                          <div class="modal-content-round-wrap">
+                              <center><h4>Requester: {{userRequested.username}}</h4></center>
+                              <blockquote class="blockquote" style="border-left: none; padding-left:10px;">
+                                  <img style="float:left; border-radius: 50%; clear:both; margin:8px;" alt="user-icon" class="img-responsive" ng-src="{{userRequested.avatar}}"
+                                  width="70px">
+                                  <p class="ClassItemsDescription" style="color: black; margin-left:100px">
+                                  Email: <b>{{userRequested.email}}</b>
+                                  <br>
+                                  Phone: <b>{{userRequested.phone}}</b>
+                                  <br>
+                                  Team: <b>{{userRequested.userType}}</b>
+                                  </p>
+                              </blockquote>
+                              <hr>
+                              <div class="row" style="margin: 0px">
+                                  <div class="col-sm-10 col-xs-9">
+                                      <blockquote class="blockquote" style="border-left: none; padding-left:0px;">
+                                          <a ui-sref="courseDetail({courseId: RequestCourseNoti.id})" style=" word-wrap: break-word">
+                                              <img style="float:left; clear:both; margin:8px;" alt="course-icon" class="img-responsive" ng-src="{{RequestCourseNoti.imgLink}}"
+                                              width="70px">
+                                              {{RequestCourseNoti.name}}
+                                              <p class="ClassItemsDescription" style="color: black; margin-left:85px" ng-bind-html="RequestCourseNoti.description"></p>
+                                          </a>
+                                      </blockquote>
+                                  </div>
+                                  <div class="col-sm-2 col-xs-3">
+                                      <center>
+                                          <br>
+                                          <div>{{RequestCourseNoti.numberOfRequest}}<i class="glyphicon glyphicon-user"></i></div>
+                                          <br>
+                                      </center>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>

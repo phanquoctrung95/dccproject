@@ -1,0 +1,219 @@
+<link rel="stylesheet" type="text/css" href="css/adminDashboard.css">
+<div ng-include="'partials/calendarModule/calendarModal.html'"></div>
+<body> 
+    <div id="addEditClassModal" role="dialog" ng-controller="admin_classAdding" onLoad="refreshArrayTime()">
+        <div class="container container-resize" >
+            <br>
+            <div class="admin-dashboard-content">
+                <fieldset class="content-border">
+                    <legend class="content-border"  style="margin-bottom: 10px">ADD NEW CLASS</legend>
+                <form name="addEditForm" role="form" class="form-horizontal" novalidate>
+                    <div class="modal-body"> 
+                        <!-- Training program -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.trainingProgramId.$invalid && !addEditForm.trainingProgramId.$pristine }">
+                                <label class="col-sm-4 control-label">Training Program </label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="trainingProgramId" ng-options="trainingProgram.name for trainingProgram in adminTrainingProgramList track by trainingProgram.id "
+                                        ng-model="trainingProgramSelected">
+                                        <option style="font-style:italic" value="">--- select training program ---</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Course Name -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.courseId.$invalid && !addEditForm.courseId.$pristine }">
+                                <label class="col-sm-4 control-label">Course </label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="courseId" ng-options="course.id as course.name for course in trainingProgramSelected.Courses track by course.id " 
+                                        ng-model="adminClassModel.courseId" id="courseId">
+                                        <option style="font-style:italic" value="">--- select course ---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.location.$invalid && !addEditForm.location.$pristine }">
+                                <label class="col-sm-4 control-label">Location</label>
+                                <div class="col-sm-8">
+                                    <select ng-show="!otherLocation" class="form-control" name="location" ng-options="location for location in locationList track by location"
+                                        ng-model="adminClassModel.location">
+                                        <option style="font-style:italic" value="">--- select location ---</option>
+                                    </select>
+                                    <input ng-show="otherLocation" type="text" class="form-control" name="location" ng-model="adminClassModel.location" required>
+                                    <p ng-show="addEditForm.location.$invalid && !addEditForm.location.$pristine" class="help-block">Class location is required.</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="checkotherLocation" ng-init="otherLocation = false" ng-click="otherLocation = !otherLocation"> Other location</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        <!-- Trainer -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.trainerID.$invalid && !addEditForm.trainerID.$pristine }">
+                                <label class="col-sm-4 control-label">Trainer</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="trainerID" ng-options="trainer.username for trainer in trainerList track by trainer.id "
+                                        ng-model="adminClassModel.trainer">
+                                        <option value="">--- select trainer ---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All teams of course -->
+                        <div class="marginRight">
+                            <div class="form-group" >
+                                <label class="col-sm-4 control-label">Groups</label>
+                                <div class="col-sm-8">
+                                    <tags-input ng-model="adminClassModel.groupId" key-property="id" display-property="groupName" placeholder="Add some groups who will learn here" replace-spaces-with-dashes="false">
+                                        <auto-complete source="loadGroups($query)" load-on-focus="true" load-on-empty="true" max-results-to-show="100" template="template-auto-complete-team">
+                                        </auto-complete>
+                                    </tags-input>
+                                    <script type="text/ng-template" id="template-auto-complete-team">
+                                
+                                        <div class="right-panel">
+                                            <span title="ABC">{{data.groupName}}</span>
+                                        </div>
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- autocomplete-->
+                        <div class="marginRight">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Specific Attendee</label>
+                                <div class="col-sm-8">
+                                    <tags-input ng-model="adminClassModel.specificAttendant" key-property="id" display-property="email" placeholder="Add some emails here" replace-spaces-with-dashes="false">
+                                        <auto-complete source="loadUsers($query)" load-on-focus="true" load-on-empty="true" max-results-to-show="100" template="template-auto-complete">
+                                        </auto-complete>
+                                    </tags-input>
+                                    <script type="text/ng-template" id="template-auto-complete">
+                                    <div class="left-panel">
+                                        <img ng-src="{{data.avatar}}" />
+                                    </div>
+                                    <div class="right-panel">
+                                        <span title="{{data.email}} ({{data.username}})">{{data.email}}</span>
+                                        <span title="{{data.email}} ({{data.username}})">({{data.username}})</span>
+                                        <span title="{{data.phone}}">Phone: {{data.phone}}</span>
+                                    </div>
+                                </script>
+                                </div>
+                            </div>
+                        </div>     
+
+                        <!-- Date -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.dayOfStart.$invalid && !addEditForm.dayOfStart.$pristine }">
+                                <label class="col-sm-4 control-label">Date require</label>
+                                <div class="col-sm-8" ng-controller="DateTimepickerCtrl">
+                                    <div class="col-sm-8" style="margin-left: -15px">
+                                        <p class="input-group">
+                                            <input name="dayOfStart" type="text" class="form-control" value="2018/06/14" uib-datepicker-popup="{{format}}" ngValue="{{adminClassModel.startTime | date: 'dd/mm/yyyy'}}"
+                                                ng-model="adminClassModel.dayOfStart" is-open="popup1.opened" datepicker-options="dateOptions"
+                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="open1()">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </button>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <p ng-show="addEditForm.startTime.$invalid && !addEditForm.startTime.$pristine" class="help-block">Start time is required.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add truc tiep -->
+                        <div class="marginRight">
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.dayOfStart.$invalid && !addEditForm.dayOfStart.$pristine }">
+                                <label class="col-sm-4 control-label" style="margin-top: 33px">Start time</label>
+    
+                                <div class="col-sm-8" ng-controller="DateTimepickerCtrl" >
+                                    <div class="col-sm-6" style="margin-left: -15px">
+                                        <div uib-timepicker ng-model="adminClassModel.timeOfStart" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" id="starttime"></div>
+                                    </div>
+                                    <p ng-show="addEditForm.startTime.$invalid && !addEditForm.startTime.$pristine" class="help-block">Start time is required.</p>
+                                </div>
+                            </div> 
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.dayOfEnd.$invalid && !addEditForm.dayOfEnd.$pristine }">
+                                <label class="col-sm-4 control-label" style="margin-top: 33px">End time</label>
+                                <div class="col-sm-8" ng-controller="DateTimepickerCtrl">
+                                    <div class="col-sm-6" style="margin-left: -15px">
+                                        <div uib-timepicker ng-model="adminClassModel.timeOfEnd" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" id="endtime"></div>
+                                    </div>
+                                    
+                                    <p ng-show="addEditForm.endTime.$invalid && !addEditForm.endTime.$pristine" class="help-block">End time is required.</p>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error' : addEditForm.dayOfEnd.$invalid && !addEditForm.dayOfEnd.$pristine }">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <button type="button" class="btn btn-info btn-small" ng-click="myClickHere()" style="margin-left: 8px">Add time</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khuc nay la khuc start time endtime-->
+                        <div class="marginRight">
+                            <div ng-show="arrayTime.length > 0" class="form-group" ng-class="{ 'has-error' : addEditForm.trainerID.$invalid && !addEditForm.trainerID.$pristine }">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <table class="table-striped" id="tableTime">
+                                        <thead>
+                                            <tr>
+                                                <th>Start Time</th>
+                                                <th>End Time</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="item in arrayTime">
+                                                <td class="formatDate">{{ item.starttime | date: "dd/MM/yyyy HH:mm"}}</td>
+                                                <td class="formatDate">{{ item.endtime | date: "dd/MM/yyyy HH:mm"}}</td>
+                                                <td>
+                                                    <button class="btn btn-danger" ng-click="myClickDelete(item.key)">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+    
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="infor_error_addtime" style="text-align:center; color:red"> </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success" ng-click="addEditClassClick()" data-dismiss="modal" ng-disabled="addEditForm.$invalid">{{addEditClassFormAction}}</button>
+                                <a href="#/admin_dashboard">
+                                    <button type="submit" class="btn btn-default" ng-click="refreshArrayTime()" data-dismiss="modal">Cancel</button>
+                                </a>  
+                            </div>
+                        </div>
+                </form>
+            </div>
+                <div class="widget-content round-wrap mini-calendar" ng-controller="modifiedCalendarController">
+                    <div ui-calendar="uiModifiedConfig.calendar" class="container-fluid calendar" ng-model="eventSources" calendar="myCalendar"></div>
+                    <div ng-show="data.error" class="alert">
+                        <strong>Error!</strong> {{data.errorMsg}}
+                    </div>
+                    <a class="container-fluid entire-calendar-modal" data-toggle="modal" data-target="#calendarModal">
+                        <span class="glyphicon glyphicon-calendar"></span> Show entire calendar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

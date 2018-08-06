@@ -1,0 +1,248 @@
+<!-- /navbar -->
+<nav class="navbar navbar-dashboard navbar-fixed-top topnav" role="navigation">
+    <div class="container container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#loginNavbar2">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-home" href="/#home">
+                <img class="navbar-logo img-responsive" ng-src="/img/logo/DCC-icon.png" alt="DCC Logo" width="95px">
+                <a id="homepageid" class="navbar-name" href="/#home">DEK<br>Competence Center</a>
+            </a>
+        </div>
+
+        <div class="collapse  navbar-collapse" id="loginNavbar2">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;">
+                <li ng-show="($state.current.name == 'home')&&(userInfo.status != 'newuser')">
+                    <a ng-show="userInfo.role == 3" id="button-dashboard" href="#trainee_dashboard" style="font-size: 17px;">Dashboard</a>
+                    <a ng-show="userInfo.role == 2 && featureToggle.trainerDashboard" id="button-dashboard" href="#trainer_dashboard" style="font-size: 17px;">Dashboard</a>
+                    <a ng-show="userInfo.role == 1" id="button-dashboard" href="#admin_dashboard" style="font-size: 17px;">Dashboard</a>
+                </li>
+                <li>
+                    <a id="button-curriculum2" style="font-size: 17px;">Curriculum</a>
+                </li>
+
+                <li>
+                    <a data-toggle="modal" data-target="#loginModal" ng-show="!userInfo" style="font-size: 17px;">Login</a>
+                </li>
+                <li class="brand dropdown" ng-show="userInfo" id="userMenu">
+                    <a class="dropdown-toggle" data-toggle="dropdown" style="padding:2px; font-weight: bold; font-size: 17px;">
+                        <img style="display: inline-block; margin-right: 5px; border-radius: 50%; border: 1px solid black; width:45px !important; height:45px !important"
+                            class="img-responsive" ng-src="{{userInfo.avatar}}">
+                            {{userInfo.username}} &nbsp <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="margin: 2px;">
+                        <li ng-show="userInfo.status != 'newuser'">
+                            <a href="#userProfile">
+                                <font size="3"><span class="glyphicon glyphicon-user">&nbsp</span>Profile</font>
+                            </a>
+                        </li>
+
+                        <!-- <li ng-show="userInfo.password != null"> -->
+                        <li>
+                            <a data-toggle="modal" data-target="#changePassword2">
+                                <font size="3"><span class="glyphicon glyphicon-lock">&nbsp</span>Change Password</font>
+                            </a>
+                        </li>
+
+                        <li ng-show="userInfo.role == 1">
+                            <a href="/#setting" ng-click="">
+                                <font size="3"><span class="glyphicon glyphicon-cog">&nbsp</span>Setting</font>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#logout">
+                                <font size="3"><span class="glyphicon glyphicon-log-out">&nbsp</span>Logout</font>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Drop down list notification of bell -->
+                <li class="brand dropdown notificatonList" ng-show="userInfo" id="userMenu" ng-controller="NotiController">
+                    <a class="dropdown-toggle" data-toggle="dropdown" ng-click="getNotificationsList()">
+                        <span class="glyphicon glyphicon-bell"></span>
+                        <sup id="NotifyCounter" ng-show="userInfo.NumberofNewNotification > 0">{{userInfo.NumberofNewNotification}}</sup>
+                    </a>
+                    <ul class="dropdown-menu" id="NotificationCard">
+                        <li id="NotificationCardHeader">
+                            <span style="font-size: 18px; color:black">Notifications</span>
+                            <a data-toggle="modal" data-target="#NotiSetting2" class="pull-right" ng-click="SyncNotificationSetting()">
+                                <span class="glyphicon glyphicon-cog" style="font-size: initial;"></span>
+                            </a>
+                        </li>
+                        <li class="divider" style="margin: 0;"></li>
+                        <div id="CardContent" style="max-height: 300px; overflow-y: auto">
+                            <li ng-show="userInfo.userNotifications.length == 0">
+                                <center>No notification</center>
+                            </li>
+                            <!-- Get every line notify in here -->
+                            <li ng-repeat="notification in userInfo.limitNotifications" ng-style="{'background-color': notification.status ? '#EAEAEF' : 'white'}"
+                                ng-click="UpdateNotificationStatus(notification)">
+                                <div style="padding-left: 20px; padding-right: 20px;">
+                                    <font>{{notification.title}}</font>
+                                    <p class="pull-right">{{notification.time}}</p>
+                                    <p style="color:darkgrey;" ng-bind-html="notification.content"></p>
+                                </div>
+                                <div class="divider" style="margin: 0;"></div>
+                            </li>
+                        </div>
+                        <div style="text-align: center; max-height: 200px; overflow-y: auto">
+                            <span style="color: blue; font-size: 13px; font-weight: 100" id="see-more2" ng-click="LoadMorecNotification()">See more</span>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="subnavbar">
+    <div class="subnavbar-inner" style="height: 35px;">
+        <div class="container">
+            <ul class="mainnav">
+                <li ng-class="{active: $state.includes('admin_dashboard')}" class="dropdown subnavbar-open-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">
+                        <i style="color: #00ba8b;" class="icon-dashboard"></i>
+                        <span ng-show="userInfo.role == 1 && $state.current.name !='trainee_dashboard'" style="padding-top: 6px; padding-left: 35px; font-size: 15px;  color: #00ba8b;">Admin Dashboard &nbsp<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                        <span ng-show="userInfo.role==3 || ($state.current.name =='trainee_dashboard' && userInfo.role == 1)" style="padding-top: 6px; padding-left: 35px; font-size: 15px; color: #00ba8b;">Trainee Dashboard &nbsp<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="userInfo.isTrainee" ng-click="userInfo.role = 3"><a href="/#trainee_dashboard">Trainee Dashboard</a></li>
+                        <li ng-show="userInfo.isAdmin" ng-click="userInfo.role = 1"><a href="/#admin_dashboard">Admin Dashboard</a></li>
+                    </ul>
+                </li>
+                <!-- <li ng-class="{active: $state.includes('admin_courseManagement')}"><a ui-sref="admin_courseManagement"><i class="icon-book"></i><span>Course</span> </a></li>
+                <li ng-class="{active: $state.includes('OpeningClass')}"><a ui-sref="OpeningClass"><i class="icon-trello "></i><span>Class</span> </a> </li>
+                <li ng-class="{active: $state.includes('EmployeesManagement')}"><a ui-sref="EmployeesManagement"><i class="icon-group "></i><span>Employees Management</span> </a> </li>
+            </ul> -->
+        </div>
+    </div>
+    <!-- /subnavbar-inner -->
+</div>
+
+<div ng-controller="changePasswordController">
+    <div class="modal fade" id="changePassword2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form name="changePasswordForm" role="form" class="form-horizontal" novalidate>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Change User Password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--Enter old password-->
+                        <div class="form-group" ng-class="{ 'has-error' : changePasswordForm.currentPassword.$invalid && !changePasswordForm.currentPassword.$pristine }">
+                            <label class="col-xs-3 control-label">Current Password</label>
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" name="currentPassword" ng-model="changePassword.oldPassword" placeholder="Type your current password"
+                                    required>
+                                <p ng-show="changePasswordForm.currentPassword.$invalid && !changePasswordForm.currentPassword.$pristine" class="help-block">Wrong password!</p>
+                            </div>
+                        </div>
+                        <!--Enter new password-->
+                        <div class="form-group" ng-class="{ 'has-error' : (changePasswordForm.newPassword.$invalid && !changePasswordForm.newPassword.$pristine) || passStrengthError }">
+                            <label class="col-xs-3 control-label">New Password</label>
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" name="newPassword" ng-model="changePassword.newPassword" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d!@#\$%\^\&*\)\(+=._-]{8,}$/"
+                                    placeholder="Type your new password" required>
+                                    <p ng-show="changePasswordForm.newPassword.$invalid && !changePasswordForm.newPassword.$pristine" class="help-block">
+                                        Password must have at least 8 characters, one uppercase letter, one lowercase letter, one number and symbol
+                                    </p>
+                            </div>
+                        </div>
+                        <!--Confirm your password-->
+                        <div class="form-group" ng-class="{ 'has-error' : (changePasswordForm.newPasswordAgain.$invalid && !changePasswordForm.newPasswordAgain.$pristine) || ((changePassword.newPasswordAgain != changePassword.newPassword) && !changePasswordForm.newPasswordAgain.$pristine) }">
+                            <label class="col-xs-3 control-label">Confirm Password</label>
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" name="newPasswordAgain" ng-model="changePassword.newPasswordAgain" placeholder="Re-type your new password"
+                                    required>
+                                <p ng-show="(changePasswordForm.newPasswordAgain.$invalid && !changePasswordForm.newPasswordAgain.$pristine) || ((changePassword.newPasswordAgain != changePassword.newPassword) && !changePasswordForm.newPasswordAgain.$pristine)"
+                                    class="help-block"> These passwords don' t match!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-click="confirmChange()" data-dismiss="modal" ng-disabled="changePasswordForm.$invalid || ((changePassword.newPasswordAgain != changePassword.newPassword) && !changePasswordForm.newPasswordAgain.$pristine)">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="NotiController">
+    <div class="modal fade" id="NotiSetting2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form name="NotiSettingForm" role="form" class="form-horizontal" novalidate>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Notification Setting</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-1"></div>
+                        <label class="control-label"><input type="checkbox" name="NotiSettingOption" ng-model="userInfo.isNotificationDesktop">&nbsp Web push notifications</label><br>
+                        <div class="col-xs-1"></div>
+                        <label class="control-label"><input type="checkbox" name="NotiSettingOption" ng-model="userInfo.isNotificationEmail">&nbsp Email</label><br>
+                        <div ng-show="userInfo.isNotificationEmail" class="row" style="position: relative;">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-3">
+                                <div class="col-xs-2" ng-show="userInfo.isNotificationEmail"></div>
+                                <label><input type="radio" name="MailPeriod" value="Daily" ng-model="userInfo.EmailPeriod"/>&nbsp Daily </label><br/>
+                                <div class="col-xs-2" ng-show="userInfo.isNotificationEmail"></div>
+                                <label><input type="radio" name="MailPeriod" value="Weekly" ng-model="userInfo.EmailPeriod"/>&nbsp Weekly</label ><br/>
+                                <div class="col-xs-2" ng-show="userInfo.isNotificationEmail"></div>
+                                <label><input type="radio" name="MailPeriod" value="Monthly" ng-model="userInfo.EmailPeriod"/>&nbsp Monthly</label ><br/>
+                                <!--<div class="col-xs-2" ng-show="userInfo.isNotificationEmail"></div>
+                                <label><input type="radio" name="MailPeriod" value="Custom" ng-model="userInfo.EmailPeriod" disabled/>&nbsp Custom</label ><br/>-->
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4"  style="margin-top: 35px;" uib-dropdown ng-show="userInfo.EmailPeriod == 'Weekly'">
+                                    <select class="NotificationSettingCombobox" ng-init="Weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']"
+                                            ng-model="userInfo.WeekdayOption" ng-options="Weekdays.indexOf(weekday) as weekday for weekday in Weekdays"/>
+
+                                </div>
+                                <div class="col-xs-4" style="margin-top: 35px;" uib-dropdown ng-show="userInfo.EmailPeriod == 'Monthly'">
+                                    <select class="NotificationSettingCombobox" ng-model="userInfo.DateOption" ng-options="date as date for date in Dates"><!--date == value-->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-click="SaveSetting()" data-dismiss="modal" ng-disabled="NotiSettingForm.$invalid || (userInfo.isNotificationEmail && userInfo.EmailPeriod === null)">Save</button>
+                        <button class="btn btn-default" data-dismiss="modal" ng-disabled="NotiSettingForm.$invalid">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        'use strict';
+
+        $("#button-curriculum2").click(function (e) {
+            window.location.href = "#home";
+            //        e.preventDefault();
+            var curriculum = $("#curriculum");
+            if (curriculum.length) {
+                $('html, body').animate({
+                    scrollTop: curriculum.offset().top - 88
+                }, 500);
+            }
+        });
+
+        $('#see-more2').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+
+
+</script>

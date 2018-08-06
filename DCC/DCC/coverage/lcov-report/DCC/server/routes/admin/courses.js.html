@@ -1,0 +1,2174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for DCC/server/routes/admin/courses.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">DCC/server/routes/admin</a> courses.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.13% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>237/244</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>48/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>74/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.1% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>234/241</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">354x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">var router = require('express').Router();
+var models = require('../../models');
+var log = require('../../config/config')["log"];
+var notification = require('../../notification');
+var Job = require('../../automatic');
+var _ = require('underscore');
+var ics = require('ics');
+var fs = require('fs');
+var settings;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync('settings.js') == true)
+<span class="cstat-no" title="statement not covered" >    settings = require('../../../settings.js');</span>
+else
+    settings = require('../../../settingsDefault.js');
+var uuid = require('uuid/v1');
+// get all class and trainer
+//  return class Array with trainer name and class nam
+router.get('/getAllClassFullDetail', function (req, res) {
+    models.User.findAll({
+        include: [{
+            model: models.Class,
+            include: [
+                models.Course
+            ]
+        }]
+    }).then(function (data) {
+        var classList = [];
+        for (let i = 0; i &lt; data.length; i++) {
+            classList.push(data[i].dataValues);
+        }
+        res.send({
+            success: true,
+            data: classList
+        });
+    })
+});
+&nbsp;
+// add course to database
+router.post('/addCourse', function (req, res) {
+    models.Course.sync({
+        force: false
+    }).then(function () {
+        // this function check if the courseName is already existed
+        models.Course.getByName(req.body.name, function (result) {
+            if (result) {
+                res.send({
+                    success: false,
+                    msg: 'Name already existed. Add fail!'
+                });
+            } else {
+                models.Course.add(
+                    req.body.name,
+                    req.body.description,
+                    req.body.duration,
+                    req.body.test,
+                    req.body.documents,
+                    req.body.trainingProgramId,
+                    function () {
+                        res.send({
+                            success: true,
+                            msg: "Add Course Success"
+                        });
+                    });
+            }
+        });
+    });
+});
+&nbsp;
+// update course in database
+router.post('/updateCourse', function (req, res) {
+    models.Course.sync({
+        force: false
+    }).then(function () {
+        models.Course.getByName(req.body.name, function (result) {
+            if (result) {
+                var courseDetail = {
+                    id: req.body.id,
+                    name: req.body.name,
+                    description: req.body.description,
+                    duration: req.body.duration,
+                    test: req.body.test,
+                    documents: req.body.documents,
+                }
+                models.Course.edit(
+                    courseDetail,
+                    function () {
+                        res.send({
+                            success: true,
+                            msg: 'Edit course success!'
+                        });
+                    });
+            } else {
+                res.send({
+                    success: false,
+                    msg: 'Name not existed. Update failed!'
+                });
+            }
+        });
+    });
+});
+&nbsp;
+// destroy Course
+router.post('/deleteCourse', function (req, res) {
+    models.Class.getClassByCourseID(req.body.id, function (data) {
+        if (data.length &gt; 0) {
+            res.send({
+                success: false,
+                msg: 'Delete Course failed'
+            });
+        } else {
+            models.Course.deleteCourseByID(req.body.id, function () {
+                res.send({
+                    success: true,
+                    msg: 'Delete Course success'
+                });
+            });
+        }
+    });
+&nbsp;
+});
+&nbsp;
+//getCourseTypeList
+router.get('/getCourseTypeList', function (req, res) {
+    models.CourseType.getAll(courseTypes =&gt; {
+        var datasend = {
+            success: true,
+            msg: 'send list success',
+            courseType: courseTypes
+        };
+        res.send(datasend);
+    });
+});
+&nbsp;
+router.get('/getTrainingProgramList', function (req, res) {
+&nbsp;
+    var query = {
+        include: [{
+                model: models.CourseType,
+            },
+            {
+                model: models.Course,
+                include: [{
+                    model: models.Class,
+                    include: [{
+                        model: models.ClassRecord,
+                    }]
+                }]
+            }
+        ]
+    };
+    models.TrainingProgram.findAll(query).then(function (trainingProgram) {
+        var datasend = {
+            success: true,
+            msg: 'send list success',
+            trainingProgram: trainingProgram
+        };
+        res.send(datasend);
+    });
+});
+&nbsp;
+//Add Training programs
+router.post('/addTrainingProgram', function (req, res) {
+    log.info('/admin/courses/addTrainingProgram: Add Training Program :' + req.body.name);
+    // this function check if the courseName is already existed
+    models.TrainingProgram.getTrainingByName(req.body.name, function (result) {
+        if (result) {
+            res.send({
+                success: false,
+                msg: 'Name already existed. Add fail!'
+            });
+        } else {
+            models.TrainingProgram.add(
+                req.body.name,
+                req.body.description,
+                req.body.courseTypeId.id,
+                function () {
+                    res.send({
+                        success: true,
+                        msg: "Add Training Program Success"
+                    });
+                });
+        }
+    });
+&nbsp;
+});
+&nbsp;
+//Updtae Training Program
+router.post('/updateTrainingProgram', function (req, res) {
+    log.info('/admin/updateTrainingProgram: Update Training Program :' + req.body.Name);
+    models.TrainingProgram.getTrainingByName(req.body.name, function (result) {
+        if (result) {
+            models.TrainingProgram.edit(
+                req.body.id,
+                req.body.name,
+                req.body.description,
+                req.body.courseTypeId.id,
+                function () {
+                    res.send({
+                        success: true,
+                        msg: "Updating Training Program Successes"
+                    });
+                });
+&nbsp;
+        } else {
+            res.send({
+                success: false,
+                msg: 'Name not existed. Updating Training Program Failed!',
+                msg0: req.body.id
+            });
+        }
+    });
+});
+&nbsp;
+//delete Training Program
+router.post('/deleteTrainingProgram', function (req, res) {
+    log.info('Get Delete Command');
+    models.Course.getCourseByTPID(req.body.id, function (data) {
+        if (data.length &gt; 0) {
+            res.send({
+                success: false,
+                msg: 'Delete Training Program failed'
+            });
+        } else {
+            models.TrainingProgram.deleteTrainingProgramByID(req.body.id, function () {
+                res.send({
+                    success: true,
+                    msg: 'Delete Training Program success'
+                });
+            });
+        }
+    });
+&nbsp;
+});
+&nbsp;
+//Get Class
+router.post('/getClass', function (req, res) {
+&nbsp;
+    var query = {
+        include: [{
+            model: models.Course
+        }],
+        where: {
+            courseId: req.body.courseId
+        }
+    };
+    models.Class.findAll(query).then(function (Class) {
+        var datasend = {
+            success: true,
+            msg: 'send list success',
+            Class: Class
+        };
+        res.send(datasend);
+    });
+});
+//add class
+router.post('/addClass', function (req, res) {
+    var dataSend = {};
+    var flgCheck = 0;
+    var classID = 0;
+&nbsp;
+    models.Class.getAllOpenandIncomClass(
+        function (result) {
+            flgCheck = models.ClassRecord.checkAvailableAddClass(result, req);
+            // cancel add class
+            if (flgCheck === -1) {
+                dataSend = {
+                    success: false,
+                    msg: "Your class can't be added because of having a class in time frame at one location."
+                }
+                return res.send(dataSend);
+            } else if(req.body.courseId == null){
+              dataSend = {
+                  success: false,
+                  msg: "not found courseId"
+              }
+              return res.send(dataSend);
+            } else { // add class
+              let courseName;
+              req.body.arrayClassTime.forEach( arrayClassTime =&gt; {
+                  models.Class.add(req, arrayClassTime.starttime, arrayClassTime.endtime,
+                      function(newClass) {
+                          <span class="missing-if-branch" title="else path not taken" >E</span>if (newClass) {
+                              classID = newClass.dataValues.id;
+                              // neu ma goi thi chac goi cho nay  arrayClassTime
+                              // ta can them cai goi la ClassID tai thoi diem do
+                                      models.sessionClassTime.addSessionClassTime(newClass.dataValues.id, req.body.arrayClassTime, newSessionClassTime =&gt; {
+                                          models.Course.getByID(req.body.courseId, course =&gt; {
+                                              <span class="missing-if-branch" title="else path not taken" >E</span>if (course) {
+                                                  var date = new Date(arrayClassTime.starttime);
+                                                  if (date.getDay() == 1) {
+                                                      date.setDate(date.getDate() - 3);
+                                                  } else if (date.getDay() == 0) {
+                                                      date.setDate(date.getDate() - 2);
+                                                  } else {
+                                                      date.setDate(date.getDate() - 1);
+                                                  }
+                                                  courseName = course.name;
+                                                  // set content of email to send
+                                                  var contentEmail = models.Notifications.setContentEmail(course, req, settings, classID)
+                                                  //auto add all requeter to class and noti to them that they have been added to class
+                                                  models.RequestOpening.findAll({ // find all requester
+                                                      include: models.User,
+                                                      where: {
+                                                          courseId: req.body.courseId,
+                                                      }
+                                                  }).then(requesterResults =&gt; {
+                                                      <span class="missing-if-branch" title="else path not taken" >E</span>if (requesterResults) {
+                                                          // get requester and members have been invited
+                                                          const Requester = requesterResults.map(requester =&gt; requester.User);
+                                                          let bothUser = Requester;
+                                                          <span class="missing-if-branch" title="if path not taken" >I</span>if (req.body.specificAttendant) {
+<span class="cstat-no" title="statement not covered" >                                                              bothUser = Requester.concat(req.body.specificAttendant);</span>
+                                                          }
+                                                          // filter to get unique member
+                                                          bothUser = _.uniq(bothUser, user =&gt; user.id);
+                                                          // add them to class
+                                                          bothUser.forEach(userRequest =&gt; {
+                                                              models.ClassRecord.enrollCourse(userRequest.id, newClass.dataValues.id, (newClassRecord) =&gt; {
+                                                                  // delete request of him/her if has.
+                                                                  <span class="missing-if-branch" title="else path not taken" >E</span>if (newClassRecord) {
+                                                                      models.RequestOpening.deleteRequestOpening(userRequest.id, req.body.courseId, () =&gt; {
+                                                                          const contentNoti = "You have been added to class " + courseName + ". Please check your calendar and course detail to get more information.";
+                                                                          const refer = 'detail_notification/' + newClass.dataValues.id;
+                                                                          // noti to traine and send mail if has
+                                                                          makeFileCalendar();
+                                                                          notification([userRequest.email],[userRequest.id], courseName, contentNoti, contentEmail, refer, 1, 1);
+                                                                          const contentSessionNoti =
+                                                                              "Your " + req.body.courseId + " class has been openned and scheduled to start tomorrow at location: " + req.body.location + ". Please be on time, thank you.";
+                                                                          // noti before class open
+                                                                          Job.job_sendnoti_ClassStart(date, newSessionClassTime.id, course.name, contentSessionNoti, refer);
+                                                                      });
+                                                                      dataSend = {
+                                                                           success: true,
+                                                                           msg: "Add class successfully",
+                                                                           idClass:classID
+                                                                       }
+                                                                       res.send(dataSend);
+                                                                  }                                                           
+                                                              });
+                                                          });
+                                                      }
+                                                  });
+                                              }
+                                          });
+                                      });  
+                          }               
+                      });
+              }); 
+          }
+        });
+});
+&nbsp;
+function checkNotSuitableTime(req) {
+    return Date.parse(req.body.startTime) &gt;= Date.parse(req.body.endTime);
+}
+&nbsp;
+//Edit Class
+router.post('/editClass', function (req, res) {
+    var dataSend = {};
+    var flgCheck = 0;
+    var classModify = {};
+    const dataSend0 = {
+        success: false,
+        msg: "Add class failed"
+    }
+    // get all class opening and incoming to check with new class
+    models.Class.getAllOpenandIncomClass(
+        function (result) {
+            if (Date.now() &gt;= Date.parse(req.body.startTime) ||
+                checkNotSuitableTime(req)) {
+                flgCheck = -1;
+             }
+            // cancel edit class
+            if (flgCheck === -1) {
+                dataSend = {
+                    success: false,
+                    msg: "Your class can't be edited."
+                }
+                res.send(dataSend);
+            } else { // edit class
+                //get old data
+                var backupData;
+                var query = {
+                    include: [{
+                        model: models.User
+                    }],
+                    where: {
+                        id: req.body.classid
+                    }
+                }
+                models.Class.findOne(query).then(
+                    function (result) {
+                        classModify = result;
+                        backupData = result;
+                        var contentEditClass = {
+                            courseName: "",
+                            description: "",
+                            host: "",
+                            courseID: 0,
+                            ClassId: req.body.classid,
+&nbsp;
+                            oldLocation: backupData.location,
+                            oldStartTime: backupData.startTime,
+                            oldEndTime: backupData.endTime,
+                            oldTrainer: backupData.User ? backupData.User.username : <span class="branch-1 cbranch-no" title="branch not covered" >'',</span>
+&nbsp;
+                            newLocation: req.body.location,
+                            newStartTime: req.body.startTime,
+                            newEndTime: req.body.endTime,
+                          //ewTrainer: req.body.trainer.username
+&nbsp;
+                        }
+                        var courseName;
+                        models.Class.edit(
+                            req.body.classid,
+                            req.body.location,
+                            req.body.startTime,
+                            req.body.endTime,
+                          // req.body.trainer.id,
+                            newClass =&gt; {
+                                <span class="missing-if-branch" title="else path not taken" >E</span>if (newClass) {
+                                    var classID = req.body.classid;
+                                            models.sessionClassTime.editSessionTime(req.body.classid, req.body.startTime, req.body.endTime, newSessionClassTime =&gt; {
+                                                models.Course.getByID(req.body.courseId, course =&gt; {
+                                                    <span class="missing-if-branch" title="else path not taken" >E</span>if (course) {
+                                                        var date = new Date(req.body.startTime);
+                                                        date.setDate(date.getDate() - 1);
+                                                        courseName = course.name;
+                                                        var contentEmail = {
+                                                            courseName: courseName,
+                                                            description: course.description,
+                                                            startTime: req.body.startTime,
+                                                            endTime: req.body.endTime,
+                                                            location: req.body.location,
+                                                            host: settings.host,
+                                                            //trainer: req.body.trainer.username,
+                                                            courseID: course.id,
+                                                            classID: classID
+                                                        };
+                                                        //equal some parameters for contentEditClass
+                                                        contentEditClass.courseName = courseName;
+                                                        contentEditClass.description = course.description;
+                                                        contentEditClass.host = settings.host;
+                                                        contentEditClass.courseID = course.id;
+&nbsp;
+                                                        //noti to all old member after edit class success
+                                                        let specificAttendant = req.body.specificAttendant ? req.body.specificAttendant.length : <span class="branch-1 cbranch-no" title="branch not covered" >0</span>
+                                                        let newAttendant = req.body.newAttendant ? req.body.newAttendant.length : <span class="branch-1 cbranch-no" title="branch not covered" >0</span>
+                                                        var totalOldTrainee = specificAttendant - newAttendant;
+                                                        for (let index = 0; index &lt; totalOldTrainee; index++) {
+                                                            notification([req.body.specificAttendant[index].email], [req.body.specificAttendant[index].id], courseName, "Class " + courseName + " have been edited. Please check your calendar and course detail to get more information.", contentEmail, 'detail_notification/' + classID, 1);
+                                                        }
+                                                        //auto add new attendees to class and noti to them that they have been added to class
+                                                        <span class="missing-if-branch" title="else path not taken" >E</span>if (req.body.newAttendant) {
+                                                            //for (let i = 0; i &lt; req.body.newAttendant.length; i++) {
+                                                            req.body.newAttendant.forEach(newAttendant =&gt; {
+                                                                models.ClassRecord.create({
+                                                                    status: "Enrolled",
+                                                                    classId: classID,
+                                                                    traineeId: newAttendant.id
+                                                                }).then(function(newClassRecord) {
+                                                                    // delete request of him/her to this class if add to class success.
+                                                                    <span class="missing-if-branch" title="else path not taken" >E</span>if (newClassRecord) {
+                                                                        // delete request opening
+                                                                        models.RequestOpening.destroy({
+                                                                            where: {
+                                                                                courseId: req.body.courseId,
+                                                                                userId: newAttendant.id
+                                                                            }
+                                                                        }).then(() =&gt; {
+                                                                            // noti to all new member after add them to class
+                                                                            notification([newAttendant.email],[newAttendant.id], courseName,
+                                                                                "You have been added to class " + courseName + ". Please check your calendar and course detail to get more information.",
+                                                                                contentEmail, 'detail_notification/' + classID, 1);
+                                                                        });
+                                                                    }
+                                                                    else {
+<span class="cstat-no" title="statement not covered" >                                                                        dataSend = {</span>
+                                                                            success: false,
+                                                                            msg: "Edit class failed"
+                                                                        }
+<span class="cstat-no" title="statement not covered" >                                                                        return res.send(dataSend);</span>
+                                                                    }
+                                                                });
+                                                            }); // ket thuc forEach
+                                                        }
+                                                        <span class="missing-if-branch" title="else path not taken" >E</span>if (req.body.delAttendant) {
+                                                            //for (let i = 0; i &lt; req.body.delAttendant.length; i++) {
+                                                            req.body.delAttendant.forEach( delAttendant =&gt; {
+                                                                models.ClassRecord.destroy({
+                                                                    where: {
+                                                                        classId: classID,
+                                                                        traineeId: delAttendant.id
+                                                                    }
+                                                                }).then(function(newClassRecord) {
+                                                                    // delete request of him/her to this class if remove from class success.
+                                                                    <span class="missing-if-branch" title="else path not taken" >E</span>if (newClassRecord) {
+                                                                        // delete request opening
+                                                                        models.RequestOpening.destroy({
+                                                                            where: {
+                                                                                courseId: req.body.courseId,
+                                                                                userId: delAttendant.id
+                                                                            }
+                                                                        }).then(() =&gt; {
+                                                                            // noti to all member after remove them from class
+                                                                            contentEmail = {
+                                                                                courseName: courseName,
+                                                                                description: course.description,
+                                                                                startTime: backupData.startTime,
+                                                                                endTime: backupData.endTime,
+                                                                                location: backupData.location,
+                                                                                host: settings.host,
+                                                                                trainer: backupData.User || <span class="branch-1 cbranch-no" title="branch not covered" >backupData.User.username,</span>
+                                                                                courseID: course.id,
+                                                                                classID: classID
+                                                                            }
+                                                                            notification([delAttendant.email], [delAttendant.id], courseName, `You have been removed from class ${courseName}. Please contact your admin to get more information.`, contentEmail, 'courseDetail/' + course.name, 5);
+                                                                        });
+                                                                    } else {
+<span class="cstat-no" title="statement not covered" >                                                                        res.send(dataSend0);</span>
+                                                                    }
+                                                                });
+                                                            }); // ket thuc forEach
+                                                        }
+                                                        dataSend = {
+                                                            data: classModify,
+                                                            success: true,
+                                                            msg: "Edit class successfully"
+                                                        }
+                                                        res.send(dataSend);
+                                                        makeFileCalendar();
+                                                        Job.job_sendnoti_ClassStart(date, newSessionClassTime.id, course.name, "Your " + req.body.courseId + " class has been open and scheduled to start tomorrow at location: " + req.body.location + ". Please be on time, thank you.", 'detail_notification/' + classID);
+                                                    } else {
+<span class="cstat-no" title="statement not covered" >                                                        res.send(dataSend0)</span>
+                                                    }
+                                                });
+                                            });
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    res.send(dataSend0);</span>
+                                }
+                            });
+                            // edit success
+                    });
+            }
+        });
+});
+//Update Class
+router.post('/updateClass', function (req, res) {
+    log.info('/admin/updateClass: update Class :' + req.body.id);
+    //  need add trainee to class record
+    models.Class.sync({
+        force: false
+    }).then(function () {
+        models.Class.edit(
+            req.body.courseId,
+            req.body.location,
+            req.body.startTime,
+            req.body.endTime,
+            function () {
+                res.send({
+                    success: true,
+                    msg: 'Edit Class Info success!'
+                });
+            });
+    });
+});
+&nbsp;
+// Delete Class
+router.post('/deleteClass', function (req, res) {
+    models.Class.getOpeningClassByID(
+        req.body.id,
+        cb =&gt; {
+            if (cb) {
+                models.sessionClassTime.deleteSessionTime(
+                    req.body.id,
+                    function (idSessionClass) {
+                        models.ClassRecord.destroy({
+                            where: {
+                                classId: idSessionClass
+                            }
+                        }).then(() =&gt; {
+                            makeFileCalendar();
+                        });
+                        models.Class.deleteClassByID(idSessionClass, function () {
+                            // warning it not delete row, just change classId to null
+                            // and i dont know why ~~
+                            res.send({
+                                success: true,
+                                msg: 'Delete Class success'
+                            });
+                        });
+                    });
+            } else {
+                models.sessionClassTime.deleteSessionTime(
+                    req.body.id,
+                    function (idSessionClass) {
+                        models.Class.deleteClassByID(idSessionClass, function () {
+                            makeFileCalendar();
+                            res.send({
+                                success: true,
+                                msg: 'Delete Class success'
+                            });
+                        });
+                    });
+            }
+        });
+&nbsp;
+});
+&nbsp;
+router.get('/getAllTrainer', function (req, res) {
+    models.User.findAll({
+        where: {
+            isTrainer: true,
+            status: 'activated'
+        }
+    }).then(function (trainer) {
+        var datasend = {
+            success: true,
+            msg: 'send list success',
+            trainer: trainer
+        };
+        res.send(datasend);
+    });
+});
+&nbsp;
+router.get('/getAllCourse', function (req, res) {
+    models.Course.getAll(data =&gt; {
+        var datasend = {
+            success: true,
+            msg: "get all courses done",
+            data: data
+        };
+        res.send(datasend);
+    });
+});
+&nbsp;
+router.get('/getAllTP', function (req, res) {
+    models.TrainingProgram.getAll(data =&gt; {
+        var datasend = {
+            success: true,
+            msg: "get all training programs done",
+            data: data
+        };
+        res.send(datasend);
+    });
+});
+&nbsp;
+function makeFileCalendar() {
+        models.ClassRecord.findAll({
+            include: [{
+                model: models.Class,
+                include: [{
+                    model: models.Course
+                }]
+            }],
+            where: {
+                classId: {
+                    $ne: null
+                },
+                status: 'Enrolled'
+            }
+        }).then(function (courseList) {
+            // day chinh la noi ma chung ta can xu ly
+            var events = [];
+            var countEvents = 0;
+            courseList.forEach(course =&gt; {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (course.Class) {
+                    let subEvent = {};
+                    const starttime = new Date(course.Class.startTime);
+                    const endtime = new Date(course.Class.endTime);
+                    subEvent.id = course.Class.id;
+                    subEvent.title = course.Class.Course.name;
+                    subEvent.start = [starttime.getFullYear(), starttime.getMonth() + 1, starttime.getDate(), starttime.getHours(), starttime.getMinutes()];
+                    subEvent.end = [endtime.getFullYear(), endtime.getMonth() + 1, endtime.getDate(), endtime.getHours(), endtime.getMinutes()];
+                    subEvent.location = course.Class.location;
+                    events.push(subEvent);
+                }
+            });
+            for (let i = 0; i &lt; courseList.length; i++)
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (courseList[i].Class &amp;&amp; courseList[i].Class.Course)
+                    countEvents++;
+            var eventFilter = _.uniq(events, event =&gt; event.id);
+            eventFilter.map((value) =&gt; {
+                delete value.id;
+                return value;
+            });
+            //make ics file
+            var temp = ics.createEvent(eventFilter[0]).value;
+&nbsp;
+            var index = temp.search("END:VCALENDAR");
+            var contentICSfile = temp.substring(0, index);
+            for (let i = 1; i &lt; eventFilter.length; i++) {
+                const value = ics.createEvent(eventFilter[i]).value;
+                contentICSfile = contentICSfile + "BEGIN:VEVENT\r\n"
+                contentICSfile = contentICSfile + "UID:" + uuid() + "\r\n";
+                let indexOfstart = value.search("SUMMARY");
+                let indexOfend = value.search("END:VCALENDAR");
+                contentICSfile = contentICSfile + value.substring(indexOfstart, indexOfend);
+            }
+            contentICSfile = contentICSfile + "END:VCALENDAR";
+            fs.writeFileSync(`client/calendar/event.ics`, contentICSfile);
+        });
+    }
+&nbsp;
+module.exports = router;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 13:43:40 GMT+0700 (SE Asia Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

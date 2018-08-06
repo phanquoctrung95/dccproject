@@ -1,0 +1,111 @@
+<div ng-include="'partials/traineeModule/dashboard/feedbackModal.html'"></div>
+
+<div class="container" ng-controller="MyCoursesCtrl">
+    <div class="widget">
+        <div class="widget-header">
+            <h3>My Courses</h3>
+        </div>
+        <div class="widget-content" style="background-color: #f9f6f1">
+            <center ng-show="myTrainingProgramList.length == 0">
+                <h4>You did not learn any course.</h4>
+                <h5>To request to open new course, or register opening course,</h5>
+                <h5>go to register menu and choose a course.</h5>
+            </center>
+            <div ng-repeat="trainingProgram in myTrainingProgramList" style="margin-top: 5px">
+                <div class="round-wrap" style="background-color: #fff">
+                    <a data-toggle="collapse" data-target="#collapse{{trainingProgram.id}}" ng-click="trainingProgram.collapsed = !trainingProgram.collapsed">
+                        <blockquote class="blockquote">
+                            <img style="float:left; clear:both; margin-right: 10px;" alt="training-program-icon" class="img-responsive" ng-src="{{trainingProgram.imgLink}}"
+                                width="70px"> {{trainingProgram.name}}
+                                <p class="TrainingItemsDescription" ng-bind-html="trainingProgram.description"></p>
+                                <p></p>
+                                <uib-progressbar style="margin:0" class="progress-striped" max="100" value=trainingProgram.completePercent type="success"><i>{{trainingProgram.completePercent}}% completed</i></uib-progressbar>
+                                <center ng-hide="trainingProgram.collapsed"><span class="glyphicon glyphicon-menu-down"></span></center>
+                                <center ng-show="trainingProgram.collapsed"><span class="glyphicon glyphicon-menu-up"></span></center>
+                        </blockquote>
+                    </a>
+                </div>
+                <div id="collapse{{trainingProgram.id}}" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="row" style="background-color: #fff" ng-repeat="myCourse in trainingProgram.Courses">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-8 col-sm-8" style="border-left:2px solid {{myCourse.backgroundColor}}; margin-bottom: 10px" id="forfun2">
+                                <blockquote class="blockquote">
+                                    <a ui-sref="courseDetail({courseId: myCourse.id})">
+                                        <img style="float:left; clear:both; margin-right:10px;" alt="course-icon" class="img-responsive" ng-src="{{myCourse.imgLink}}"
+                                            width="70px"> {{myCourse.name}}
+                                            <p class="crop" ng-bind-html="myCourse.description"></p>
+                                    </a>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-2 col-sm-4" id="forfun">
+                                <center>
+                                    <div class="dropdown col-xs-12 col-md-12 tooltipMod">
+                                        <div class="tooltiptext" style="text-align: left">
+                                            <div ng-show="'{{myCourse.status}}' =='Learned'">
+                                                <img style="display: inline-block; margin-left: 5px; border-radius: 50%; border: 1px solid #8BC34A; background-color: #8BC34A; width:20px !important; height:20px !important"
+                                                    class="img-responsive">&nbsp: Already learned this course</br>
+                                            </div>
+                                            <div ng-show="'{{myCourse.status}}' =='Enrolled'">
+                                                <img style="display: inline-block; margin-left: 5px; border-radius: 50%; border: 1px solid #4FC3F7; background-color: #4FC3F7; width:20px !important; height:20px !important"
+                                                    class="img-responsive">&nbsp: Currently enrolled in</br>
+                                            </div>
+                                            <div ng-show="'{{myCourse.status}}' =='Not Learned'">
+                                                <img style="display: inline-block; margin-left: 5px; border-radius: 50%; border: 1px solid #ffb84d; background-color: #ffb84d; width:20px !important; height:20px !important"
+                                                    class="img-responsive">&nbsp: There is class available</br>
+                                            </div>
+                                            <div ng-show="'{{myCourse.status}}' =='Not Learned '">
+                                                <img style="display: inline-block; margin-left: 5px; border-radius: 50%; border: 1px solid #ff704d; background-color: #ff704d; width:20px !important; height:20px !important"
+                                                    class="img-responsive">&nbsp: No available classes now </br>
+                                            </div>
+                                        </div>
+                                        <a class="dropdown-toggle btn col-xs-12 col-md-12" style="background-color: {{myCourse.backgroundColor}}" data-toggle="dropdown">
+                                            {{myCourse.status}} &nbsp <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li ng-click="actionOneClick(myCourse)"><a>{{actionOneText[myCourse.status]}}</a></li>
+                                            <li ng-show="(myCourse.status != 'Not Learned')&&(myCourse.status != 'Not Learned ')" ng-click="actionTwoClick(myCourse)"><a>{{actionTwoText[myCourse.status]}}</a></li>
+                                        </ul>
+                                    </div>
+                                </center>
+                            </div>
+                            <br/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" ng-controller="requestOpenCourseCtrl" id="requestCourse">
+    <div class="widget">
+        <div class="widget-header">
+            <h3>My Request Open Course</h3>
+        </div>
+        <div class="widget-content" style="background-color: #f9f6f1">
+            <center ng-show="myRequestOpenCourseList.length == 0" style="background-color: #fff">
+                <h4>You did not request to open any course.</h4>
+                <h5>To request to open new course, go to register menu and choose a course.</h5>
+            </center>
+
+            <div class="row round-wrap" style="background-color: #fff; margin-top: 3px" ng-repeat="requestOpenCourse in myRequestOpenCourseList">
+                <div class="col-md-7 col-sm-8 col-xs-8">
+                    <blockquote class="blockquote">
+                        <a ui-sref="courseDetail({courseId: requestOpenCourse.id})" style="text-decoration: none">
+                            <img style="float:left; clear:both; margin:8px;margin-top:-5px" alt="course-icon" class="img-responsive" ng-src="{{requestOpenCourse.imgLink}}"
+                                width="70px"> {{requestOpenCourse.name}}
+                                <p style="color: black" ng-show="requestOpenCourse.haveClass">Opening</p>
+                                <p style="color: black" ng-show="!requestOpenCourse.haveClass">Requesting</p>
+                        </a>
+                    </blockquote>
+                </div>
+                                
+                <div class="col-md-offset-3 col-md-1 col-sm-offset-1 col-sm-2 col-xs-offset-1 col-xs-2">
+                    <br>
+                    <a ng-click="cancelRequestClick(requestOpenCourse.id)" class="btn btn-warning pull-right" style="margin-top:5px;">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

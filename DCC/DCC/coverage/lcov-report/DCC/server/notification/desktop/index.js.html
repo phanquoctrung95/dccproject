@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for DCC/server/notification/desktop/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">DCC/server/notification/desktop</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.07% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.85% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.27% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/54</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">var io;
+var onlineUsers = [];
+var models = require('../../models');
+&nbsp;
+function binarySearch(key, first, last) {
+    var mid;
+    key = key.toUpperCase();
+    while (first &lt;= last) {
+<span class="cstat-no" title="statement not covered" >        mid = Math.floor((last + first) / 2);</span>
+<span class="cstat-no" title="statement not covered" >        if (onlineUsers[mid].email) {</span>
+<span class="cstat-no" title="statement not covered" >            if (key == onlineUsers[mid].email.toUpperCase())</span>
+<span class="cstat-no" title="statement not covered" >                return mid;</span>
+<span class="cstat-no" title="statement not covered" >            if (key &gt; onlineUsers[mid].email.toUpperCase())</span>
+<span class="cstat-no" title="statement not covered" >                first = mid + 1;</span>
+<span class="cstat-no" title="statement not covered" >            if (key &lt; onlineUsers[mid].email.toUpperCase())</span>
+<span class="cstat-no" title="statement not covered" >                last = mid - 1;</span>
+        }
+    }
+    return -1;
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >checkExistUserOnline(</span>user) {
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; onlineUsers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        if (onlineUsers[i].email === user.email)</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+}
+&nbsp;
+var desktop = {
+    send: function (receivers, subject, content) {
+        var notification = {
+            title: subject,
+            msg: content
+        };
+        for (let i = 0; i &lt; receivers.length; i++) {
+            const index = binarySearch(receivers[i], 0, onlineUsers.length - 1);
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (index !== -1) {
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('pushNotification', notification);</span>
+                // trigger user to update notification
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('updateNumberOfNewNotifications', {</span>
+                    message: "update"
+                });
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('updateNumberOfNewNotificationsRequestCourse', {</span>
+                    message: "update"
+                });
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('updateRequestOpenCourse', {</span>
+                    message: "update"
+                });
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('updateAdminRequestOpenCourseList', {</span>
+                    message: "update"
+                });
+<span class="cstat-no" title="statement not covered" >                onlineUsers[index].socket.emit('updateTraineeOfClass', {</span>
+                    message: "update"
+                });
+            }
+        }
+    },
+    createSocketServer: createServer
+}
+&nbsp;
+function createServer(server_socket) {
+    io = require('socket.io').listen(server_socket);
+&nbsp;
+    io.on('connection', <span class="fstat-no" title="function not covered" >fu</span>nction (socket) {
+<span class="cstat-no" title="statement not covered" >        socket.on('disconnect', <span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
+<span class="cstat-no" title="statement not covered" >            for (let i = 0; i &lt; onlineUsers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                if (onlineUsers[i].socket === socket) {</span>
+<span class="cstat-no" title="statement not covered" >                    onlineUsers.splice(i, 1);</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                }
+            }
+        });
+&nbsp;
+        // Use socket to communicate with this particular client only, sending it it's own id
+<span class="cstat-no" title="statement not covered" >        socket.on('sendEmail', <span class="fstat-no" title="function not covered" >fu</span>nction (data) {</span>
+            var item = <span class="cstat-no" title="statement not covered" >{</span>
+                socket: socket,
+                email: data.email
+            };
+<span class="cstat-no" title="statement not covered" >            if (!checkExistUserOnline(item)) {</span>
+<span class="cstat-no" title="statement not covered" >                onlineUsers.push(item);</span>
+            }
+            //Sort list of user for optimize the search algorithm later
+<span class="cstat-no" title="statement not covered" >            models.Notifications.getNumberofNewNotification(data.userId, <span class="fstat-no" title="function not covered" >fu</span>nction (notifications) {</span>
+<span class="cstat-no" title="statement not covered" >                socket.emit('NewNotifications', notifications.count);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            models.Notifications.getNumberofNewNotificationRequestCourse(data.userId, <span class="fstat-no" title="function not covered" >fu</span>nction (notifications) {</span>
+<span class="cstat-no" title="statement not covered" >                socket.emit('NewNotifications', notifications.count);</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            onlineUsers.sort(<span class="fstat-no" title="function not covered" >fu</span>nction (prevUser, nextUser) {</span>
+<span class="cstat-no" title="statement not covered" >                if (prevUser.email &amp;&amp; nextUser.email) {</span>
+                    var upper_prevUser = <span class="cstat-no" title="statement not covered" >prevUser.email.toUpperCase();</span>
+                    var upper_nextUser = <span class="cstat-no" title="statement not covered" >nextUser.email.toUpperCase();</span>
+<span class="cstat-no" title="statement not covered" >                    return upper_prevUser &lt; upper_nextUser ? -1 :</span>
+                        upper_prevUser &gt; upper_nextUser ? 1 : 0;
+                }
+&nbsp;
+            });
+        });
+<span class="cstat-no" title="statement not covered" >        socket.on('logout', <span class="fstat-no" title="function not covered" >fu</span>nction (data) {</span>
+<span class="cstat-no" title="statement not covered" >            for (let i = 0; i &lt; onlineUsers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                if (onlineUsers[i].email === data.email) {</span>
+<span class="cstat-no" title="statement not covered" >                    onlineUsers.splice(i, 1);</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                }
+            }
+        });
+    });
+};
+&nbsp;
+module.exports = desktop;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 13:43:40 GMT+0700 (SE Asia Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

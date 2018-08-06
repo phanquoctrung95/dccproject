@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html xmlns:ng="https://angularjs.org" lang="en" id="ng-app" ng-app="myApp" class="no-js" ng-controller="mainController">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DEK Competence Center</title>
+    <!--<title>Thử tiếng Việt</title>-->
+    <link rel="icon" href="/img/logo/DCC-icon.png" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bower_components/angular-ng-table/ng-table.min.css" rel="stylesheet"> -->
+    <!-- <link href="bower_components/angular-chart/angular-chart.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script> -->
+    <link href="bower_components/angular-bootstrap-toggle/dist/angular-bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="bower_components/ng-tags-input/ng-tags-input.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!--TextAngular.css-->
+    <link href="css/textAngular.css" rel="stylesheet">
+    <link href="css/font-awesome-4.css" rel="stylesheet">
+    <link href="css/datePicker.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/5733e40e5af936eb3f48554cf6a8a7075d71d18a/FileSaver.js" type="text/javascript"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body ng-controller="loginController" ng-init="CheckCookie()">
+    <div id="wrapper">
+        <feature-toggle>
+            <div id="header">
+                <div ng-show="$state.current.name == 'home'">
+                    <div ng-include="'partials/common/loginHeader.html'"></div>
+                </div>
+                <div ng-include="'partials/users/firstPassword.html'"></div>
+                <!-- loginHeader -->
+                <div ng-show="$state.current.name != 'home'">
+                    <div ng-include="'partials/common/adminHeader.html'" ng-show="userInfo.role == 1"></div>
+                    <!-- adminHeader -->
+                    <div ng-include="'partials/common/trainerHeader.html'" ng-show="userInfo.role == 2"></div>
+                    <!-- trainerHeader -->
+                    <div ng-include="'partials/common/traineeHeader.html'" ng-show="userInfo.role == 3"></div>
+                    <!-- traineeHeader -->
+                </div>
+            </div>
+            <!-- #header -->
+
+            <div id="content">
+                <div class="main">
+                    <div class="main-inner">
+                        <div class="" ui-view></div>
+                    </div>
+                </div>
+            </div>
+            <!-- #content -->
+
+            <div id="footer">
+                <div id="popUpMessage">{{popUpMessage}}</div>
+                <!-- Show popup mesage when needed-->
+                <div ng-include="'partials/common/footer.html'"></div>
+                <!-- footer -->
+            </div>
+            <!-- #footer -->
+
+        </div>
+    </feature-toggle>
+        <!-- #wrapper -->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="bower_components/angular-chart/angular-chart.min.js"></script> -->
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- <script src="bower_components/angular-ng-table/ng-table.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-validation/dist/angular-validation.min.js"></script>
+    <script src="bower_components/angular-validation/dist/angular-validation-rule.js"></script>
+    <!-- <script src="bower_components/angular-chart/angular-chart.js"></script> -->
+    <script src="bower_components/angular-bootstrap-toggle/dist/angular-bootstrap-toggle.min.js"></script>
+    <!-- Calendar css and js -->
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="bower_components/fullcalendar/dist/gcal.js"></script>
+    <link href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+    <script src="bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
+
+    <!--Desktop push notification-->
+    <script type="text/javascript" src="https://rawgit.com/sagiegurari/simple-web-notification/master/web-notification.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/sagiegurari/angular-web-notification/master/angular-web-notification.js"></script>
+    <script src="bower_components/socket.io-client/dist/socket.io.js"></script>
+    <script src="js/desktop-notification/desktop-notification.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+    <!-- App source code -->
+    <script src="app.js"></script>
+    <script src="partials/home/home.js"></script>
+    <script src="partials/users/users.js"></script>
+    <script src="partials/traineeModule/dashboard/dashboard.js"></script>
+    <script src="partials/traineeModule/courseRegister/courseRegister.js"></script>
+    <script src="partials/calendarModule/calendar.js"></script>
+    <script src="partials/common/course/courseDetail.js"></script>
+    <script src="partials/common/setting.js"></script>
+    <script src="partials/adminModule/courseManagement/courseManagement.js"></script>
+<!-- nhúng file vừa ms tạo -->
+    <script src="partials/adminModule/classAdding/classManagement.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+
+    <script src="partials/adminModule/dashboard/dashboard.js"></script>
+    <script src="partials/adminModule/EmployeesManagement/EmployeesManagement.js"></script>
+    <script src="partials/adminModule/EmployeesManagement/register/register.js"></script>
+    <script src="partials/adminModule/openingclass/openingclass.js"></script>
+    <script src="partials/notification/notification.js"></script>
+
+    <!--TextAngular-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-rangy.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-sanitize.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular.min.js'></script>
+    <!--Infinite Scroll-->
+    <script src='partials/traineeModule/dashboard/ng-infinite-scroll.js'></script>
+</body>
+
+</html>

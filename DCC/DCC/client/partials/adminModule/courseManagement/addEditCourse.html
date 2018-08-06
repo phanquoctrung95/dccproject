@@ -1,0 +1,57 @@
+<div class="modal fade" id="addEditCourseModal" role="dialog" ng-controller ="addEditCourseCtrl">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+    
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" >{{addEditCourseFormTitle}}</h4>
+                </div>
+    
+                <form name="addEditForm"  role="form" class="form-horizontal" novalidate>
+                    <div class="modal-body">
+                        <!-- Course Name -->
+                        <div class="form-group" ng-class="{ 'has-error' : addEditForm.name.$invalid && !addEditForm.name.$pristine }">
+                            <label class="col-sm-4 control-label">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="name" ng-model="courseModel.name"  required>
+                                <p ng-show="addEditForm.name.$invalid && !addEditForm.name.$pristine" class="help-block">Course name is required.</p>
+                            </div>
+                        </div>
+    
+                        <!-- Course Document -->
+                        <div class="form-group" ng-class="{ 'has-error' : addEditForm.documents.$invalid && !addEditForm.documents.$pristine }">
+                            <label class="col-sm-4 control-label">Documents</label>
+                            <div class="col-sm-8">
+                                <!-- <input type="text" class="form-control" name="documents" ng-model="courseModel.documents"  required> -->
+                                <input type="text" class="form-control" name="documents" ng-model="courseModel.documents">
+                                <p ng-show="addEditForm.documents.$invalid && !addEditForm.documents.$pristine" class="help-block">Course documents is required.</p>
+                            </div>
+                        </div>
+    
+                        <!-- Course Test -->
+                        <div class="form-group" ng-class="{ 'has-error' : addEditForm.test.$invalid && !addEditForm.test.$pristine }">
+                            <label class="col-sm-4 control-label">Test</label>
+                            <div class="col-sm-8">
+                                <!-- <input type="text" class="form-control" name="test" ng-model="courseModel.test"  required> -->
+                                <input type="text" class="form-control" name="test" ng-model="courseModel.test">
+                                <p ng-show="addEditForm.test.$invalid && !addEditForm.test.$pristine" class="help-block">Course test is required.</p>
+                            </div>
+                        </div>
+    
+                        <div class="form-group" ng-class="{ 'has-error' : addEditForm.description.$invalid && !addEditForm.description.$pristine }">
+                            <center><label>Description</label></center><br>
+                            <div text-angular ng-model="courseModel.description"  required></div>
+                            <p ng-show="addEditForm.description.$invalid && !addEditForm.description.$pristine" class="help-block">Course Description is required.</p>
+                        </div>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-click="addEditCourseClick()" data-dismiss="modal"
+                                ng-disabled="addEditForm.$invalid">{{addEditCourseFormAction}}</button>
+                        <button type="submit" class="btn btn-default" ng-click="cancel()" data-dismiss="modal" >Cancel</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </div>

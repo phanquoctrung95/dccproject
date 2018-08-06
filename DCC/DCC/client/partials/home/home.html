@@ -1,0 +1,106 @@
+<div id="myCarousel" class="intro-header carousel slide" data-ride="carousel" style="height=100%">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active intro-message" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(/img/sliders/slider-1.jpg) no-repeat center center ;
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/sliders/slider-1.jpg) no-repeat center center ; /* For Safari 5.1 to 6.0 */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;">
+            <p class="slidertext">DEK
+                <br> Competence Center</p>
+        </div>
+
+        <div class="item  intro-message" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(/img/sliders/slider-2.jpg) no-repeat center center ;
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/sliders/slider-2.jpg) no-repeat center center ; /* For Safari 5.1 to 6.0 */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;">
+            <p class="slidertext">Developing
+                <br> Tommorrow's Technology</p>
+        </div>
+
+        <div class="item  intro-message" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(/img/sliders/slider-3.jpg) no-repeat center center ;
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/sliders/slider-3.jpg) no-repeat center center ; /* For Safari 5.1 to 6.0 */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;">
+            <p class="slidertext">DCC</p>
+        </div>
+
+        <div class="item    intro-message" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(/img/sliders/slider-4.jpg) no-repeat center center ;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/sliders/slider-4.jpg) no-repeat center center ; /* For Safari 5.1 to 6.0 */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+            <p class="slidertext">
+                DEK
+                <br> Technologies
+            </p>
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!--Calendar-->
+<br/>
+<div ng-controller="calendarController" class="container">
+    <div style="float:right; margin-bottom: 10px; margin-left: 30px;">
+        <button uib-popover-html="htmlPopover" popover-placement="{{placement.selected}}"
+            popover-title="{{dynamicPopover.title}}" popover-trigger="'outsideClick'"
+            class="btn btn-info btn-sm">Outlook Calendar</button>
+        <!-- <button ng-click="googleCalendar()" class="btn btn-info btn-xs">Google Calendar</button> -->
+    </div>
+    <div ng-if="userInfo">
+        <button style="margin-left: 30px" type="button" class="btn btn-info btn-sm" id="filter-button-cutomize" ng-click="filterEvent()">{{titleFilterButton}}</button>
+    </div>
+    <div ng-include="templates.url"></div>
+</div>
+
+<!--Contact-->
+<div id="contact" class="contact">
+    <div class="banner">
+        <div class="row">
+            <h2>Follow us</h2>
+            <br>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://www.dektech.com.au/" class="btn_contact">
+                        <em class="fa fa-globe fa-fw"></em>
+                        <span class="network-name">Website</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/DEKTechnologiesGlobal/" class="btn_contact">
+                        <em class="fa fa-facebook fa-fw"></em>
+                        <span class="network-name">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/dek-technologies" class="btn_contact">
+                        <em class="fa fa-linkedin fa-fw"></em>
+                        <span class="network-name">Linkedin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

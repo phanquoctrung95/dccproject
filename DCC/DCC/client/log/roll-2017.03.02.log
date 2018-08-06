@@ -1,0 +1,2567 @@
+10:26:02.040 INFO  Post /login 
+10:26:02.100 INFO  User login: bqd@gmail.com 
+10:26:07.943 INFO  GET /logout 
+10:26:12.679 INFO  Post /login 
+10:26:12.699 INFO  User login: qwe@gmail.com 
+10:26:21.486 INFO  GET /users/getUserInfo 
+10:27:34.586 INFO  GET /users/getUserInfo 
+10:27:42.730 INFO  GET /logout 
+10:27:47.926 INFO  Post /login 
+10:27:47.946 INFO  User login: qwe@gmail.com 
+10:33:31.612 INFO  GET /users/getUserInfo 
+10:33:34.189 INFO  GET /users/getUserInfo 
+10:39:57.827 INFO  GET /users/getUserInfo 
+10:45:32.551 INFO  GET /users/getUserInfo 
+10:45:49.878 INFO  GET /users/getUserInfo 
+10:46:11.863 INFO  /routes/users: Upload avatar 
+10:47:36.079 INFO  Post /login 
+10:47:36.135 INFO  User login: qwe@gmail.com 
+10:47:52.057 INFO  GET /users/getUserInfo 
+10:47:57.015 INFO  GET /users/getUserInfo 
+10:48:03.843 INFO  /routes/users: Upload avatar 
+10:48:04.715 INFO  GET /users/getUserInfo 
+10:53:08.088 INFO  GET /users/getUserInfo 
+10:53:39.792 INFO  GET /users/getUserInfo 
+10:53:41.454 INFO  GET /users/getUserInfo 
+11:04:23.229 INFO  GET /users/getUserInfo 
+11:04:26.199 INFO  GET /users/getUserInfo 
+11:04:28.808 INFO  GET /users/getUserInfo 
+11:04:30.773 INFO  GET /users/getUserInfo 
+11:05:23.932 INFO  /routes/users: Upload avatar 
+11:06:15.381 INFO  /routes/users: Upload avatar 
+11:06:24.420 INFO  GET /users/getUserInfo 
+11:06:27.245 INFO  GET /users/getUserInfo 
+11:06:32.637 INFO  /routes/users: Upload avatar 
+11:06:35.226 INFO  /routes/users: Upload avatar 
+11:06:35.475 INFO  /routes/users: Upload avatar 
+11:06:35.715 INFO  /routes/users: Upload avatar 
+11:08:00.599 INFO  Post /login 
+11:08:00.639 INFO  User login: qwe@gmail.com 
+11:08:03.012 INFO  GET /users/getUserInfo 
+11:08:05.902 INFO  GET /users/getUserInfo 
+11:08:10.316 INFO  /routes/users: Upload avatar 
+11:09:54.047 INFO  GET /users/getUserInfo 
+11:09:59.407 INFO  /routes/users: Upload avatar 
+11:10:02.091 INFO  /routes/users: Upload avatar 
+11:11:59.417 INFO  /routes/users: Upload avatar 
+11:15:57.528 INFO  GET /users/getUserInfo 
+11:16:02.438 INFO  /routes/users: Upload avatar 
+11:17:36.440 INFO  GET /users/getUserInfo 
+11:19:00.831 INFO  /routes/users: Upload avatar 
+11:19:47.928 INFO  GET /users/getUserInfo 
+11:19:51.841 INFO  GET /logout 
+11:19:54.303 INFO  Post /login 
+11:19:54.354 INFO  User login: qwe@gmail.com 
+11:19:56.258 INFO  GET /users/getUserInfo 
+11:19:57.834 INFO  GET /users/getUserInfo 
+11:20:07.086 INFO  /routes/users: Upload avatar 
+11:20:07.870 INFO  GET /users/getUserInfo 
+11:20:48.894 INFO  GET /users/getUserInfo 
+11:20:50.662 INFO  GET /logout 
+11:20:53.390 INFO  Post /login 
+11:20:53.440 INFO  User login: qwe@gmail.com 
+11:20:54.812 INFO  GET /users/getUserInfo 
+11:20:56.216 INFO  GET /users/getUserInfo 
+11:21:02.767 INFO  /routes/users: Upload avatar 
+11:21:03.590 INFO  GET /users/getUserInfo 
+11:22:43.279 INFO  /routes/users: Upload avatar 
+11:23:33.802 INFO  Post /login 
+11:23:33.842 INFO  User login: qwe@gmail.com 
+11:23:34.921 INFO  GET /users/getUserInfo 
+11:23:36.491 INFO  GET /users/getUserInfo 
+11:23:44.374 INFO  /routes/users: Upload avatar 
+11:23:45.230 INFO  GET /users/getUserInfo 
+11:23:51.245 INFO  GET /users/getUserInfo 
+11:26:39.222 INFO  GET /users/getUserInfo 
+11:26:40.088 INFO  GET /users/getUserInfo 
+11:26:47.193 INFO  /routes/users: Upload avatar 
+11:27:38.076 INFO  Post /login 
+11:27:41.139 INFO  User login: qwe@gmail.com 
+11:28:17.368 INFO  GET /users/getUserInfo 
+11:28:18.609 INFO  GET /users/getUserInfo 
+11:28:31.258 INFO  /routes/users: Upload avatar 
+11:28:32.228 INFO  GET /users/getUserInfo 
+11:28:51.269 INFO  GET /users/getUserInfo 
+11:29:17.932 INFO  GET /users/getUserInfo 
+11:29:23.529 INFO  /routes/users: Upload avatar 
+11:30:38.245 INFO  Post /login 
+11:30:41.369 INFO  User login: qwe@gmail.com 
+11:30:43.352 INFO  GET /users/getUserInfo 
+11:30:45.359 INFO  GET /users/getUserInfo 
+11:30:56.748 INFO  /routes/users: Upload avatar 
+11:30:57.764 INFO  GET /users/getUserInfo 
+11:33:38.325 INFO  GET /logout 
+11:33:41.044 INFO  Post /login 
+11:33:44.062 INFO  User login: qwe@gmail.com 
+11:33:45.444 INFO  GET /users/getUserInfo 
+11:33:47.197 INFO  GET /users/getUserInfo 
+11:33:53.018 INFO  /routes/users: Upload avatar 
+11:33:53.870 INFO  GET /users/getUserInfo 
+11:33:55.748 INFO  GET /users/getUserInfo 
+11:33:58.056 INFO  GET /users/getUserInfo 
+11:34:03.931 INFO  /routes/users: Upload avatar 
+11:34:04.668 INFO  GET /users/getUserInfo 
+11:34:11.787 INFO  /routes/users: Upload avatar 
+11:34:12.517 INFO  GET /users/getUserInfo 
+11:37:35.873 INFO  Post /login 
+11:37:35.910 INFO  User login: qwe@gmail.com 
+11:37:38.062 INFO  GET /users/getUserInfo 
+11:37:39.745 INFO  GET /users/getUserInfo 
+11:37:43.757 INFO  /routes/users: Upload avatar 
+11:37:44.631 INFO  GET /users/getUserInfo 
+11:39:37.571 INFO  GET /users/getUserInfo 
+11:39:38.722 INFO  GET /users/getUserInfo 
+11:39:40.303 INFO  GET /logout 
+11:39:42.392 INFO  Post /login 
+11:39:42.443 INFO  User login: qwe@gmail.com 
+11:39:44.061 INFO  GET /users/getUserInfo 
+11:40:09.375 INFO  GET /users/getUserInfo 
+11:40:13.269 INFO  GET /users/getUserInfo 
+11:40:17.756 INFO  /routes/users: Upload avatar 
+11:40:50.247 INFO  GET /logout 
+11:40:52.654 INFO  Post /login 
+11:40:52.691 INFO  User login: qwe@gmail.com 
+11:40:54.145 INFO  GET /users/getUserInfo 
+11:40:55.572 INFO  GET /users/getUserInfo 
+11:41:28.965 INFO  /routes/users: Upload avatar 
+11:41:51.671 INFO  GET /users/getUserInfo 
+11:41:54.262 INFO  GET /logout 
+11:41:56.374 INFO  Post /login 
+11:41:56.450 INFO  User login: qwe@gmail.com 
+11:41:57.800 INFO  GET /users/getUserInfo 
+11:41:59.393 INFO  GET /users/getUserInfo 
+11:42:04.303 INFO  /routes/users: Upload avatar 
+11:43:11.263 INFO  GET /users/getUserInfo 
+11:43:12.861 INFO  GET /logout 
+11:43:15.166 INFO  Post /login 
+11:43:15.225 INFO  User login: qwe@gmail.com 
+11:43:16.081 INFO  GET /users/getUserInfo 
+11:43:17.222 INFO  GET /users/getUserInfo 
+11:43:21.741 INFO  /routes/users: Upload avatar 
+11:43:22.415 INFO  GET /users/getUserInfo 
+11:43:42.302 INFO  GET /users/getUserInfo 
+11:43:45.182 INFO  GET /users/getUserInfo 
+11:44:04.368 INFO  GET /users/getUserInfo 
+11:45:22.917 INFO  GET /users/getUserInfo 
+11:45:24.308 INFO  GET /users/getUserInfo 
+11:45:31.318 INFO  /routes/users: Upload avatar 
+11:46:02.663 INFO  Post /login 
+11:46:02.716 INFO  User login: qwe@gmail.com 
+11:46:04.697 INFO  GET /users/getUserInfo 
+11:46:09.066 INFO  GET /users/getUserInfo 
+11:46:23.011 INFO  /routes/users: Upload avatar 
+11:47:33.321 INFO  GET /users/getUserInfo 
+11:49:34.571 INFO  GET /users/getUserInfo 
+11:49:35.693 INFO  GET /users/getUserInfo 
+11:49:39.474 INFO  /routes/users: Upload avatar 
+11:50:10.419 INFO  Post /login 
+11:50:10.485 INFO  User login: qwe@gmail.com 
+11:50:11.706 INFO  GET /users/getUserInfo 
+11:50:22.175 INFO  GET /users/getUserInfo 
+11:50:25.576 INFO  GET /users/getUserInfo 
+11:50:31.533 INFO  /routes/users: Upload avatar 
+11:52:00.125 INFO  GET /logout 
+11:52:04.689 INFO  Post /login 
+11:52:04.729 INFO  User login: qwe@gmail.com 
+11:52:06.737 INFO  GET /users/getUserInfo 
+11:52:08.256 INFO  GET /users/getUserInfo 
+11:52:17.670 INFO  /routes/users: Upload avatar 
+13:13:33.606 INFO  GET /users/getUserInfo 
+13:13:34.758 INFO  GET /users/getUserInfo 
+13:13:41.953 INFO  /routes/users: Upload avatar 
+13:14:19.827 INFO  Post /login 
+13:14:19.876 INFO  User login: qwe@gmail.com 
+13:14:22.583 INFO  GET /users/getUserInfo 
+13:14:24.737 INFO  GET /users/getUserInfo 
+13:14:34.193 INFO  /routes/users: Upload avatar 
+13:14:34.970 INFO  GET /users/getUserInfo 
+13:16:10.538 INFO  /routes/users: Upload avatar 
+13:17:14.508 INFO  Post /login 
+13:17:14.557 INFO  User login: qwe@gmail.com 
+13:17:16.961 INFO  GET /users/getUserInfo 
+13:17:20.486 INFO  GET /users/getUserInfo 
+13:17:27.634 INFO  /routes/users: Upload avatar 
+13:19:16.089 INFO  Post /login 
+13:19:16.131 INFO  User login: qwe@gmail.com 
+13:19:18.295 INFO  GET /users/getUserInfo 
+13:19:19.579 INFO  GET /users/getUserInfo 
+13:19:32.575 INFO  /routes/users: Upload avatar 
+13:19:33.505 INFO  GET /users/getUserInfo 
+13:19:42.992 INFO  GET /users/getUserInfo 
+13:19:44.280 INFO  GET /users/getUserInfo 
+13:20:27.161 INFO  Post /login 
+13:20:27.219 INFO  User login: qwe@gmail.com 
+13:20:27.439 INFO  Post /login 
+13:20:27.450 INFO  User login: qwe@gmail.com 
+13:20:27.505 INFO  Post /login 
+13:20:27.530 INFO  User login: qwe@gmail.com 
+13:20:27.614 INFO  Post /login 
+13:20:27.636 INFO  User login: qwe@gmail.com 
+13:20:27.685 INFO  Post /login 
+13:20:27.697 INFO  User login: qwe@gmail.com 
+13:20:27.750 INFO  Post /login 
+13:20:27.765 INFO  User login: qwe@gmail.com 
+13:20:27.836 INFO  Post /login 
+13:20:27.855 INFO  User login: qwe@gmail.com 
+13:20:27.886 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:20:27.911 INFO  Post /login 
+13:20:27.931 INFO  User login: qwe@gmail.com 
+13:20:27.955 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:20:27.970 INFO  Post /login 
+13:20:27.982 INFO  User login: qwe@gmail.com 
+13:20:28.008 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:20:28.050 INFO  Post /login 
+13:20:28.063 INFO  User login: qwe@gmail.com 
+13:20:28.088 INFO  Get Delete Command 
+13:20:28.105 INFO  Post /login 
+13:20:28.132 INFO  User login: qwe@gmail.com 
+13:20:28.174 INFO  Post /login 
+13:20:28.182 INFO  User login: qwe@gmail.com 
+13:20:28.202 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:20:28.249 INFO  Post /login 
+13:20:28.260 INFO  User login: qwe@gmail.com 
+13:20:28.291 INFO  /admin/updateClass: update Class :1 
+13:20:28.332 INFO  Post /login 
+13:20:28.354 INFO  User login: qwe@gmail.com 
+13:20:28.376 INFO  Get Delete Command 
+13:20:28.392 INFO  Post /login 
+13:20:28.407 INFO  User login: qwe@gmail.com 
+13:20:28.463 INFO  Post /login 
+13:20:28.476 INFO  User login: qwe@gmail.com 
+13:20:28.512 INFO  Post /login 
+13:20:28.524 INFO  User login: qwe@gmail.com 
+13:20:28.590 INFO  Post /login 
+13:20:28.602 INFO  User login: qwe@gmail.com 
+13:20:28.653 INFO  Post /login 
+13:20:28.664 INFO  User login: qwe@gmail.com 
+13:20:28.684 INFO  /common/course/getClassByCourseID:  
+13:20:28.717 INFO  Post /login 
+13:20:28.731 INFO  User login: qwe@gmail.com 
+13:20:28.770 INFO  Post /login 
+13:20:28.787 INFO  User login failed. 
+13:20:28.793 INFO  Post /login 
+13:20:28.808 INFO  User login: qwe@gmail.com 
+13:20:28.828 INFO  Post /login 
+13:20:28.855 INFO  User login failed. 
+13:20:28.861 INFO  Post /login 
+13:20:28.878 INFO  User login failed. 
+13:20:28.887 INFO  Post /login 
+13:20:28.901 INFO  User login failed. 
+13:20:28.920 INFO  Post /login 
+13:20:28.936 INFO  User login: bqd@gmail.com 
+13:20:28.944 INFO  Post /login 
+13:20:28.966 INFO  User login failed. 
+13:20:28.976 INFO  Post /login 
+13:20:29.008 INFO  User login failed. 
+13:20:29.020 INFO  Post /login 
+13:20:29.038 INFO  User login failed. 
+13:20:29.047 INFO  GET /logout 
+13:20:31.072 INFO  Post /login 
+13:20:31.082 INFO  User login: qwe@gmail.com 
+13:20:31.121 INFO  Post /login 
+13:20:31.132 INFO  User login: qwe@gmail.com 
+13:20:31.171 INFO  Post /login 
+13:20:31.182 INFO  User login: qwe@gmail.com 
+13:20:31.230 INFO  Post /login 
+13:20:31.252 INFO  User login: qwe@gmail.com 
+13:20:31.287 INFO  Post /login 
+13:20:31.306 INFO  User login: qwe@gmail.com 
+13:20:31.339 INFO  Post /login 
+13:20:31.349 INFO  User login: qwe@gmail.com 
+13:20:31.399 INFO  Post /login 
+13:20:31.416 INFO  User login: qwe@gmail.com 
+13:20:31.470 INFO  Post /login 
+13:20:31.483 INFO  User login: qwe@gmail.com 
+13:20:31.525 INFO  Post /login 
+13:20:31.535 INFO  User login: qwe@gmail.com 
+13:20:31.574 INFO  Post /login 
+13:20:31.586 INFO  User login: qwe@gmail.com 
+13:20:31.636 INFO  Post /login 
+13:20:31.652 INFO  User login: qwe@gmail.com 
+13:20:31.729 INFO  Post /login 
+13:20:31.742 INFO  User login: qwe@gmail.com 
+13:20:31.795 INFO  Post /login 
+13:20:31.809 INFO  User login: qwe@gmail.com 
+13:20:31.849 INFO  Post /login 
+13:20:31.862 INFO  User login: qwe@gmail.com 
+13:20:31.893 INFO  Post /login 
+13:20:31.904 INFO  User login: qwe@gmail.com 
+13:20:31.939 INFO  Post /login 
+13:20:31.951 INFO  User login: qwe@gmail.com 
+13:20:31.986 INFO  Post /login 
+13:20:31.996 INFO  User login: thach@gmail.com 
+13:20:32.067 INFO  Post /login 
+13:20:32.091 INFO  User login: qwe@gmail.com 
+13:20:32.136 INFO  GET /users/getUserInfo 
+13:20:32.153 INFO  Post /login 
+13:20:32.173 INFO  User login: qwe@gmail.com 
+13:20:32.237 INFO  GET /users/getUserInfo 
+13:20:32.250 INFO  Post /login 
+13:20:32.279 INFO  User login: qwe@gmail.com 
+13:20:32.321 INFO  GET /users/getUserInfo 
+13:20:32.346 INFO  Post /login 
+13:20:32.388 INFO  User login: qwe@gmail.com 
+13:20:32.438 INFO  /routes/users: Save edit userprofile 
+13:20:32.463 INFO  Post /login 
+13:20:32.475 INFO  User login: qwe@gmail.com 
+13:20:32.521 INFO  /routes/users: Upload avatar 
+13:20:32.567 INFO  Post /login 
+13:20:32.585 INFO  User login: qwe@gmail.com 
+13:20:32.670 INFO  Post /login 
+13:20:32.697 INFO  User login: qwe@gmail.com 
+13:20:32.760 INFO  Post /login 
+13:20:32.792 INFO  User login: qwe@gmail.com 
+13:20:32.832 INFO  /routes/users: Save edit userprofile 
+13:20:32.866 INFO  Post /login 
+13:20:32.881 INFO  User login: qwe@gmail.com 
+13:20:32.933 INFO  Post /login 
+13:20:32.968 INFO  User login: qwe@gmail.com 
+13:20:33.004 INFO  /routes/users: Save edit userprofile 
+13:20:33.035 INFO  Post /login 
+13:20:33.076 INFO  User login: tranhoangnam3108@gmail.com 
+13:20:33.085 INFO  /routes/users: Save edit userprofile 
+13:21:12.728 INFO  Post /login 
+13:21:12.786 INFO  User login: qwe@gmail.com 
+13:21:12.949 INFO  Post /login 
+13:21:12.962 INFO  User login: qwe@gmail.com 
+13:21:13.025 INFO  Post /login 
+13:21:13.045 INFO  User login: qwe@gmail.com 
+13:21:13.188 INFO  Post /login 
+13:21:13.217 INFO  User login: qwe@gmail.com 
+13:21:13.276 INFO  Post /login 
+13:21:13.334 INFO  User login: qwe@gmail.com 
+13:21:13.394 INFO  Post /login 
+13:21:13.418 INFO  User login: qwe@gmail.com 
+13:21:13.517 INFO  Post /login 
+13:21:13.537 INFO  User login: qwe@gmail.com 
+13:21:13.563 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:21:13.595 INFO  Post /login 
+13:21:13.612 INFO  User login: qwe@gmail.com 
+13:21:13.661 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:21:13.680 INFO  Post /login 
+13:21:13.715 INFO  User login: qwe@gmail.com 
+13:21:13.761 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:21:13.798 INFO  Post /login 
+13:21:13.835 INFO  User login: qwe@gmail.com 
+13:21:13.894 INFO  Get Delete Command 
+13:21:13.910 INFO  Post /login 
+13:21:13.934 INFO  User login: qwe@gmail.com 
+13:21:14.003 INFO  Post /login 
+13:21:14.026 INFO  User login: qwe@gmail.com 
+13:21:14.070 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:21:14.103 INFO  Post /login 
+13:21:14.124 INFO  User login: qwe@gmail.com 
+13:21:14.159 INFO  /admin/updateClass: update Class :1 
+13:21:14.190 INFO  Post /login 
+13:21:14.222 INFO  User login: qwe@gmail.com 
+13:21:14.247 INFO  Get Delete Command 
+13:21:14.257 INFO  Post /login 
+13:21:14.276 INFO  User login: qwe@gmail.com 
+13:21:14.343 INFO  Post /login 
+13:21:14.367 INFO  User login: qwe@gmail.com 
+13:21:14.416 INFO  Post /login 
+13:21:14.439 INFO  User login: qwe@gmail.com 
+13:21:14.504 INFO  Post /login 
+13:21:14.524 INFO  User login: qwe@gmail.com 
+13:21:14.581 INFO  Post /login 
+13:21:14.624 INFO  User login: qwe@gmail.com 
+13:21:14.659 INFO  /common/course/getClassByCourseID:  
+13:21:14.686 INFO  Post /login 
+13:21:14.702 INFO  User login: qwe@gmail.com 
+13:21:14.737 INFO  Post /login 
+13:21:14.769 INFO  User login failed. 
+13:21:14.779 INFO  Post /login 
+13:21:14.804 INFO  User login: qwe@gmail.com 
+13:21:14.848 INFO  Post /login 
+13:21:14.872 INFO  User login failed. 
+13:21:14.881 INFO  Post /login 
+13:21:14.988 INFO  User login failed. 
+13:21:14.996 INFO  Post /login 
+13:21:15.060 INFO  User login failed. 
+13:21:15.076 INFO  Post /login 
+13:21:15.092 INFO  User login: bqd@gmail.com 
+13:21:15.101 INFO  Post /login 
+13:21:15.119 INFO  User login failed. 
+13:21:15.127 INFO  Post /login 
+13:21:15.159 INFO  User login failed. 
+13:21:15.167 INFO  Post /login 
+13:21:15.190 INFO  User login failed. 
+13:21:15.196 INFO  GET /logout 
+13:21:17.226 INFO  Post /login 
+13:21:17.250 INFO  User login: qwe@gmail.com 
+13:21:17.296 INFO  Post /login 
+13:21:17.308 INFO  User login: qwe@gmail.com 
+13:21:17.371 INFO  Post /login 
+13:21:17.393 INFO  User login: qwe@gmail.com 
+13:21:17.441 INFO  Post /login 
+13:21:17.468 INFO  User login: qwe@gmail.com 
+13:21:17.510 INFO  Post /login 
+13:21:17.527 INFO  User login: qwe@gmail.com 
+13:21:17.568 INFO  Post /login 
+13:21:17.581 INFO  User login: qwe@gmail.com 
+13:21:17.668 INFO  Post /login 
+13:21:17.710 INFO  User login: qwe@gmail.com 
+13:21:17.791 INFO  Post /login 
+13:21:17.816 INFO  User login: qwe@gmail.com 
+13:21:17.866 INFO  Post /login 
+13:21:17.884 INFO  User login: qwe@gmail.com 
+13:21:17.943 INFO  Post /login 
+13:21:17.963 INFO  User login: qwe@gmail.com 
+13:21:18.087 INFO  Post /login 
+13:21:18.118 INFO  User login: qwe@gmail.com 
+13:21:18.216 INFO  Post /login 
+13:21:18.231 INFO  User login: qwe@gmail.com 
+13:21:18.305 INFO  Post /login 
+13:21:18.323 INFO  User login: qwe@gmail.com 
+13:21:18.380 INFO  Post /login 
+13:21:18.411 INFO  User login: qwe@gmail.com 
+13:21:18.463 INFO  Post /login 
+13:21:18.479 INFO  User login: qwe@gmail.com 
+13:21:18.525 INFO  Post /login 
+13:21:18.541 INFO  User login: qwe@gmail.com 
+13:21:18.588 INFO  Post /login 
+13:21:18.614 INFO  User login: thach@gmail.com 
+13:21:18.679 INFO  Post /login 
+13:21:18.702 INFO  User login: qwe@gmail.com 
+13:21:18.734 INFO  GET /users/getUserInfo 
+13:21:18.747 INFO  Post /login 
+13:21:18.758 INFO  User login: qwe@gmail.com 
+13:21:18.787 INFO  GET /users/getUserInfo 
+13:21:18.800 INFO  Post /login 
+13:21:18.822 INFO  User login: qwe@gmail.com 
+13:21:18.845 INFO  GET /users/getUserInfo 
+13:21:18.872 INFO  Post /login 
+13:21:18.887 INFO  User login: qwe@gmail.com 
+13:21:18.976 INFO  /routes/users: Save edit userprofile 
+13:21:18.999 INFO  Post /login 
+13:21:19.008 INFO  User login: qwe@gmail.com 
+13:21:19.078 INFO  /routes/users: Upload avatar 
+13:21:19.225 INFO  Post /login 
+13:21:19.281 INFO  User login: qwe@gmail.com 
+13:21:19.352 INFO  Post /login 
+13:21:19.379 INFO  User login: qwe@gmail.com 
+13:21:19.456 INFO  Post /login 
+13:21:19.471 INFO  User login: qwe@gmail.com 
+13:21:19.520 INFO  /routes/users: Save edit userprofile 
+13:21:19.553 INFO  Post /login 
+13:21:19.618 INFO  User login: qwe@gmail.com 
+13:21:19.696 INFO  Post /login 
+13:21:19.729 INFO  User login: qwe@gmail.com 
+13:21:19.770 INFO  /routes/users: Save edit userprofile 
+13:21:19.799 INFO  Post /login 
+13:21:19.824 INFO  User login: tranhoangnam3108@gmail.com 
+13:21:19.832 INFO  /routes/users: Save edit userprofile 
+13:25:51.775 INFO  Post /login 
+13:25:51.839 INFO  User login: qwe@gmail.com 
+13:25:53.100 INFO  GET /users/getUserInfo 
+13:25:54.272 INFO  GET /users/getUserInfo 
+13:26:45.270 INFO  Post /login 
+13:26:45.351 INFO  User login: qwe@gmail.com 
+13:26:45.548 INFO  Post /login 
+13:26:45.580 INFO  User login: qwe@gmail.com 
+13:26:45.654 INFO  Post /login 
+13:26:45.680 INFO  User login: qwe@gmail.com 
+13:26:45.769 INFO  Post /login 
+13:26:45.796 INFO  User login: qwe@gmail.com 
+13:26:45.856 INFO  Post /login 
+13:26:45.914 INFO  User login: qwe@gmail.com 
+13:26:46.002 INFO  Post /login 
+13:26:46.033 INFO  User login: qwe@gmail.com 
+13:26:46.134 INFO  Post /login 
+13:26:46.164 INFO  User login: qwe@gmail.com 
+13:26:46.217 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:26:46.252 INFO  Post /login 
+13:26:46.265 INFO  User login: qwe@gmail.com 
+13:26:46.340 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:26:46.359 INFO  Post /login 
+13:26:46.374 INFO  User login: qwe@gmail.com 
+13:26:46.414 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:26:46.447 INFO  Post /login 
+13:26:46.461 INFO  User login: qwe@gmail.com 
+13:26:46.487 INFO  Get Delete Command 
+13:26:46.501 INFO  Post /login 
+13:26:46.522 INFO  User login: qwe@gmail.com 
+13:26:46.588 INFO  Post /login 
+13:26:46.613 INFO  User login: qwe@gmail.com 
+13:26:46.644 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:26:46.692 INFO  Post /login 
+13:26:46.731 INFO  User login: qwe@gmail.com 
+13:26:46.786 INFO  /admin/updateClass: update Class :1 
+13:26:46.836 INFO  Post /login 
+13:26:46.853 INFO  User login: qwe@gmail.com 
+13:26:46.891 INFO  Get Delete Command 
+13:26:46.903 INFO  Post /login 
+13:26:46.926 INFO  User login: qwe@gmail.com 
+13:26:46.985 INFO  Post /login 
+13:26:47.014 INFO  User login: qwe@gmail.com 
+13:26:47.056 INFO  Post /login 
+13:26:47.075 INFO  User login: qwe@gmail.com 
+13:26:47.153 INFO  Post /login 
+13:26:47.171 INFO  User login: qwe@gmail.com 
+13:26:47.221 INFO  Post /login 
+13:26:47.246 INFO  User login: qwe@gmail.com 
+13:26:47.291 INFO  /common/course/getClassByCourseID:  
+13:26:47.312 INFO  Post /login 
+13:26:47.347 INFO  User login: qwe@gmail.com 
+13:26:47.372 INFO  Post /login 
+13:26:47.415 INFO  User login failed. 
+13:26:47.423 INFO  Post /login 
+13:26:47.456 INFO  User login: qwe@gmail.com 
+13:26:47.496 INFO  Post /login 
+13:26:47.547 INFO  User login failed. 
+13:26:47.555 INFO  Post /login 
+13:26:47.576 INFO  User login failed. 
+13:26:47.585 INFO  Post /login 
+13:26:47.596 INFO  User login failed. 
+13:26:47.613 INFO  Post /login 
+13:26:47.633 INFO  User login: bqd@gmail.com 
+13:26:47.641 INFO  Post /login 
+13:26:47.665 INFO  User login failed. 
+13:26:47.671 INFO  Post /login 
+13:26:47.705 INFO  User login failed. 
+13:26:47.712 INFO  Post /login 
+13:26:47.756 INFO  User login failed. 
+13:26:47.763 INFO  GET /logout 
+13:26:49.788 INFO  Post /login 
+13:26:49.805 INFO  User login: qwe@gmail.com 
+13:26:49.859 INFO  Post /login 
+13:26:49.888 INFO  User login: qwe@gmail.com 
+13:26:49.935 INFO  Post /login 
+13:26:49.959 INFO  User login: qwe@gmail.com 
+13:26:50.016 INFO  Post /login 
+13:26:50.051 INFO  User login: qwe@gmail.com 
+13:26:50.100 INFO  Post /login 
+13:26:50.123 INFO  User login: qwe@gmail.com 
+13:26:50.166 INFO  Post /login 
+13:26:50.208 INFO  User login: qwe@gmail.com 
+13:26:50.292 INFO  Post /login 
+13:26:50.320 INFO  User login: qwe@gmail.com 
+13:26:50.375 INFO  Post /login 
+13:26:50.391 INFO  User login: qwe@gmail.com 
+13:26:50.437 INFO  Post /login 
+13:26:50.449 INFO  User login: qwe@gmail.com 
+13:26:50.497 INFO  Post /login 
+13:26:50.510 INFO  User login: qwe@gmail.com 
+13:26:50.556 INFO  Post /login 
+13:26:50.569 INFO  User login: qwe@gmail.com 
+13:26:50.656 INFO  Post /login 
+13:26:50.679 INFO  User login: qwe@gmail.com 
+13:26:50.745 INFO  Post /login 
+13:26:50.759 INFO  User login: qwe@gmail.com 
+13:26:50.804 INFO  Post /login 
+13:26:50.825 INFO  User login: qwe@gmail.com 
+13:26:50.856 INFO  Post /login 
+13:26:50.869 INFO  User login: qwe@gmail.com 
+13:26:50.906 INFO  Post /login 
+13:26:50.921 INFO  User login: qwe@gmail.com 
+13:26:50.958 INFO  Post /login 
+13:26:50.976 INFO  User login: thach@gmail.com 
+13:26:51.044 INFO  Post /login 
+13:26:51.058 INFO  User login: qwe@gmail.com 
+13:26:51.080 INFO  GET /users/getUserInfo 
+13:26:51.092 INFO  Post /login 
+13:26:51.110 INFO  User login: qwe@gmail.com 
+13:26:51.134 INFO  GET /users/getUserInfo 
+13:26:51.144 INFO  Post /login 
+13:26:51.159 INFO  User login: qwe@gmail.com 
+13:26:51.183 INFO  GET /users/getUserInfo 
+13:26:51.199 INFO  Post /login 
+13:26:51.223 INFO  User login: qwe@gmail.com 
+13:26:51.267 INFO  /routes/users: Save edit userprofile 
+13:26:51.291 INFO  Post /login 
+13:26:51.318 INFO  User login: qwe@gmail.com 
+13:26:51.357 INFO  /routes/users: Upload avatar 
+13:26:51.405 INFO  Post /login 
+13:26:51.423 INFO  User login: qwe@gmail.com 
+13:26:51.491 INFO  Post /login 
+13:26:51.516 INFO  User login: qwe@gmail.com 
+13:26:51.556 INFO  Post /login 
+13:26:51.568 INFO  User login: qwe@gmail.com 
+13:26:51.587 INFO  /routes/users: Save edit userprofile 
+13:26:51.612 INFO  Post /login 
+13:26:51.625 INFO  User login: qwe@gmail.com 
+13:26:51.664 INFO  Post /login 
+13:26:51.678 INFO  User login: qwe@gmail.com 
+13:26:51.697 INFO  /routes/users: Save edit userprofile 
+13:26:51.725 INFO  Post /login 
+13:26:51.744 INFO  User login: tranhoangnam3108@gmail.com 
+13:26:51.750 INFO  /routes/users: Save edit userprofile 
+13:27:42.312 INFO  Post /login 
+13:27:42.364 INFO  User login: qwe@gmail.com 
+13:27:43.620 INFO  GET /users/getUserInfo 
+13:27:45.109 INFO  GET /users/getUserInfo 
+13:27:49.427 INFO  /routes/users: Upload avatar 
+13:27:50.434 INFO  GET /users/getUserInfo 
+13:27:52.196 INFO  /routes/users: Save edit userprofile 
+13:27:52.221 INFO  GET /users/getUserInfo 
+13:27:52.285 INFO  GET /users/getUserInfo 
+13:27:55.935 INFO  GET /users/getUserInfo 
+13:30:38.628 INFO  Post /login 
+13:30:38.681 INFO  User login: qwe@gmail.com 
+13:30:38.813 INFO  Post /login 
+13:30:38.835 INFO  User login: qwe@gmail.com 
+13:30:38.888 INFO  Post /login 
+13:30:38.948 INFO  User login: qwe@gmail.com 
+13:30:39.020 INFO  Post /login 
+13:30:39.041 INFO  User login: qwe@gmail.com 
+13:30:39.087 INFO  Post /login 
+13:30:39.111 INFO  User login: qwe@gmail.com 
+13:30:39.152 INFO  Post /login 
+13:30:39.166 INFO  User login: qwe@gmail.com 
+13:30:39.240 INFO  Post /login 
+13:30:39.256 INFO  User login: qwe@gmail.com 
+13:30:39.288 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:30:39.314 INFO  Post /login 
+13:30:39.325 INFO  User login: qwe@gmail.com 
+13:30:39.357 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:30:39.371 INFO  Post /login 
+13:30:39.384 INFO  User login: qwe@gmail.com 
+13:30:39.412 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:30:39.441 INFO  Post /login 
+13:30:39.458 INFO  User login: qwe@gmail.com 
+13:30:39.482 INFO  Get Delete Command 
+13:30:39.497 INFO  Post /login 
+13:30:39.513 INFO  User login: qwe@gmail.com 
+13:30:39.563 INFO  Post /login 
+13:30:39.576 INFO  User login: qwe@gmail.com 
+13:30:39.606 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:30:39.649 INFO  Post /login 
+13:30:39.664 INFO  User login: qwe@gmail.com 
+13:30:39.697 INFO  /admin/updateClass: update Class :1 
+13:30:39.728 INFO  Post /login 
+13:30:39.740 INFO  User login: qwe@gmail.com 
+13:30:39.776 INFO  Get Delete Command 
+13:30:39.788 INFO  Post /login 
+13:30:39.800 INFO  User login: qwe@gmail.com 
+13:30:39.849 INFO  Post /login 
+13:30:39.867 INFO  User login: qwe@gmail.com 
+13:30:39.907 INFO  Post /login 
+13:30:39.920 INFO  User login: qwe@gmail.com 
+13:30:39.966 INFO  Post /login 
+13:30:39.975 INFO  User login: qwe@gmail.com 
+13:30:40.017 INFO  Post /login 
+13:30:40.028 INFO  User login: qwe@gmail.com 
+13:30:40.047 INFO  /common/course/getClassByCourseID:  
+13:30:40.074 INFO  Post /login 
+13:30:40.089 INFO  User login: qwe@gmail.com 
+13:30:40.113 INFO  Post /login 
+13:30:40.126 INFO  User login failed. 
+13:30:40.133 INFO  Post /login 
+13:30:40.142 INFO  User login: qwe@gmail.com 
+13:30:40.175 INFO  Post /login 
+13:30:40.195 INFO  User login failed. 
+13:30:40.201 INFO  Post /login 
+13:30:40.217 INFO  User login failed. 
+13:30:40.225 INFO  Post /login 
+13:30:40.239 INFO  User login failed. 
+13:30:40.252 INFO  Post /login 
+13:30:40.294 INFO  User login: bqd@gmail.com 
+13:30:40.303 INFO  Post /login 
+13:30:40.320 INFO  User login failed. 
+13:30:40.327 INFO  Post /login 
+13:30:40.344 INFO  User login failed. 
+13:30:40.351 INFO  Post /login 
+13:30:40.373 INFO  User login failed. 
+13:30:40.379 INFO  GET /logout 
+13:30:42.403 INFO  Post /login 
+13:30:42.422 INFO  User login: qwe@gmail.com 
+13:30:42.452 INFO  Post /login 
+13:30:42.468 INFO  User login: qwe@gmail.com 
+13:30:42.507 INFO  Post /login 
+13:30:42.527 INFO  User login: qwe@gmail.com 
+13:30:42.582 INFO  Post /login 
+13:30:42.606 INFO  User login: qwe@gmail.com 
+13:30:42.654 INFO  Post /login 
+13:30:42.669 INFO  User login: qwe@gmail.com 
+13:30:42.699 INFO  Post /login 
+13:30:42.708 INFO  User login: qwe@gmail.com 
+13:30:42.775 INFO  Post /login 
+13:30:42.789 INFO  User login: qwe@gmail.com 
+13:30:42.852 INFO  Post /login 
+13:30:42.863 INFO  User login: qwe@gmail.com 
+13:30:42.907 INFO  Post /login 
+13:30:42.918 INFO  User login: qwe@gmail.com 
+13:30:42.969 INFO  Post /login 
+13:30:42.981 INFO  User login: qwe@gmail.com 
+13:30:43.051 INFO  Post /login 
+13:30:43.062 INFO  User login: qwe@gmail.com 
+13:30:43.145 INFO  Post /login 
+13:30:43.156 INFO  User login: qwe@gmail.com 
+13:30:43.215 INFO  Post /login 
+13:30:43.223 INFO  User login: qwe@gmail.com 
+13:30:43.269 INFO  Post /login 
+13:30:43.284 INFO  User login: qwe@gmail.com 
+13:30:43.319 INFO  Post /login 
+13:30:43.329 INFO  User login: qwe@gmail.com 
+13:30:43.368 INFO  Post /login 
+13:30:43.380 INFO  User login: qwe@gmail.com 
+13:30:43.410 INFO  Post /login 
+13:30:43.424 INFO  User login: thach@gmail.com 
+13:30:43.495 INFO  Post /login 
+13:30:43.505 INFO  User login: qwe@gmail.com 
+13:30:43.524 INFO  GET /users/getUserInfo 
+13:30:43.539 INFO  Post /login 
+13:30:43.552 INFO  User login: qwe@gmail.com 
+13:30:43.579 INFO  GET /users/getUserInfo 
+13:30:43.602 INFO  Post /login 
+13:30:43.615 INFO  User login: qwe@gmail.com 
+13:30:43.639 INFO  GET /users/getUserInfo 
+13:30:43.661 INFO  Post /login 
+13:30:43.671 INFO  User login: qwe@gmail.com 
+13:30:43.713 INFO  /routes/users: Save edit userprofile 
+13:30:43.739 INFO  Post /login 
+13:30:43.757 INFO  User login: qwe@gmail.com 
+13:30:43.790 INFO  /routes/users: Upload avatar 
+13:30:43.841 INFO  Post /login 
+13:30:43.861 INFO  User login: qwe@gmail.com 
+13:30:43.931 INFO  Post /login 
+13:30:43.941 INFO  User login: qwe@gmail.com 
+13:30:43.988 INFO  Post /login 
+13:30:44.002 INFO  User login: qwe@gmail.com 
+13:30:44.024 INFO  /routes/users: Save edit userprofile 
+13:30:44.048 INFO  Post /login 
+13:30:44.082 INFO  User login: qwe@gmail.com 
+13:30:44.120 INFO  Post /login 
+13:30:44.134 INFO  User login: qwe@gmail.com 
+13:30:44.165 INFO  /routes/users: Save edit userprofile 
+13:30:44.191 INFO  Post /login 
+13:30:44.207 INFO  User login: tranhoangnam3108@gmail.com 
+13:30:44.215 INFO  /routes/users: Save edit userprofile 
+13:31:18.017 INFO  Post /login 
+13:31:18.075 INFO  User login: qwe@gmail.com 
+13:31:18.201 INFO  Post /login 
+13:31:18.217 INFO  User login: qwe@gmail.com 
+13:31:18.293 INFO  Post /login 
+13:31:18.309 INFO  User login: qwe@gmail.com 
+13:31:18.380 INFO  Post /login 
+13:31:18.390 INFO  User login: qwe@gmail.com 
+13:31:18.450 INFO  Post /login 
+13:31:18.481 INFO  User login: qwe@gmail.com 
+13:31:18.520 INFO  Post /login 
+13:31:18.529 INFO  User login: qwe@gmail.com 
+13:31:18.602 INFO  Post /login 
+13:31:18.612 INFO  User login: qwe@gmail.com 
+13:31:18.650 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:31:18.683 INFO  Post /login 
+13:31:18.708 INFO  User login: qwe@gmail.com 
+13:31:18.733 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:31:18.749 INFO  Post /login 
+13:31:18.768 INFO  User login: qwe@gmail.com 
+13:31:18.796 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:31:18.836 INFO  Post /login 
+13:31:18.874 INFO  User login: qwe@gmail.com 
+13:31:18.959 INFO  Get Delete Command 
+13:31:18.972 INFO  Post /login 
+13:31:18.996 INFO  User login: qwe@gmail.com 
+13:31:19.032 INFO  Post /login 
+13:31:19.043 INFO  User login: qwe@gmail.com 
+13:31:19.068 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:31:19.117 INFO  Post /login 
+13:31:19.128 INFO  User login: qwe@gmail.com 
+13:31:19.157 INFO  /admin/updateClass: update Class :1 
+13:31:19.194 INFO  Post /login 
+13:31:19.207 INFO  User login: qwe@gmail.com 
+13:31:19.228 INFO  Get Delete Command 
+13:31:19.242 INFO  Post /login 
+13:31:19.261 INFO  User login: qwe@gmail.com 
+13:31:19.327 INFO  Post /login 
+13:31:19.337 INFO  User login: qwe@gmail.com 
+13:31:19.395 INFO  Post /login 
+13:31:19.412 INFO  User login: qwe@gmail.com 
+13:31:19.466 INFO  Post /login 
+13:31:19.485 INFO  User login: qwe@gmail.com 
+13:31:19.526 INFO  Post /login 
+13:31:19.541 INFO  User login: qwe@gmail.com 
+13:31:19.561 INFO  /common/course/getClassByCourseID:  
+13:31:19.589 INFO  Post /login 
+13:31:19.618 INFO  User login: qwe@gmail.com 
+13:31:19.640 INFO  Post /login 
+13:31:19.654 INFO  User login failed. 
+13:31:19.660 INFO  Post /login 
+13:31:19.678 INFO  User login: qwe@gmail.com 
+13:31:19.717 INFO  Post /login 
+13:31:19.751 INFO  User login failed. 
+13:31:19.759 INFO  Post /login 
+13:31:19.797 INFO  User login failed. 
+13:31:19.809 INFO  Post /login 
+13:31:19.830 INFO  User login failed. 
+13:31:19.845 INFO  Post /login 
+13:31:19.860 INFO  User login: bqd@gmail.com 
+13:31:19.868 INFO  Post /login 
+13:31:19.887 INFO  User login failed. 
+13:31:19.894 INFO  Post /login 
+13:31:19.920 INFO  User login failed. 
+13:31:19.926 INFO  Post /login 
+13:31:19.940 INFO  User login failed. 
+13:31:19.951 INFO  GET /logout 
+13:31:21.976 INFO  Post /login 
+13:31:21.989 INFO  User login: qwe@gmail.com 
+13:31:22.024 INFO  Post /login 
+13:31:22.035 INFO  User login: qwe@gmail.com 
+13:31:22.094 INFO  Post /login 
+13:31:22.116 INFO  User login: qwe@gmail.com 
+13:31:22.171 INFO  Post /login 
+13:31:22.187 INFO  User login: qwe@gmail.com 
+13:31:22.221 INFO  Post /login 
+13:31:22.235 INFO  User login: qwe@gmail.com 
+13:31:22.282 INFO  Post /login 
+13:31:22.295 INFO  User login: qwe@gmail.com 
+13:31:22.346 INFO  Post /login 
+13:31:22.361 INFO  User login: qwe@gmail.com 
+13:31:22.419 INFO  Post /login 
+13:31:22.432 INFO  User login: qwe@gmail.com 
+13:31:22.491 INFO  Post /login 
+13:31:22.503 INFO  User login: qwe@gmail.com 
+13:31:22.542 INFO  Post /login 
+13:31:22.565 INFO  User login: qwe@gmail.com 
+13:31:22.617 INFO  Post /login 
+13:31:22.626 INFO  User login: qwe@gmail.com 
+13:31:22.705 INFO  Post /login 
+13:31:22.714 INFO  User login: qwe@gmail.com 
+13:31:22.761 INFO  Post /login 
+13:31:22.775 INFO  User login: qwe@gmail.com 
+13:31:22.811 INFO  Post /login 
+13:31:22.819 INFO  User login: qwe@gmail.com 
+13:31:22.846 INFO  Post /login 
+13:31:22.866 INFO  User login: qwe@gmail.com 
+13:31:22.899 INFO  Post /login 
+13:31:22.911 INFO  User login: qwe@gmail.com 
+13:31:22.952 INFO  Post /login 
+13:31:22.984 INFO  User login: thach@gmail.com 
+13:31:23.060 INFO  Post /login 
+13:31:23.077 INFO  User login: qwe@gmail.com 
+13:31:23.097 INFO  GET /users/getUserInfo 
+13:31:23.116 INFO  Post /login 
+13:31:23.127 INFO  User login: qwe@gmail.com 
+13:31:23.146 INFO  GET /users/getUserInfo 
+13:31:23.173 INFO  Post /login 
+13:31:23.204 INFO  User login: qwe@gmail.com 
+13:31:23.223 INFO  GET /users/getUserInfo 
+13:31:23.242 INFO  Post /login 
+13:31:23.251 INFO  User login: qwe@gmail.com 
+13:31:23.281 INFO  /routes/users: Save edit userprofile 
+13:31:23.304 INFO  Post /login 
+13:31:23.315 INFO  User login: qwe@gmail.com 
+13:31:23.348 INFO  /routes/users: Upload avatar 
+13:31:23.399 INFO  Post /login 
+13:31:23.409 INFO  User login: qwe@gmail.com 
+13:31:23.489 INFO  Post /login 
+13:31:23.503 INFO  User login: qwe@gmail.com 
+13:31:23.549 INFO  Post /login 
+13:31:23.562 INFO  User login: qwe@gmail.com 
+13:31:23.602 INFO  /routes/users: Save edit userprofile 
+13:31:23.628 INFO  Post /login 
+13:31:23.641 INFO  User login: qwe@gmail.com 
+13:31:23.682 INFO  Post /login 
+13:31:23.696 INFO  User login: qwe@gmail.com 
+13:31:23.718 INFO  /routes/users: Save edit userprofile 
+13:31:23.740 INFO  Post /login 
+13:31:23.763 INFO  User login: tranhoangnam3108@gmail.com 
+13:31:23.771 INFO  /routes/users: Save edit userprofile 
+13:32:17.846 INFO  Post /login 
+13:32:17.953 INFO  User login: qwe@gmail.com 
+13:32:18.161 INFO  Post /login 
+13:32:18.181 INFO  User login: qwe@gmail.com 
+13:32:18.253 INFO  Post /login 
+13:32:18.302 INFO  User login: qwe@gmail.com 
+13:32:18.435 INFO  Post /login 
+13:32:18.453 INFO  User login: qwe@gmail.com 
+13:32:18.524 INFO  Post /login 
+13:32:18.538 INFO  User login: qwe@gmail.com 
+13:32:18.600 INFO  Post /login 
+13:32:18.618 INFO  User login: qwe@gmail.com 
+13:32:18.710 INFO  Post /login 
+13:32:18.723 INFO  User login: qwe@gmail.com 
+13:32:18.752 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+13:32:18.798 INFO  Post /login 
+13:32:18.812 INFO  User login: qwe@gmail.com 
+13:32:18.846 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+13:32:18.864 INFO  Post /login 
+13:32:18.937 INFO  User login: qwe@gmail.com 
+13:32:18.975 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+13:32:19.009 INFO  Post /login 
+13:32:19.024 INFO  User login: qwe@gmail.com 
+13:32:19.055 INFO  Get Delete Command 
+13:32:19.069 INFO  Post /login 
+13:32:19.089 INFO  User login: qwe@gmail.com 
+13:32:19.142 INFO  Post /login 
+13:32:19.170 INFO  User login: qwe@gmail.com 
+13:32:19.241 INFO  /admin/courses/addClass: Add Class :test creat loc 
+13:32:19.294 INFO  Post /login 
+13:32:19.307 INFO  User login: qwe@gmail.com 
+13:32:19.352 INFO  /admin/updateClass: update Class :1 
+13:32:19.392 INFO  Post /login 
+13:32:19.416 INFO  User login: qwe@gmail.com 
+13:32:19.443 INFO  Get Delete Command 
+13:32:19.467 INFO  Post /login 
+13:32:19.494 INFO  User login: qwe@gmail.com 
+13:32:19.540 INFO  Post /login 
+13:32:19.550 INFO  User login: qwe@gmail.com 
+13:32:19.588 INFO  Post /login 
+13:32:19.609 INFO  User login: qwe@gmail.com 
+13:32:19.678 INFO  Post /login 
+13:32:19.701 INFO  User login: qwe@gmail.com 
+13:32:19.754 INFO  Post /login 
+13:32:19.766 INFO  User login: qwe@gmail.com 
+13:32:19.793 INFO  /common/course/getClassByCourseID:  
+13:32:19.823 INFO  Post /login 
+13:32:19.843 INFO  User login: qwe@gmail.com 
+13:32:19.865 INFO  Post /login 
+13:32:19.882 INFO  User login failed. 
+13:32:19.894 INFO  Post /login 
+13:32:19.913 INFO  User login: qwe@gmail.com 
+13:32:19.951 INFO  Post /login 
+13:32:19.971 INFO  User login failed. 
+13:32:19.979 INFO  Post /login 
+13:32:19.991 INFO  User login failed. 
+13:32:20.002 INFO  Post /login 
+13:32:20.019 INFO  User login failed. 
+13:32:20.036 INFO  Post /login 
+13:32:20.074 INFO  User login: bqd@gmail.com 
+13:32:20.083 INFO  Post /login 
+13:32:20.122 INFO  User login failed. 
+13:32:20.129 INFO  Post /login 
+13:32:20.149 INFO  User login failed. 
+13:32:20.156 INFO  Post /login 
+13:32:20.176 INFO  User login failed. 
+13:32:20.184 INFO  GET /logout 
+13:32:22.213 INFO  Post /login 
+13:32:22.230 INFO  User login: qwe@gmail.com 
+13:32:22.275 INFO  Post /login 
+13:32:22.287 INFO  User login: qwe@gmail.com 
+13:32:22.336 INFO  Post /login 
+13:32:22.361 INFO  User login: qwe@gmail.com 
+13:32:22.402 INFO  Post /login 
+13:32:22.420 INFO  User login: qwe@gmail.com 
+13:32:22.452 INFO  Post /login 
+13:32:22.471 INFO  User login: qwe@gmail.com 
+13:32:22.507 INFO  Post /login 
+13:32:22.518 INFO  User login: qwe@gmail.com 
+13:32:22.571 INFO  Post /login 
+13:32:22.589 INFO  User login: qwe@gmail.com 
+13:32:22.664 INFO  Post /login 
+13:32:22.674 INFO  User login: qwe@gmail.com 
+13:32:22.732 INFO  Post /login 
+13:32:22.748 INFO  User login: qwe@gmail.com 
+13:32:22.804 INFO  Post /login 
+13:32:22.820 INFO  User login: qwe@gmail.com 
+13:32:22.918 INFO  Post /login 
+13:32:22.929 INFO  User login: qwe@gmail.com 
+13:32:23.010 INFO  Post /login 
+13:32:23.025 INFO  User login: qwe@gmail.com 
+13:32:23.096 INFO  Post /login 
+13:32:23.110 INFO  User login: qwe@gmail.com 
+13:32:23.145 INFO  Post /login 
+13:32:23.157 INFO  User login: qwe@gmail.com 
+13:32:23.216 INFO  Post /login 
+13:32:23.229 INFO  User login: qwe@gmail.com 
+13:32:23.269 INFO  Post /login 
+13:32:23.315 INFO  User login: qwe@gmail.com 
+13:32:23.354 INFO  Post /login 
+13:32:23.364 INFO  User login: thach@gmail.com 
+13:32:23.443 INFO  Post /login 
+13:32:23.453 INFO  User login: qwe@gmail.com 
+13:32:23.474 INFO  GET /users/getUserInfo 
+13:32:23.495 INFO  Post /login 
+13:32:23.508 INFO  User login: qwe@gmail.com 
+13:32:23.539 INFO  GET /users/getUserInfo 
+13:32:23.554 INFO  Post /login 
+13:32:23.572 INFO  User login: qwe@gmail.com 
+13:32:23.608 INFO  GET /users/getUserInfo 
+13:32:23.620 INFO  Post /login 
+13:32:23.630 INFO  User login: qwe@gmail.com 
+13:32:23.655 INFO  /routes/users: Save edit userprofile 
+13:32:23.677 INFO  Post /login 
+13:32:23.699 INFO  User login: qwe@gmail.com 
+13:32:23.737 INFO  /routes/users: Upload avatar 
+13:32:23.811 INFO  Post /login 
+13:32:23.830 INFO  User login: qwe@gmail.com 
+13:32:23.915 INFO  Post /login 
+13:32:23.928 INFO  User login: qwe@gmail.com 
+13:32:23.977 INFO  Post /login 
+13:32:24.000 INFO  User login: qwe@gmail.com 
+13:32:24.031 INFO  /routes/users: Save edit userprofile 
+13:32:24.057 INFO  Post /login 
+13:32:24.070 INFO  User login: qwe@gmail.com 
+13:32:24.140 INFO  Post /login 
+13:32:24.158 INFO  User login: qwe@gmail.com 
+13:32:24.179 INFO  /routes/users: Save edit userprofile 
+13:32:24.203 INFO  Post /login 
+13:32:24.220 INFO  User login: tranhoangnam3108@gmail.com 
+13:32:24.226 INFO  /routes/users: Save edit userprofile 
+13:42:35.830 INFO  Post /login 
+13:42:35.975 INFO  User login: bqd@gmail.com 
+13:43:59.115 INFO  GET /users/getUserInfo 
+13:44:02.118 INFO  GET /users/getUserInfo 
+13:44:06.181 INFO  GET /users/getUserInfo 
+13:45:52.165 INFO  GET /users/getUserInfo 
+13:45:54.266 INFO  GET /users/getUserInfo 
+13:46:12.916 INFO  /routes/users: Save edit userprofile 
+13:46:12.970 INFO  GET /users/getUserInfo 
+13:46:13.022 INFO  GET /users/getUserInfo 
+13:46:14.640 INFO  GET /users/getUserInfo 
+13:46:27.266 INFO  /routes/users: Save edit userprofile 
+13:46:27.315 INFO  GET /users/getUserInfo 
+13:46:27.351 INFO  GET /users/getUserInfo 
+13:46:30.399 INFO  GET /users/getUserInfo 
+13:58:56.511 INFO  GET /users/getUserInfo 
+13:58:58.254 INFO  GET /users/getUserInfo 
+13:59:10.748 INFO  GET /users/getUserInfo 
+13:59:31.244 INFO  GET /users/getUserInfo 
+14:01:49.750 INFO  GET /users/getUserInfo 
+14:10:11.919 INFO  GET /users/getUserInfo 
+14:10:15.239 INFO  GET /logout 
+14:12:44.751 INFO  Post /login 
+14:12:44.844 INFO  User login: asdasdasdz@gmail.com 
+14:12:46.383 INFO  GET /users/getUserInfo 
+14:12:48.068 INFO  GET /users/getUserInfo 
+14:12:52.870 INFO  /routes/users: Upload avatar 
+14:12:53.729 INFO  GET /users/getUserInfo 
+14:12:55.446 INFO  GET /users/getUserInfo 
+14:12:58.864 INFO  GET /logout 
+14:15:07.410 INFO  Post /login 
+14:15:07.454 INFO  User login: qwe@gmail.com 
+14:15:08.773 INFO  GET /users/getUserInfo 
+14:16:07.983 INFO  GET /users/getUserInfo 
+14:16:16.001 INFO  GET /users/getUserInfo 
+14:16:21.298 INFO  /routes/users: Upload avatar 
+14:16:22.171 INFO  GET /users/getUserInfo 
+14:16:25.490 INFO  /routes/users: Save edit userprofile 
+14:16:25.523 INFO  GET /users/getUserInfo 
+14:16:25.580 INFO  GET /users/getUserInfo 
+14:17:15.908 INFO  GET /logout 
+14:17:20.696 INFO  Post /login 
+14:17:20.746 INFO  User login: bqd@gmail.com 
+14:17:22.118 INFO  GET /users/getUserInfo 
+14:34:57.545 INFO  Post /login 
+14:34:57.589 INFO  User login: qwe@gmail.com 
+14:45:47.925 INFO  GET /users/getUserInfo 
+14:45:48.095 INFO  GET /users/getUserInfo 
+15:00:35.945 INFO  GET /logout 
+15:00:36.049 INFO  GET /logout 
+15:00:40.354 INFO  Post /login 
+15:00:43.440 INFO  User login: qwe@gmail.com 
+16:05:41.028 INFO  Post /login 
+16:05:41.125 INFO  User login: bqd@gmail.com 
+16:05:42.828 INFO  GET /users/getUserInfo 
+16:05:44.253 INFO  GET /users/getUserInfo 
+16:05:48.572 INFO  /routes/users: Upload avatar 
+16:05:49.573 INFO  GET /users/getUserInfo 
+16:05:54.478 INFO  GET /users/getUserInfo 
+16:08:53.997 INFO  Post /login 
+16:08:54.102 INFO  User login: qwe@gmail.com 
+16:08:54.281 INFO  Post /login 
+16:08:54.306 INFO  User login: qwe@gmail.com 
+16:08:54.369 INFO  Post /login 
+16:08:54.396 INFO  User login: qwe@gmail.com 
+16:08:54.476 INFO  Post /login 
+16:08:54.500 INFO  User login: qwe@gmail.com 
+16:08:54.561 INFO  Post /login 
+16:08:54.587 INFO  User login: qwe@gmail.com 
+16:08:54.639 INFO  Post /login 
+16:08:54.663 INFO  User login: qwe@gmail.com 
+16:08:54.755 INFO  Post /login 
+16:08:54.793 INFO  User login: qwe@gmail.com 
+16:08:54.834 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:08:54.877 INFO  Post /login 
+16:08:54.907 INFO  User login: qwe@gmail.com 
+16:08:54.939 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:08:54.962 INFO  Post /login 
+16:08:54.985 INFO  User login: qwe@gmail.com 
+16:08:55.033 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:08:55.067 INFO  Post /login 
+16:08:55.080 INFO  User login: qwe@gmail.com 
+16:08:55.115 INFO  Get Delete Command 
+16:08:55.126 INFO  Post /login 
+16:08:55.144 INFO  User login: qwe@gmail.com 
+16:08:55.178 INFO  Post /login 
+16:08:55.219 INFO  User login: qwe@gmail.com 
+16:08:55.251 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:08:55.281 INFO  Post /login 
+16:08:55.331 INFO  User login: qwe@gmail.com 
+16:08:55.362 INFO  /admin/updateClass: update Class :1 
+16:08:55.401 INFO  Post /login 
+16:08:55.421 INFO  User login: qwe@gmail.com 
+16:08:55.444 INFO  Get Delete Command 
+16:08:55.456 INFO  Post /login 
+16:08:55.472 INFO  User login: qwe@gmail.com 
+16:08:55.527 INFO  Post /login 
+16:08:55.545 INFO  User login: qwe@gmail.com 
+16:08:55.588 INFO  Post /login 
+16:08:55.598 INFO  User login: qwe@gmail.com 
+16:08:55.660 INFO  Post /login 
+16:08:55.669 INFO  User login: qwe@gmail.com 
+16:08:55.715 INFO  Post /login 
+16:08:55.730 INFO  User login: qwe@gmail.com 
+16:08:55.750 INFO  /common/course/getClassByCourseID:  
+16:08:55.772 INFO  Post /login 
+16:08:55.792 INFO  User login: qwe@gmail.com 
+16:08:55.817 INFO  Post /login 
+16:08:55.837 INFO  User login failed. 
+16:08:55.844 INFO  Post /login 
+16:08:55.857 INFO  User login: qwe@gmail.com 
+16:08:55.886 INFO  Post /login 
+16:08:55.906 INFO  User login failed. 
+16:08:55.915 INFO  Post /login 
+16:08:55.941 INFO  User login failed. 
+16:08:55.955 INFO  Post /login 
+16:08:55.967 INFO  User login failed. 
+16:08:55.982 INFO  Post /login 
+16:08:56.008 INFO  User login: bqd@gmail.com 
+16:08:56.015 INFO  Post /login 
+16:08:56.040 INFO  User login failed. 
+16:08:56.046 INFO  Post /login 
+16:08:56.062 INFO  User login failed. 
+16:08:56.069 INFO  Post /login 
+16:08:56.087 INFO  User login failed. 
+16:08:56.094 INFO  GET /logout 
+16:08:56.947 INFO  Post /login 
+16:08:56.960 INFO  User login: qwe@gmail.com 
+16:08:56.992 INFO  Post /login 
+16:08:57.005 INFO  User login: qwe@gmail.com 
+16:08:57.051 INFO  Post /login 
+16:08:57.063 INFO  User login: qwe@gmail.com 
+16:08:57.121 INFO  Post /login 
+16:08:57.136 INFO  User login: qwe@gmail.com 
+16:08:57.178 INFO  Post /login 
+16:08:57.188 INFO  User login: qwe@gmail.com 
+16:08:57.226 INFO  Post /login 
+16:08:57.235 INFO  User login: qwe@gmail.com 
+16:08:57.297 INFO  Post /login 
+16:08:57.314 INFO  User login: qwe@gmail.com 
+16:08:57.381 INFO  Post /login 
+16:08:57.391 INFO  User login: qwe@gmail.com 
+16:08:57.437 INFO  Post /login 
+16:08:57.447 INFO  User login: qwe@gmail.com 
+16:08:57.504 INFO  Post /login 
+16:08:57.520 INFO  User login: qwe@gmail.com 
+16:08:57.569 INFO  Post /login 
+16:08:57.586 INFO  User login: qwe@gmail.com 
+16:08:57.660 INFO  Post /login 
+16:08:57.678 INFO  User login: qwe@gmail.com 
+16:08:57.737 INFO  Post /login 
+16:08:57.757 INFO  User login: qwe@gmail.com 
+16:08:57.807 INFO  Post /login 
+16:08:57.820 INFO  User login: qwe@gmail.com 
+16:08:57.858 INFO  Post /login 
+16:08:57.879 INFO  User login: qwe@gmail.com 
+16:08:57.910 INFO  Post /login 
+16:08:57.923 INFO  User login: qwe@gmail.com 
+16:08:57.973 INFO  Post /login 
+16:08:57.989 INFO  User login: thach@gmail.com 
+16:08:58.056 INFO  Post /login 
+16:08:58.068 INFO  User login: qwe@gmail.com 
+16:08:58.095 INFO  GET /users/getUserInfo 
+16:08:58.109 INFO  Post /login 
+16:08:58.122 INFO  User login: qwe@gmail.com 
+16:08:58.147 INFO  GET /users/getUserInfo 
+16:08:58.160 INFO  Post /login 
+16:08:58.181 INFO  User login: qwe@gmail.com 
+16:08:58.202 INFO  GET /users/getUserInfo 
+16:08:58.218 INFO  Post /login 
+16:08:58.229 INFO  User login: qwe@gmail.com 
+16:08:58.267 INFO  /routes/users: Save edit userprofile 
+16:08:58.293 INFO  Post /login 
+16:08:58.315 INFO  User login: qwe@gmail.com 
+16:08:58.349 INFO  /routes/users: Upload avatar 
+16:08:58.388 INFO  Post /login 
+16:08:58.403 INFO  Post /login 
+16:08:58.404 INFO  User login: qwe@gmail.com 
+16:08:58.418 INFO  User login: qwe@gmail.com 
+16:08:58.470 INFO  Post /login 
+16:08:58.485 INFO  Post /login 
+16:08:58.496 INFO  User login: qwe@gmail.com 
+16:08:58.502 INFO  User login: qwe@gmail.com 
+16:08:58.551 INFO  Post /login 
+16:08:58.570 INFO  Post /login 
+16:08:58.578 INFO  User login: qwe@gmail.com 
+16:08:58.615 INFO  User login: tranhoangnam3108@gmail.com 
+16:08:58.625 INFO  /routes/users: Save edit userprofile 
+16:08:58.634 INFO  /routes/users: Save edit userprofile 
+16:15:59.052 INFO  Post /login 
+16:15:59.105 INFO  User login: qwe@gmail.com 
+16:15:59.591 INFO  Post /login 
+16:15:59.693 INFO  User login: qwe@gmail.com 
+16:16:31.013 INFO  Post /login 
+16:16:31.064 INFO  User login: qwe@gmail.com 
+16:16:31.244 INFO  Post /login 
+16:16:31.260 INFO  User login: qwe@gmail.com 
+16:16:31.320 INFO  Post /login 
+16:16:31.347 INFO  User login: qwe@gmail.com 
+16:16:31.431 INFO  Post /login 
+16:16:31.449 INFO  User login: qwe@gmail.com 
+16:16:31.503 INFO  Post /login 
+16:16:31.515 INFO  User login: qwe@gmail.com 
+16:16:31.578 INFO  Post /login 
+16:16:31.588 INFO  User login: qwe@gmail.com 
+16:16:31.666 INFO  Post /login 
+16:16:31.682 INFO  User login: qwe@gmail.com 
+16:16:31.704 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:16:31.732 INFO  Post /login 
+16:16:31.752 INFO  User login: qwe@gmail.com 
+16:16:31.778 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:16:31.794 INFO  Post /login 
+16:16:31.803 INFO  User login: qwe@gmail.com 
+16:16:31.827 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:16:31.865 INFO  Post /login 
+16:16:31.878 INFO  User login: qwe@gmail.com 
+16:16:31.909 INFO  Get Delete Command 
+16:16:31.922 INFO  Post /login 
+16:16:31.947 INFO  User login: qwe@gmail.com 
+16:16:31.999 INFO  Post /login 
+16:16:32.010 INFO  User login: qwe@gmail.com 
+16:16:32.078 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:16:32.123 INFO  Post /login 
+16:16:32.152 INFO  User login: qwe@gmail.com 
+16:16:32.192 INFO  /admin/updateClass: update Class :1 
+16:16:32.226 INFO  Post /login 
+16:16:32.270 INFO  User login: qwe@gmail.com 
+16:16:32.346 INFO  Get Delete Command 
+16:16:32.360 INFO  Post /login 
+16:16:32.400 INFO  User login: qwe@gmail.com 
+16:16:32.477 INFO  Post /login 
+16:16:32.496 INFO  User login: qwe@gmail.com 
+16:16:32.537 INFO  Post /login 
+16:16:32.588 INFO  User login: qwe@gmail.com 
+16:16:32.641 INFO  Post /login 
+16:16:32.667 INFO  User login: qwe@gmail.com 
+16:16:32.717 INFO  Post /login 
+16:16:32.738 INFO  User login: qwe@gmail.com 
+16:16:32.797 INFO  /common/course/getClassByCourseID:  
+16:16:32.820 INFO  Post /login 
+16:16:32.891 INFO  User login: qwe@gmail.com 
+16:16:32.922 INFO  Post /login 
+16:16:32.938 INFO  User login failed. 
+16:16:32.945 INFO  Post /login 
+16:16:32.970 INFO  User login: qwe@gmail.com 
+16:16:33.015 INFO  Post /login 
+16:16:33.044 INFO  User login failed. 
+16:16:33.051 INFO  Post /login 
+16:16:33.080 INFO  User login failed. 
+16:16:33.088 INFO  Post /login 
+16:16:33.112 INFO  User login failed. 
+16:16:33.126 INFO  Post /login 
+16:16:33.147 INFO  User login: bqd@gmail.com 
+16:16:33.154 INFO  Post /login 
+16:16:33.181 INFO  User login failed. 
+16:16:33.189 INFO  Post /login 
+16:16:33.210 INFO  User login failed. 
+16:16:33.218 INFO  Post /login 
+16:16:33.236 INFO  User login failed. 
+16:16:33.244 INFO  GET /logout 
+16:16:34.297 INFO  Post /login 
+16:16:34.323 INFO  User login: qwe@gmail.com 
+16:16:34.358 INFO  Post /login 
+16:16:34.387 INFO  User login: qwe@gmail.com 
+16:16:34.438 INFO  Post /login 
+16:16:34.448 INFO  User login: qwe@gmail.com 
+16:16:34.493 INFO  Post /login 
+16:16:34.525 INFO  User login: qwe@gmail.com 
+16:16:34.572 INFO  Post /login 
+16:16:34.596 INFO  User login: qwe@gmail.com 
+16:16:34.682 INFO  Post /login 
+16:16:34.756 INFO  User login: qwe@gmail.com 
+16:16:34.878 INFO  Post /login 
+16:16:34.920 INFO  User login: qwe@gmail.com 
+16:16:35.033 INFO  Post /login 
+16:16:35.056 INFO  User login: qwe@gmail.com 
+16:16:35.127 INFO  Post /login 
+16:16:35.164 INFO  User login: qwe@gmail.com 
+16:16:35.230 INFO  Post /login 
+16:16:35.261 INFO  User login: qwe@gmail.com 
+16:16:35.404 INFO  Post /login 
+16:16:35.467 INFO  User login: qwe@gmail.com 
+16:16:35.648 INFO  Post /login 
+16:16:35.710 INFO  User login: qwe@gmail.com 
+16:16:35.911 INFO  Post /login 
+16:16:35.980 INFO  User login: qwe@gmail.com 
+16:16:36.021 INFO  Post /login 
+16:16:36.069 INFO  User login: qwe@gmail.com 
+16:16:36.178 INFO  Post /login 
+16:16:36.201 INFO  User login: qwe@gmail.com 
+16:16:36.272 INFO  Post /login 
+16:16:36.302 INFO  User login: qwe@gmail.com 
+16:16:36.342 INFO  Post /login 
+16:16:36.387 INFO  User login: thach@gmail.com 
+16:16:36.427 INFO  Post /login 
+16:16:36.439 INFO  User login: qwe@gmail.com 
+16:16:36.481 INFO  GET /users/getUserInfo 
+16:16:36.494 INFO  Post /login 
+16:16:36.527 INFO  User login: qwe@gmail.com 
+16:16:36.559 INFO  GET /users/getUserInfo 
+16:16:36.573 INFO  Post /login 
+16:16:36.584 INFO  User login: qwe@gmail.com 
+16:16:36.617 INFO  GET /users/getUserInfo 
+16:16:36.634 INFO  Post /login 
+16:16:36.643 INFO  User login: qwe@gmail.com 
+16:16:36.685 INFO  /routes/users: Save edit userprofile 
+16:16:36.708 INFO  Post /login 
+16:16:36.723 INFO  User login: qwe@gmail.com 
+16:16:36.764 INFO  /routes/users: Upload avatar 
+16:16:36.818 INFO  Post /login 
+16:16:36.832 INFO  User login: qwe@gmail.com 
+16:16:36.894 INFO  Post /login 
+16:16:36.905 INFO  User login: qwe@gmail.com 
+16:16:36.979 INFO  Post /login 
+16:16:36.993 INFO  User login: qwe@gmail.com 
+16:16:37.012 INFO  /routes/users: Save edit userprofile 
+16:16:37.037 INFO  Post /login 
+16:16:37.050 INFO  User login: qwe@gmail.com 
+16:16:37.105 INFO  Post /login 
+16:16:37.117 INFO  User login: qwe@gmail.com 
+16:16:37.139 INFO  /routes/users: Save edit userprofile 
+16:16:37.161 INFO  Post /login 
+16:16:37.200 INFO  User login: tranhoangnam3108@gmail.com 
+16:16:37.209 INFO  /routes/users: Save edit userprofile 
+16:34:57.392 INFO  Post /login 
+16:34:57.449 INFO  User login: qwe@gmail.com 
+16:34:57.521 INFO  Ensure authenticated middleware 
+16:34:57.521 INFO  Ensure admin middleware 
+16:34:57.592 INFO  Post /login 
+16:34:57.605 INFO  User login: qwe@gmail.com 
+16:34:57.652 INFO  Ensure authenticated middleware 
+16:34:57.652 INFO  Ensure admin middleware 
+16:34:57.691 INFO  Post /login 
+16:34:57.713 INFO  User login: qwe@gmail.com 
+16:34:57.782 INFO  Ensure authenticated middleware 
+16:34:57.782 INFO  Ensure admin middleware 
+16:34:57.829 INFO  Post /login 
+16:34:57.863 INFO  User login: qwe@gmail.com 
+16:34:57.889 INFO  Ensure authenticated middleware 
+16:34:57.889 INFO  Ensure admin middleware 
+16:34:57.909 INFO  Post /login 
+16:34:57.918 INFO  User login: qwe@gmail.com 
+16:34:57.962 INFO  Ensure authenticated middleware 
+16:34:57.962 INFO  Ensure admin middleware 
+16:34:57.981 INFO  Post /login 
+16:34:57.993 INFO  User login: qwe@gmail.com 
+16:34:58.016 INFO  Ensure authenticated middleware 
+16:34:58.016 INFO  Ensure admin middleware 
+16:34:58.085 INFO  Post /login 
+16:34:58.113 INFO  User login: qwe@gmail.com 
+16:34:58.162 INFO  Ensure authenticated middleware 
+16:34:58.162 INFO  Ensure admin middleware 
+16:34:58.170 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:34:58.194 INFO  Post /login 
+16:34:58.206 INFO  User login: qwe@gmail.com 
+16:34:58.233 INFO  Ensure authenticated middleware 
+16:34:58.233 INFO  Ensure admin middleware 
+16:34:58.259 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:34:58.280 INFO  Post /login 
+16:34:58.314 INFO  User login: qwe@gmail.com 
+16:34:58.340 INFO  Ensure authenticated middleware 
+16:34:58.340 INFO  Ensure admin middleware 
+16:34:58.368 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:34:58.402 INFO  Post /login 
+16:34:58.428 INFO  User login: qwe@gmail.com 
+16:34:58.464 INFO  Ensure authenticated middleware 
+16:34:58.464 INFO  Ensure admin middleware 
+16:34:58.471 INFO  Get Delete Command 
+16:34:58.481 INFO  Post /login 
+16:34:58.499 INFO  User login: qwe@gmail.com 
+16:34:58.532 INFO  Ensure authenticated middleware 
+16:34:58.532 INFO  Ensure admin middleware 
+16:34:58.557 INFO  Post /login 
+16:34:58.588 INFO  User login: qwe@gmail.com 
+16:34:58.617 INFO  Ensure authenticated middleware 
+16:34:58.617 INFO  Ensure admin middleware 
+16:34:58.622 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:34:58.730 INFO  Post /login 
+16:34:58.777 INFO  User login: qwe@gmail.com 
+16:34:58.821 INFO  Ensure authenticated middleware 
+16:34:58.821 INFO  Ensure admin middleware 
+16:34:58.827 INFO  /admin/updateClass: update Class :1 
+16:34:58.862 INFO  Post /login 
+16:34:58.876 INFO  User login: qwe@gmail.com 
+16:34:58.900 INFO  Ensure authenticated middleware 
+16:34:58.900 INFO  Ensure admin middleware 
+16:34:58.908 INFO  Get Delete Command 
+16:34:58.926 INFO  Post /login 
+16:34:58.944 INFO  User login: qwe@gmail.com 
+16:34:58.992 INFO  Ensure authenticated middleware 
+16:34:58.992 INFO  Receive unauthenticated request 
+16:34:59.004 INFO  Post /login 
+16:34:59.021 INFO  User login: qwe@gmail.com 
+16:34:59.050 INFO  Ensure authenticated middleware 
+16:34:59.050 INFO  Receive unauthenticated request 
+16:34:59.060 INFO  Post /login 
+16:34:59.083 INFO  User login: qwe@gmail.com 
+16:34:59.112 INFO  Ensure authenticated middleware 
+16:34:59.112 INFO  Ensure admin middleware 
+16:34:59.145 INFO  Post /login 
+16:34:59.163 INFO  User login: qwe@gmail.com 
+16:34:59.255 INFO  Post /login 
+16:34:59.292 INFO  User login: qwe@gmail.com 
+16:34:59.320 INFO  /common/course/getClassByCourseID:  
+16:34:59.348 INFO  Post /login 
+16:34:59.366 INFO  User login: qwe@gmail.com 
+16:34:59.413 INFO  Post /login 
+16:34:59.441 INFO  User login failed. 
+16:34:59.448 INFO  Post /login 
+16:34:59.465 INFO  User login: qwe@gmail.com 
+16:34:59.520 INFO  Post /login 
+16:34:59.551 INFO  User login failed. 
+16:34:59.560 INFO  Post /login 
+16:34:59.586 INFO  User login failed. 
+16:34:59.598 INFO  Post /login 
+16:34:59.615 INFO  User login failed. 
+16:34:59.630 INFO  Post /login 
+16:34:59.648 INFO  User login: bqd@gmail.com 
+16:34:59.661 INFO  Post /login 
+16:34:59.675 INFO  User login failed. 
+16:34:59.684 INFO  Post /login 
+16:34:59.706 INFO  User login failed. 
+16:34:59.714 INFO  Post /login 
+16:34:59.738 INFO  User login failed. 
+16:34:59.744 INFO  GET /logout 
+16:35:00.609 INFO  Post /login 
+16:35:00.666 INFO  User login: qwe@gmail.com 
+16:35:00.700 INFO  Post /login 
+16:35:00.725 INFO  User login: qwe@gmail.com 
+16:35:00.752 INFO  Ensure authenticated middleware 
+16:35:00.753 INFO  Ensure trainee middleware 
+16:35:00.780 INFO  Post /login 
+16:35:00.811 INFO  User login: qwe@gmail.com 
+16:35:00.844 INFO  Ensure authenticated middleware 
+16:35:00.844 INFO  Ensure trainee middleware 
+16:35:00.873 INFO  Post /login 
+16:35:00.887 INFO  User login: qwe@gmail.com 
+16:35:00.923 INFO  Ensure authenticated middleware 
+16:35:00.923 INFO  Ensure trainee middleware 
+16:35:00.940 INFO  Post /login 
+16:35:00.951 INFO  User login: qwe@gmail.com 
+16:35:00.970 INFO  Ensure authenticated middleware 
+16:35:00.970 INFO  Ensure trainee middleware 
+16:35:00.985 INFO  Post /login 
+16:35:00.997 INFO  User login: qwe@gmail.com 
+16:35:01.035 INFO  Ensure authenticated middleware 
+16:35:01.035 INFO  Ensure trainee middleware 
+16:35:01.071 INFO  Post /login 
+16:35:01.089 INFO  User login: qwe@gmail.com 
+16:35:01.151 INFO  Ensure authenticated middleware 
+16:35:01.151 INFO  Ensure trainee middleware 
+16:35:01.186 INFO  Post /login 
+16:35:01.202 INFO  User login: qwe@gmail.com 
+16:35:01.243 INFO  Ensure authenticated middleware 
+16:35:01.243 INFO  Ensure trainee middleware 
+16:35:01.270 INFO  Post /login 
+16:35:01.325 INFO  User login: qwe@gmail.com 
+16:35:01.359 INFO  Ensure authenticated middleware 
+16:35:01.359 INFO  Ensure trainee middleware 
+16:35:01.379 INFO  Post /login 
+16:35:01.439 INFO  User login: qwe@gmail.com 
+16:35:01.467 INFO  Ensure authenticated middleware 
+16:35:01.467 INFO  Ensure trainee middleware 
+16:35:01.501 INFO  Post /login 
+16:35:01.517 INFO  User login: qwe@gmail.com 
+16:35:01.558 INFO  Ensure authenticated middleware 
+16:35:01.558 INFO  Ensure trainee middleware 
+16:35:01.675 INFO  Post /login 
+16:35:01.696 INFO  User login: qwe@gmail.com 
+16:35:01.754 INFO  Ensure authenticated middleware 
+16:35:01.754 INFO  Ensure trainee middleware 
+16:35:01.800 INFO  Post /login 
+16:35:01.819 INFO  User login: qwe@gmail.com 
+16:35:01.856 INFO  Ensure authenticated middleware 
+16:35:01.856 INFO  Ensure trainee middleware 
+16:35:01.881 INFO  Post /login 
+16:35:01.897 INFO  User login: qwe@gmail.com 
+16:35:01.933 INFO  Ensure authenticated middleware 
+16:35:01.933 INFO  Ensure trainee middleware 
+16:35:01.958 INFO  Post /login 
+16:35:01.974 INFO  User login: qwe@gmail.com 
+16:35:02.007 INFO  Ensure authenticated middleware 
+16:35:02.007 INFO  Ensure trainee middleware 
+16:35:02.033 INFO  Post /login 
+16:35:02.061 INFO  User login: qwe@gmail.com 
+16:35:02.092 INFO  Ensure authenticated middleware 
+16:35:02.092 INFO  Ensure trainee middleware 
+16:35:02.128 INFO  Post /login 
+16:35:02.154 INFO  User login: thach@gmail.com 
+16:35:02.200 INFO  Ensure authenticated middleware 
+16:35:02.200 INFO  Ensure trainee middleware 
+16:35:02.229 INFO  Post /login 
+16:35:02.264 INFO  User login: qwe@gmail.com 
+16:35:02.301 INFO  Ensure authenticated middleware 
+16:35:02.301 INFO  GET /users/getUserInfo 
+16:35:02.315 INFO  Post /login 
+16:35:02.397 INFO  User login: qwe@gmail.com 
+16:35:02.477 INFO  Ensure authenticated middleware 
+16:35:02.477 INFO  GET /users/getUserInfo 
+16:35:02.490 INFO  Post /login 
+16:35:02.502 INFO  User login: qwe@gmail.com 
+16:35:02.525 INFO  Ensure authenticated middleware 
+16:35:02.525 INFO  GET /users/getUserInfo 
+16:35:02.546 INFO  Post /login 
+16:35:02.567 INFO  User login: qwe@gmail.com 
+16:35:02.590 INFO  Ensure authenticated middleware 
+16:35:02.590 INFO  /routes/users: Save edit userprofile 
+16:35:02.616 INFO  Post /login 
+16:35:02.627 INFO  User login: qwe@gmail.com 
+16:35:02.669 INFO  Ensure authenticated middleware 
+16:35:02.669 INFO  /routes/users: Upload avatar 
+16:35:02.716 INFO  Post /login 
+16:35:02.732 INFO  User login: qwe@gmail.com 
+16:35:02.763 INFO  Ensure authenticated middleware 
+16:35:02.799 INFO  Post /login 
+16:35:02.808 INFO  User login: qwe@gmail.com 
+16:35:02.841 INFO  Ensure authenticated middleware 
+16:35:02.871 INFO  Post /login 
+16:35:02.886 INFO  User login: qwe@gmail.com 
+16:35:02.916 INFO  Ensure authenticated middleware 
+16:35:02.917 INFO  /routes/users: Save edit userprofile 
+16:35:02.936 INFO  Post /login 
+16:35:02.980 INFO  User login: qwe@gmail.com 
+16:35:03.011 INFO  Ensure authenticated middleware 
+16:35:03.011 INFO  Receive unauthenticated request 
+16:35:03.020 INFO  Post /login 
+16:35:03.034 INFO  User login: qwe@gmail.com 
+16:35:03.069 INFO  Ensure authenticated middleware 
+16:35:03.069 INFO  /routes/users: Save edit userprofile 
+16:35:03.092 INFO  Post /login 
+16:35:03.108 INFO  User login: tranhoangnam3108@gmail.com 
+16:35:03.114 INFO  Ensure authenticated middleware 
+16:35:03.115 INFO  /routes/users: Save edit userprofile 
+16:35:59.453 INFO  Post /login 
+16:35:59.511 INFO  User login: qwe@gmail.com 
+16:35:59.580 INFO  Ensure authenticated middleware 
+16:35:59.580 INFO  Receive unauthenticated request 
+16:35:59.597 INFO  Post /login 
+16:35:59.610 INFO  User login: qwe@gmail.com 
+16:35:59.659 INFO  Ensure authenticated middleware 
+16:35:59.659 INFO  Ensure admin middleware 
+16:35:59.737 INFO  Post /login 
+16:35:59.777 INFO  User login: qwe@gmail.com 
+16:35:59.820 INFO  Ensure authenticated middleware 
+16:35:59.820 INFO  Ensure admin middleware 
+16:35:59.855 INFO  Post /login 
+16:35:59.867 INFO  User login: qwe@gmail.com 
+16:35:59.905 INFO  Ensure authenticated middleware 
+16:35:59.905 INFO  Ensure admin middleware 
+16:35:59.982 INFO  Post /login 
+16:36:00.007 INFO  User login: qwe@gmail.com 
+16:36:00.032 INFO  Ensure authenticated middleware 
+16:36:00.032 INFO  Ensure admin middleware 
+16:36:00.050 INFO  Post /login 
+16:36:00.105 INFO  User login: qwe@gmail.com 
+16:36:00.136 INFO  Ensure authenticated middleware 
+16:36:00.136 INFO  Ensure admin middleware 
+16:36:00.153 INFO  Post /login 
+16:36:00.167 INFO  User login: qwe@gmail.com 
+16:36:00.210 INFO  Ensure authenticated middleware 
+16:36:00.210 INFO  Ensure admin middleware 
+16:36:00.265 INFO  Post /login 
+16:36:00.319 INFO  User login: qwe@gmail.com 
+16:36:00.344 INFO  Ensure authenticated middleware 
+16:36:00.344 INFO  Ensure admin middleware 
+16:36:00.350 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:36:00.436 INFO  Post /login 
+16:36:00.449 INFO  User login: qwe@gmail.com 
+16:36:00.470 INFO  Ensure authenticated middleware 
+16:36:00.470 INFO  Ensure admin middleware 
+16:36:00.475 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:36:00.491 INFO  Post /login 
+16:36:00.531 INFO  User login: qwe@gmail.com 
+16:36:00.559 INFO  Ensure authenticated middleware 
+16:36:00.559 INFO  Ensure admin middleware 
+16:36:00.569 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:36:00.600 INFO  Post /login 
+16:36:00.636 INFO  User login: qwe@gmail.com 
+16:36:00.661 INFO  Ensure authenticated middleware 
+16:36:00.661 INFO  Ensure admin middleware 
+16:36:00.670 INFO  Get Delete Command 
+16:36:00.681 INFO  Post /login 
+16:36:00.694 INFO  User login: qwe@gmail.com 
+16:36:00.733 INFO  Ensure authenticated middleware 
+16:36:00.733 INFO  Ensure admin middleware 
+16:36:00.752 INFO  Post /login 
+16:36:00.773 INFO  User login: qwe@gmail.com 
+16:36:00.797 INFO  Ensure authenticated middleware 
+16:36:00.797 INFO  Ensure admin middleware 
+16:36:00.805 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:36:00.843 INFO  Post /login 
+16:36:00.854 INFO  User login: qwe@gmail.com 
+16:36:00.882 INFO  Ensure authenticated middleware 
+16:36:00.882 INFO  Ensure admin middleware 
+16:36:00.899 INFO  /admin/updateClass: update Class :1 
+16:36:00.943 INFO  Post /login 
+16:36:00.954 INFO  User login: qwe@gmail.com 
+16:36:00.984 INFO  Ensure authenticated middleware 
+16:36:00.984 INFO  Ensure admin middleware 
+16:36:00.992 INFO  Get Delete Command 
+16:36:01.005 INFO  Post /login 
+16:36:01.026 INFO  User login: qwe@gmail.com 
+16:36:01.053 INFO  Ensure authenticated middleware 
+16:36:01.053 INFO  Receive unauthenticated request 
+16:36:01.063 INFO  Post /login 
+16:36:01.074 INFO  User login: qwe@gmail.com 
+16:36:01.096 INFO  Ensure authenticated middleware 
+16:36:01.096 INFO  Ensure admin middleware 
+16:36:01.125 INFO  Post /login 
+16:36:01.137 INFO  User login: qwe@gmail.com 
+16:36:01.178 INFO  Post /login 
+16:36:01.191 INFO  User login: qwe@gmail.com 
+16:36:01.218 INFO  /common/course/getClassByCourseID:  
+16:36:01.245 INFO  Post /login 
+16:36:01.258 INFO  User login: qwe@gmail.com 
+16:36:01.283 INFO  Post /login 
+16:36:01.310 INFO  User login failed. 
+16:36:01.316 INFO  Post /login 
+16:36:01.338 INFO  User login: qwe@gmail.com 
+16:36:01.362 INFO  Post /login 
+16:36:01.399 INFO  User login failed. 
+16:36:01.407 INFO  Post /login 
+16:36:01.445 INFO  User login failed. 
+16:36:01.456 INFO  Post /login 
+16:36:01.473 INFO  User login failed. 
+16:36:01.484 INFO  Post /login 
+16:36:01.498 INFO  User login: bqd@gmail.com 
+16:36:01.505 INFO  Post /login 
+16:36:01.522 INFO  User login failed. 
+16:36:01.530 INFO  Post /login 
+16:36:01.550 INFO  User login failed. 
+16:36:01.558 INFO  Post /login 
+16:36:01.573 INFO  User login failed. 
+16:36:01.581 INFO  GET /logout 
+16:36:02.469 INFO  Post /login 
+16:36:02.484 INFO  User login: qwe@gmail.com 
+16:36:02.510 INFO  Post /login 
+16:36:02.533 INFO  User login: qwe@gmail.com 
+16:36:02.574 INFO  Ensure authenticated middleware 
+16:36:02.574 INFO  Ensure trainee middleware 
+16:36:02.598 INFO  Post /login 
+16:36:02.642 INFO  User login: qwe@gmail.com 
+16:36:02.703 INFO  Ensure authenticated middleware 
+16:36:02.703 INFO  Ensure trainee middleware 
+16:36:02.734 INFO  Post /login 
+16:36:02.750 INFO  User login: qwe@gmail.com 
+16:36:02.783 INFO  Ensure authenticated middleware 
+16:36:02.783 INFO  Ensure trainee middleware 
+16:36:02.803 INFO  Post /login 
+16:36:02.812 INFO  User login: qwe@gmail.com 
+16:36:02.830 INFO  Ensure authenticated middleware 
+16:36:02.831 INFO  Ensure trainee middleware 
+16:36:02.848 INFO  Post /login 
+16:36:02.868 INFO  User login: qwe@gmail.com 
+16:36:02.891 INFO  Ensure authenticated middleware 
+16:36:02.891 INFO  Ensure trainee middleware 
+16:36:02.924 INFO  Post /login 
+16:36:02.939 INFO  User login: qwe@gmail.com 
+16:36:02.977 INFO  Ensure authenticated middleware 
+16:36:02.977 INFO  Ensure trainee middleware 
+16:36:03.028 INFO  Post /login 
+16:36:03.039 INFO  User login: qwe@gmail.com 
+16:36:03.062 INFO  Ensure authenticated middleware 
+16:36:03.062 INFO  Ensure trainee middleware 
+16:36:03.092 INFO  Post /login 
+16:36:03.111 INFO  User login: qwe@gmail.com 
+16:36:03.129 INFO  Ensure authenticated middleware 
+16:36:03.129 INFO  Ensure trainee middleware 
+16:36:03.152 INFO  Post /login 
+16:36:03.176 INFO  User login: qwe@gmail.com 
+16:36:03.205 INFO  Ensure authenticated middleware 
+16:36:03.205 INFO  Ensure trainee middleware 
+16:36:03.238 INFO  Post /login 
+16:36:03.249 INFO  User login: qwe@gmail.com 
+16:36:03.281 INFO  Ensure authenticated middleware 
+16:36:03.281 INFO  Ensure trainee middleware 
+16:36:03.335 INFO  Post /login 
+16:36:03.356 INFO  User login: qwe@gmail.com 
+16:36:03.410 INFO  Ensure authenticated middleware 
+16:36:03.410 INFO  Ensure trainee middleware 
+16:36:03.471 INFO  Post /login 
+16:36:03.490 INFO  User login: qwe@gmail.com 
+16:36:03.513 INFO  Ensure authenticated middleware 
+16:36:03.513 INFO  Ensure trainee middleware 
+16:36:03.535 INFO  Post /login 
+16:36:03.545 INFO  User login: qwe@gmail.com 
+16:36:03.573 INFO  Ensure authenticated middleware 
+16:36:03.573 INFO  Ensure trainee middleware 
+16:36:03.599 INFO  Post /login 
+16:36:03.616 INFO  User login: qwe@gmail.com 
+16:36:03.640 INFO  Ensure authenticated middleware 
+16:36:03.641 INFO  Ensure trainee middleware 
+16:36:03.658 INFO  Post /login 
+16:36:03.672 INFO  User login: qwe@gmail.com 
+16:36:03.708 INFO  Ensure authenticated middleware 
+16:36:03.708 INFO  Ensure trainee middleware 
+16:36:03.726 INFO  Post /login 
+16:36:03.739 INFO  User login: thach@gmail.com 
+16:36:03.760 INFO  Ensure authenticated middleware 
+16:36:03.760 INFO  Ensure trainee middleware 
+16:36:03.800 INFO  Post /login 
+16:36:03.813 INFO  User login: qwe@gmail.com 
+16:36:03.840 INFO  Ensure authenticated middleware 
+16:36:03.841 INFO  GET /users/getUserInfo 
+16:36:03.853 INFO  Post /login 
+16:36:03.865 INFO  User login: qwe@gmail.com 
+16:36:03.894 INFO  Ensure authenticated middleware 
+16:36:03.894 INFO  GET /users/getUserInfo 
+16:36:03.907 INFO  Post /login 
+16:36:03.921 INFO  User login: qwe@gmail.com 
+16:36:03.938 INFO  Ensure authenticated middleware 
+16:36:03.938 INFO  GET /users/getUserInfo 
+16:36:03.952 INFO  Post /login 
+16:36:03.962 INFO  User login: qwe@gmail.com 
+16:36:03.985 INFO  Ensure authenticated middleware 
+16:36:03.986 INFO  /routes/users: Save edit userprofile 
+16:36:04.009 INFO  Post /login 
+16:36:04.020 INFO  User login: qwe@gmail.com 
+16:36:04.052 INFO  Ensure authenticated middleware 
+16:36:04.052 INFO  /routes/users: Upload avatar 
+16:36:04.109 INFO  Post /login 
+16:36:04.119 INFO  User login: qwe@gmail.com 
+16:36:04.139 INFO  Ensure authenticated middleware 
+16:36:04.204 INFO  Post /login 
+16:36:04.221 INFO  User login: qwe@gmail.com 
+16:36:04.248 INFO  Ensure authenticated middleware 
+16:36:04.270 INFO  Post /login 
+16:36:04.282 INFO  User login: qwe@gmail.com 
+16:36:04.314 INFO  Ensure authenticated middleware 
+16:36:04.314 INFO  /routes/users: Save edit userprofile 
+16:36:04.357 INFO  Post /login 
+16:36:04.389 INFO  User login: qwe@gmail.com 
+16:36:04.421 INFO  Ensure authenticated middleware 
+16:36:04.421 INFO  Receive unauthenticated request 
+16:36:04.430 INFO  Post /login 
+16:36:04.443 INFO  User login: qwe@gmail.com 
+16:36:04.461 INFO  Ensure authenticated middleware 
+16:36:04.462 INFO  /routes/users: Save edit userprofile 
+16:36:04.486 INFO  Post /login 
+16:36:04.518 INFO  User login: tranhoangnam3108@gmail.com 
+16:36:04.524 INFO  Ensure authenticated middleware 
+16:36:04.524 INFO  /routes/users: Save edit userprofile 
+16:50:29.338 INFO  Post /login 
+16:50:29.392 INFO  User login: qwe@gmail.com 
+16:50:29.867 INFO  Ensure authenticated middleware 
+16:50:29.867 INFO  Ensure admin middleware 
+16:50:29.990 INFO  Post /login 
+16:50:30.017 INFO  User login: qwe@gmail.com 
+16:50:30.050 INFO  Ensure authenticated middleware 
+16:50:30.050 INFO  Ensure admin middleware 
+16:50:30.176 INFO  Post /login 
+16:50:30.201 INFO  User login: qwe@gmail.com 
+16:50:30.239 INFO  Ensure authenticated middleware 
+16:50:30.239 INFO  Ensure admin middleware 
+16:50:30.278 INFO  Post /login 
+16:50:30.301 INFO  User login: qwe@gmail.com 
+16:50:30.330 INFO  Ensure authenticated middleware 
+16:50:30.330 INFO  Ensure admin middleware 
+16:50:30.376 INFO  Post /login 
+16:50:30.399 INFO  User login: qwe@gmail.com 
+16:50:30.430 INFO  Ensure authenticated middleware 
+16:50:30.430 INFO  Ensure admin middleware 
+16:50:30.457 INFO  Post /login 
+16:50:30.483 INFO  User login: qwe@gmail.com 
+16:50:30.525 INFO  Ensure authenticated middleware 
+16:50:30.525 INFO  Ensure admin middleware 
+16:50:30.576 INFO  Post /login 
+16:50:30.610 INFO  User login: qwe@gmail.com 
+16:50:30.642 INFO  Ensure authenticated middleware 
+16:50:30.642 INFO  Ensure admin middleware 
+16:50:30.694 INFO  Post /login 
+16:50:30.714 INFO  User login: qwe@gmail.com 
+16:50:30.762 INFO  Ensure authenticated middleware 
+16:50:30.762 INFO  Ensure admin middleware 
+16:50:30.771 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:50:30.801 INFO  Post /login 
+16:50:30.837 INFO  User login: qwe@gmail.com 
+16:50:30.869 INFO  Ensure authenticated middleware 
+16:50:30.869 INFO  Ensure admin middleware 
+16:50:30.874 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:50:30.887 INFO  Post /login 
+16:50:30.908 INFO  User login: qwe@gmail.com 
+16:50:30.973 INFO  Ensure authenticated middleware 
+16:50:30.973 INFO  Ensure admin middleware 
+16:50:30.979 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:50:31.026 INFO  Post /login 
+16:50:31.049 INFO  User login: qwe@gmail.com 
+16:50:31.088 INFO  Ensure authenticated middleware 
+16:50:31.088 INFO  Ensure admin middleware 
+16:50:31.102 INFO  Get Delete Command 
+16:50:31.114 INFO  Post /login 
+16:50:31.130 INFO  User login: qwe@gmail.com 
+16:50:31.187 INFO  Ensure authenticated middleware 
+16:50:31.187 INFO  Ensure admin middleware 
+16:50:31.226 INFO  Post /login 
+16:50:31.267 INFO  User login: qwe@gmail.com 
+16:50:31.326 INFO  Ensure authenticated middleware 
+16:50:31.326 INFO  Ensure admin middleware 
+16:50:31.345 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:50:31.379 INFO  Post /login 
+16:50:31.425 INFO  User login: qwe@gmail.com 
+16:50:31.456 INFO  Ensure authenticated middleware 
+16:50:31.456 INFO  Ensure admin middleware 
+16:50:31.463 INFO  /admin/updateClass: update Class :1 
+16:50:31.498 INFO  Post /login 
+16:50:31.529 INFO  User login: qwe@gmail.com 
+16:50:31.561 INFO  Ensure authenticated middleware 
+16:50:31.561 INFO  Ensure admin middleware 
+16:50:31.569 INFO  Get Delete Command 
+16:50:31.579 INFO  Post /login 
+16:50:31.589 INFO  User login: qwe@gmail.com 
+16:50:31.624 INFO  Ensure authenticated middleware 
+16:50:31.624 INFO  Receive unauthenticated request 
+16:50:31.636 INFO  Post /login 
+16:50:31.650 INFO  User login: qwe@gmail.com 
+16:50:31.675 INFO  Ensure authenticated middleware 
+16:50:31.675 INFO  Ensure admin middleware 
+16:50:31.705 INFO  Post /login 
+16:50:31.729 INFO  User login: qwe@gmail.com 
+16:50:31.772 INFO  Post /login 
+16:50:31.786 INFO  User login: qwe@gmail.com 
+16:50:31.811 INFO  /common/course/getClassByCourseID:  
+16:50:31.837 INFO  Post /login 
+16:50:31.855 INFO  User login: qwe@gmail.com 
+16:50:31.879 INFO  Post /login 
+16:50:31.903 INFO  User login failed. 
+16:50:31.909 INFO  Post /login 
+16:50:31.932 INFO  User login: qwe@gmail.com 
+16:50:31.959 INFO  Post /login 
+16:50:31.976 INFO  User login failed. 
+16:50:31.983 INFO  Post /login 
+16:50:32.003 INFO  User login failed. 
+16:50:32.012 INFO  Post /login 
+16:50:32.043 INFO  User login failed. 
+16:50:32.056 INFO  Post /login 
+16:50:32.077 INFO  User login: bqd@gmail.com 
+16:50:32.084 INFO  Post /login 
+16:50:32.103 INFO  User login failed. 
+16:50:32.115 INFO  Post /login 
+16:50:32.141 INFO  User login failed. 
+16:50:32.147 INFO  Post /login 
+16:50:32.161 INFO  User login failed. 
+16:50:32.168 INFO  GET /logout 
+16:50:32.994 INFO  Post /login 
+16:50:33.012 INFO  User login: qwe@gmail.com 
+16:50:33.064 INFO  Post /login 
+16:50:33.078 INFO  User login: qwe@gmail.com 
+16:50:33.104 INFO  Ensure authenticated middleware 
+16:50:33.104 INFO  Ensure trainee middleware 
+16:50:33.128 INFO  Post /login 
+16:50:33.164 INFO  User login: qwe@gmail.com 
+16:50:33.188 INFO  Ensure authenticated middleware 
+16:50:33.188 INFO  Ensure trainee middleware 
+16:50:33.214 INFO  Post /login 
+16:50:33.230 INFO  User login: qwe@gmail.com 
+16:50:33.259 INFO  Ensure authenticated middleware 
+16:50:33.259 INFO  Ensure trainee middleware 
+16:50:33.279 INFO  Post /login 
+16:50:33.295 INFO  User login: qwe@gmail.com 
+16:50:33.330 INFO  Ensure authenticated middleware 
+16:50:33.330 INFO  Ensure trainee middleware 
+16:50:33.345 INFO  Post /login 
+16:50:33.390 INFO  User login: qwe@gmail.com 
+16:50:33.441 INFO  Ensure authenticated middleware 
+16:50:33.441 INFO  Ensure trainee middleware 
+16:50:33.507 INFO  Post /login 
+16:50:33.556 INFO  User login: qwe@gmail.com 
+16:50:33.613 INFO  Ensure authenticated middleware 
+16:50:33.613 INFO  Ensure trainee middleware 
+16:50:33.672 INFO  Post /login 
+16:50:33.717 INFO  User login: qwe@gmail.com 
+16:50:33.871 INFO  Ensure authenticated middleware 
+16:50:33.871 INFO  Ensure trainee middleware 
+16:50:33.939 INFO  Post /login 
+16:50:33.998 INFO  User login: qwe@gmail.com 
+16:50:34.086 INFO  Ensure authenticated middleware 
+16:50:34.086 INFO  Ensure trainee middleware 
+16:50:34.109 INFO  Post /login 
+16:50:34.137 INFO  User login: qwe@gmail.com 
+16:50:34.166 INFO  Ensure authenticated middleware 
+16:50:34.166 INFO  Ensure trainee middleware 
+16:50:34.203 INFO  Post /login 
+16:50:34.214 INFO  User login: qwe@gmail.com 
+16:50:34.237 INFO  Ensure authenticated middleware 
+16:50:34.237 INFO  Ensure trainee middleware 
+16:50:34.288 INFO  Post /login 
+16:50:34.305 INFO  User login: qwe@gmail.com 
+16:50:34.342 INFO  Ensure authenticated middleware 
+16:50:34.342 INFO  Ensure trainee middleware 
+16:50:34.380 INFO  Post /login 
+16:50:34.394 INFO  User login: qwe@gmail.com 
+16:50:34.416 INFO  Ensure authenticated middleware 
+16:50:34.416 INFO  Ensure trainee middleware 
+16:50:34.461 INFO  Post /login 
+16:50:34.484 INFO  User login: qwe@gmail.com 
+16:50:34.510 INFO  Ensure authenticated middleware 
+16:50:34.510 INFO  Ensure trainee middleware 
+16:50:34.525 INFO  Post /login 
+16:50:34.537 INFO  User login: qwe@gmail.com 
+16:50:34.559 INFO  Ensure authenticated middleware 
+16:50:34.559 INFO  Ensure trainee middleware 
+16:50:34.587 INFO  Post /login 
+16:50:34.596 INFO  User login: qwe@gmail.com 
+16:50:34.620 INFO  Ensure authenticated middleware 
+16:50:34.620 INFO  Ensure trainee middleware 
+16:50:34.638 INFO  Post /login 
+16:50:34.655 INFO  User login: thach@gmail.com 
+16:50:34.676 INFO  Ensure authenticated middleware 
+16:50:34.676 INFO  Ensure trainee middleware 
+16:50:34.707 INFO  Post /login 
+16:50:34.720 INFO  User login: qwe@gmail.com 
+16:50:34.746 INFO  Ensure authenticated middleware 
+16:50:34.747 INFO  GET /users/getUserInfo 
+16:50:34.771 INFO  Post /login 
+16:50:34.793 INFO  User login: qwe@gmail.com 
+16:50:34.819 INFO  Ensure authenticated middleware 
+16:50:34.819 INFO  GET /users/getUserInfo 
+16:50:34.831 INFO  Post /login 
+16:50:34.845 INFO  User login: qwe@gmail.com 
+16:50:34.865 INFO  Ensure authenticated middleware 
+16:50:34.865 INFO  GET /users/getUserInfo 
+16:50:34.883 INFO  Post /login 
+16:50:34.901 INFO  User login: qwe@gmail.com 
+16:50:34.933 INFO  Ensure authenticated middleware 
+16:50:34.933 INFO  /routes/users: Save edit userprofile 
+16:50:34.955 INFO  Post /login 
+16:50:34.967 INFO  User login: qwe@gmail.com 
+16:50:35.012 INFO  Ensure authenticated middleware 
+16:50:35.012 INFO  /routes/users: Upload avatar 
+16:50:35.063 INFO  Post /login 
+16:50:35.097 INFO  User login: qwe@gmail.com 
+16:50:35.125 INFO  Ensure authenticated middleware 
+16:50:35.158 INFO  Post /login 
+16:50:35.170 INFO  User login: qwe@gmail.com 
+16:50:35.204 INFO  Ensure authenticated middleware 
+16:50:35.222 INFO  Post /login 
+16:50:35.238 INFO  User login: qwe@gmail.com 
+16:50:35.262 INFO  Ensure authenticated middleware 
+16:50:35.262 INFO  /routes/users: Save edit userprofile 
+16:50:35.281 INFO  Post /login 
+16:50:35.302 INFO  User login: qwe@gmail.com 
+16:50:35.329 INFO  Ensure authenticated middleware 
+16:50:35.329 INFO  Receive unauthenticated request 
+16:50:35.337 INFO  Post /login 
+16:50:35.350 INFO  User login: qwe@gmail.com 
+16:50:35.374 INFO  Ensure authenticated middleware 
+16:50:35.374 INFO  /routes/users: Save edit userprofile 
+16:50:35.401 INFO  Post /login 
+16:50:35.416 INFO  User login: tranhoangnam3108@gmail.com 
+16:50:35.422 INFO  Ensure authenticated middleware 
+16:50:35.422 INFO  /routes/users: Save edit userprofile 
+16:51:24.263 INFO  Post /login 
+16:51:24.337 INFO  User login: qwe@gmail.com 
+16:51:24.497 INFO  Ensure authenticated middleware 
+16:51:24.497 INFO  Ensure admin middleware 
+16:51:24.581 INFO  Post /login 
+16:51:24.617 INFO  User login: qwe@gmail.com 
+16:51:24.649 INFO  Ensure authenticated middleware 
+16:51:24.649 INFO  Ensure admin middleware 
+16:51:24.780 INFO  Post /login 
+16:51:24.817 INFO  User login: qwe@gmail.com 
+16:51:24.885 INFO  Ensure authenticated middleware 
+16:51:24.885 INFO  Ensure admin middleware 
+16:51:24.928 INFO  Post /login 
+16:51:25.003 INFO  User login: qwe@gmail.com 
+16:51:25.049 INFO  Ensure authenticated middleware 
+16:51:25.049 INFO  Ensure admin middleware 
+16:51:25.133 INFO  Post /login 
+16:51:25.152 INFO  User login: qwe@gmail.com 
+16:51:25.203 INFO  Ensure authenticated middleware 
+16:51:25.203 INFO  Ensure admin middleware 
+16:51:25.234 INFO  Post /login 
+16:51:25.295 INFO  User login: qwe@gmail.com 
+16:51:25.334 INFO  Ensure authenticated middleware 
+16:51:25.334 INFO  Ensure admin middleware 
+16:51:25.364 INFO  Post /login 
+16:51:25.398 INFO  User login: qwe@gmail.com 
+16:51:25.447 INFO  Ensure authenticated middleware 
+16:51:25.447 INFO  Ensure admin middleware 
+16:51:25.512 INFO  Post /login 
+16:51:25.527 INFO  User login: qwe@gmail.com 
+16:51:25.557 INFO  Ensure authenticated middleware 
+16:51:25.557 INFO  Ensure admin middleware 
+16:51:25.566 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:51:25.594 INFO  Post /login 
+16:51:25.620 INFO  User login: qwe@gmail.com 
+16:51:25.660 INFO  Ensure authenticated middleware 
+16:51:25.660 INFO  Ensure admin middleware 
+16:51:25.665 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:51:25.689 INFO  Post /login 
+16:51:25.733 INFO  User login: qwe@gmail.com 
+16:51:25.767 INFO  Ensure authenticated middleware 
+16:51:25.767 INFO  Ensure admin middleware 
+16:51:25.784 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:51:25.819 INFO  Post /login 
+16:51:25.850 INFO  User login: qwe@gmail.com 
+16:51:25.900 INFO  Ensure authenticated middleware 
+16:51:25.900 INFO  Ensure admin middleware 
+16:51:25.906 INFO  Get Delete Command 
+16:51:25.919 INFO  Post /login 
+16:51:25.944 INFO  User login: qwe@gmail.com 
+16:51:26.004 INFO  Ensure authenticated middleware 
+16:51:26.004 INFO  Ensure admin middleware 
+16:51:26.037 INFO  Post /login 
+16:51:26.057 INFO  User login: qwe@gmail.com 
+16:51:26.112 INFO  Ensure authenticated middleware 
+16:51:26.112 INFO  Ensure admin middleware 
+16:51:26.129 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:51:26.162 INFO  Post /login 
+16:51:26.213 INFO  User login: qwe@gmail.com 
+16:51:26.281 INFO  Ensure authenticated middleware 
+16:51:26.281 INFO  Ensure admin middleware 
+16:51:26.315 INFO  /admin/updateClass: update Class :1 
+16:51:26.353 INFO  Post /login 
+16:51:26.371 INFO  User login: qwe@gmail.com 
+16:51:26.435 INFO  Ensure authenticated middleware 
+16:51:26.435 INFO  Ensure admin middleware 
+16:51:26.445 INFO  Get Delete Command 
+16:51:26.456 INFO  Post /login 
+16:51:26.475 INFO  User login: qwe@gmail.com 
+16:51:26.545 INFO  Ensure authenticated middleware 
+16:51:26.545 INFO  Ensure admin middleware 
+16:51:26.574 INFO  Post /login 
+16:51:26.608 INFO  User login: qwe@gmail.com 
+16:51:26.657 INFO  Ensure authenticated middleware 
+16:51:26.657 INFO  Ensure admin middleware 
+16:51:26.743 INFO  Post /login 
+16:51:26.764 INFO  User login: qwe@gmail.com 
+16:51:26.836 INFO  Post /login 
+16:51:26.887 INFO  User login: qwe@gmail.com 
+16:51:26.945 INFO  /common/course/getClassByCourseID:  
+16:51:26.981 INFO  Post /login 
+16:51:27.018 INFO  User login: qwe@gmail.com 
+16:51:27.047 INFO  Post /login 
+16:51:27.068 INFO  User login failed. 
+16:51:27.074 INFO  Post /login 
+16:51:27.090 INFO  User login: qwe@gmail.com 
+16:51:27.131 INFO  Post /login 
+16:51:27.153 INFO  User login failed. 
+16:51:27.163 INFO  Post /login 
+16:51:27.186 INFO  User login failed. 
+16:51:27.194 INFO  Post /login 
+16:51:27.228 INFO  User login failed. 
+16:51:27.242 INFO  Post /login 
+16:51:27.267 INFO  User login: bqd@gmail.com 
+16:51:27.281 INFO  Post /login 
+16:51:27.336 INFO  User login failed. 
+16:51:27.345 INFO  Post /login 
+16:51:27.371 INFO  User login failed. 
+16:51:27.380 INFO  Post /login 
+16:51:27.447 INFO  User login failed. 
+16:51:27.455 INFO  GET /logout 
+16:51:29.479 INFO  Post /login 
+16:51:29.512 INFO  User login: qwe@gmail.com 
+16:51:29.548 INFO  Post /login 
+16:51:29.574 INFO  User login: qwe@gmail.com 
+16:51:29.684 INFO  Ensure authenticated middleware 
+16:51:29.684 INFO  Ensure trainee middleware 
+16:51:29.714 INFO  Post /login 
+16:51:29.749 INFO  User login: qwe@gmail.com 
+16:51:29.795 INFO  Ensure authenticated middleware 
+16:51:29.795 INFO  Ensure trainee middleware 
+16:51:29.830 INFO  Post /login 
+16:51:29.848 INFO  User login: qwe@gmail.com 
+16:51:29.898 INFO  Ensure authenticated middleware 
+16:51:29.898 INFO  Ensure trainee middleware 
+16:51:29.955 INFO  Post /login 
+16:51:29.995 INFO  User login: qwe@gmail.com 
+16:51:30.021 INFO  Ensure authenticated middleware 
+16:51:30.021 INFO  Ensure trainee middleware 
+16:51:30.037 INFO  Post /login 
+16:51:30.059 INFO  User login: qwe@gmail.com 
+16:51:30.102 INFO  Ensure authenticated middleware 
+16:51:30.102 INFO  Ensure trainee middleware 
+16:51:30.152 INFO  Post /login 
+16:51:30.192 INFO  User login: qwe@gmail.com 
+16:51:30.240 INFO  Ensure authenticated middleware 
+16:51:30.240 INFO  Ensure trainee middleware 
+16:51:30.316 INFO  Post /login 
+16:51:30.354 INFO  User login: qwe@gmail.com 
+16:51:30.382 INFO  Ensure authenticated middleware 
+16:51:30.382 INFO  Ensure trainee middleware 
+16:51:30.422 INFO  Post /login 
+16:51:30.446 INFO  User login: qwe@gmail.com 
+16:51:30.471 INFO  Ensure authenticated middleware 
+16:51:30.471 INFO  Ensure trainee middleware 
+16:51:30.503 INFO  Post /login 
+16:51:30.530 INFO  User login: qwe@gmail.com 
+16:51:30.555 INFO  Ensure authenticated middleware 
+16:51:30.555 INFO  Ensure trainee middleware 
+16:51:30.597 INFO  Post /login 
+16:51:30.635 INFO  User login: qwe@gmail.com 
+16:51:30.675 INFO  Ensure authenticated middleware 
+16:51:30.675 INFO  Ensure trainee middleware 
+16:51:30.751 INFO  Post /login 
+16:51:30.774 INFO  User login: qwe@gmail.com 
+16:51:30.805 INFO  Ensure authenticated middleware 
+16:51:30.805 INFO  Ensure trainee middleware 
+16:51:30.865 INFO  Post /login 
+16:51:30.887 INFO  User login: qwe@gmail.com 
+16:51:30.928 INFO  Ensure authenticated middleware 
+16:51:30.928 INFO  Ensure trainee middleware 
+16:51:30.957 INFO  Post /login 
+16:51:30.990 INFO  User login: qwe@gmail.com 
+16:51:31.030 INFO  Ensure authenticated middleware 
+16:51:31.030 INFO  Ensure trainee middleware 
+16:51:31.056 INFO  Post /login 
+16:51:31.084 INFO  User login: qwe@gmail.com 
+16:51:31.128 INFO  Ensure authenticated middleware 
+16:51:31.128 INFO  Ensure trainee middleware 
+16:51:31.155 INFO  Post /login 
+16:51:31.187 INFO  User login: qwe@gmail.com 
+16:51:31.266 INFO  Ensure authenticated middleware 
+16:51:31.266 INFO  Ensure trainee middleware 
+16:51:31.301 INFO  Post /login 
+16:51:31.339 INFO  User login: thach@gmail.com 
+16:51:31.377 INFO  Ensure authenticated middleware 
+16:51:31.377 INFO  Ensure trainee middleware 
+16:51:31.404 INFO  Post /login 
+16:51:31.423 INFO  User login: qwe@gmail.com 
+16:51:31.459 INFO  Ensure authenticated middleware 
+16:51:31.459 INFO  GET /users/getUserInfo 
+16:51:31.482 INFO  Post /login 
+16:51:31.535 INFO  User login: qwe@gmail.com 
+16:51:31.586 INFO  Ensure authenticated middleware 
+16:51:31.586 INFO  GET /users/getUserInfo 
+16:51:31.598 INFO  Post /login 
+16:51:31.629 INFO  User login: qwe@gmail.com 
+16:51:31.661 INFO  Ensure authenticated middleware 
+16:51:31.661 INFO  GET /users/getUserInfo 
+16:51:31.676 INFO  Post /login 
+16:51:31.698 INFO  User login: qwe@gmail.com 
+16:51:31.736 INFO  Ensure authenticated middleware 
+16:51:31.736 INFO  /routes/users: Save edit userprofile 
+16:51:31.762 INFO  Post /login 
+16:51:31.789 INFO  User login: qwe@gmail.com 
+16:51:31.841 INFO  Ensure authenticated middleware 
+16:51:31.841 INFO  /routes/users: Upload avatar 
+16:51:31.890 INFO  Post /login 
+16:51:31.909 INFO  User login: qwe@gmail.com 
+16:51:31.957 INFO  Ensure authenticated middleware 
+16:51:32.002 INFO  Post /login 
+16:51:32.015 INFO  User login: qwe@gmail.com 
+16:51:32.053 INFO  Ensure authenticated middleware 
+16:51:32.106 INFO  Post /login 
+16:51:32.146 INFO  User login: qwe@gmail.com 
+16:51:32.171 INFO  Ensure authenticated middleware 
+16:51:32.171 INFO  /routes/users: Save edit userprofile 
+16:51:32.194 INFO  Post /login 
+16:51:32.206 INFO  User login: qwe@gmail.com 
+16:51:32.245 INFO  Ensure authenticated middleware 
+16:51:32.245 INFO  Receive unauthenticated request 
+16:51:32.256 INFO  Post /login 
+16:51:32.295 INFO  User login: qwe@gmail.com 
+16:51:32.353 INFO  Ensure authenticated middleware 
+16:51:32.353 INFO  /routes/users: Save edit userprofile 
+16:51:32.373 INFO  Post /login 
+16:51:32.440 INFO  User login: tranhoangnam3108@gmail.com 
+16:51:32.446 INFO  Ensure authenticated middleware 
+16:51:32.446 INFO  /routes/users: Save edit userprofile 
+16:52:45.141 INFO  Post /login 
+16:52:45.207 INFO  User login: qwe@gmail.com 
+16:52:45.353 INFO  Ensure authenticated middleware 
+16:52:45.354 INFO  Ensure admin middleware 
+16:52:45.432 INFO  Post /login 
+16:52:45.487 INFO  User login: qwe@gmail.com 
+16:52:45.520 INFO  Ensure authenticated middleware 
+16:52:45.520 INFO  Ensure admin middleware 
+16:52:45.605 INFO  Post /login 
+16:52:45.656 INFO  User login: qwe@gmail.com 
+16:52:45.724 INFO  Ensure authenticated middleware 
+16:52:45.724 INFO  Ensure admin middleware 
+16:52:45.795 INFO  Post /login 
+16:52:45.834 INFO  User login: qwe@gmail.com 
+16:52:45.941 INFO  Ensure authenticated middleware 
+16:52:45.941 INFO  Ensure admin middleware 
+16:52:46.111 INFO  Post /login 
+16:52:46.136 INFO  User login: qwe@gmail.com 
+16:52:46.205 INFO  Ensure authenticated middleware 
+16:52:46.205 INFO  Ensure admin middleware 
+16:52:46.243 INFO  Post /login 
+16:52:46.326 INFO  User login: qwe@gmail.com 
+16:52:46.420 INFO  Ensure authenticated middleware 
+16:52:46.420 INFO  Ensure admin middleware 
+16:52:46.499 INFO  Post /login 
+16:52:46.517 INFO  User login: qwe@gmail.com 
+16:52:46.558 INFO  Ensure authenticated middleware 
+16:52:46.558 INFO  Ensure admin middleware 
+16:52:46.626 INFO  Post /login 
+16:52:46.658 INFO  User login: qwe@gmail.com 
+16:52:46.720 INFO  Ensure authenticated middleware 
+16:52:46.720 INFO  Ensure admin middleware 
+16:52:46.741 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:52:46.767 INFO  Post /login 
+16:52:46.819 INFO  User login: qwe@gmail.com 
+16:52:46.872 INFO  Ensure authenticated middleware 
+16:52:46.872 INFO  Ensure admin middleware 
+16:52:46.882 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:52:46.896 INFO  Post /login 
+16:52:46.949 INFO  User login: qwe@gmail.com 
+16:52:47.021 INFO  Ensure authenticated middleware 
+16:52:47.021 INFO  Ensure admin middleware 
+16:52:47.040 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:52:47.078 INFO  Post /login 
+16:52:47.134 INFO  User login: qwe@gmail.com 
+16:52:47.163 INFO  Ensure authenticated middleware 
+16:52:47.163 INFO  Ensure admin middleware 
+16:52:47.173 INFO  Get Delete Command 
+16:52:47.188 INFO  Post /login 
+16:52:47.216 INFO  User login: qwe@gmail.com 
+16:52:47.252 INFO  Ensure authenticated middleware 
+16:52:47.252 INFO  Ensure admin middleware 
+16:52:47.296 INFO  Post /login 
+16:52:47.338 INFO  User login: qwe@gmail.com 
+16:52:47.408 INFO  Ensure authenticated middleware 
+16:52:47.408 INFO  Ensure admin middleware 
+16:52:47.415 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:52:47.454 INFO  Post /login 
+16:52:47.482 INFO  User login: qwe@gmail.com 
+16:52:47.531 INFO  Ensure authenticated middleware 
+16:52:47.531 INFO  Ensure admin middleware 
+16:52:47.538 INFO  /admin/updateClass: update Class :1 
+16:52:47.575 INFO  Post /login 
+16:52:47.607 INFO  User login: qwe@gmail.com 
+16:52:47.643 INFO  Ensure authenticated middleware 
+16:52:47.643 INFO  Ensure admin middleware 
+16:52:47.650 INFO  Get Delete Command 
+16:52:47.662 INFO  Post /login 
+16:52:47.714 INFO  User login: qwe@gmail.com 
+16:52:47.748 INFO  Ensure authenticated middleware 
+16:52:47.748 INFO  Ensure admin middleware 
+16:52:47.770 INFO  Post /login 
+16:52:47.812 INFO  User login: qwe@gmail.com 
+16:52:47.854 INFO  Ensure authenticated middleware 
+16:52:47.854 INFO  Ensure admin middleware 
+16:52:47.888 INFO  Post /login 
+16:52:47.928 INFO  User login: qwe@gmail.com 
+16:52:48.021 INFO  Post /login 
+16:52:48.065 INFO  User login: qwe@gmail.com 
+16:52:48.095 INFO  /common/course/getClassByCourseID:  
+16:52:48.129 INFO  Post /login 
+16:52:48.198 INFO  User login: qwe@gmail.com 
+16:52:48.247 INFO  Post /login 
+16:52:48.289 INFO  User login failed. 
+16:52:48.298 INFO  Post /login 
+16:52:48.351 INFO  User login: qwe@gmail.com 
+16:52:48.442 INFO  Post /login 
+16:52:48.495 INFO  User login failed. 
+16:52:48.504 INFO  Post /login 
+16:52:48.573 INFO  User login failed. 
+16:52:48.580 INFO  Post /login 
+16:52:48.606 INFO  User login failed. 
+16:52:48.620 INFO  Post /login 
+16:52:48.660 INFO  User login: bqd@gmail.com 
+16:52:48.672 INFO  Post /login 
+16:52:48.754 INFO  User login failed. 
+16:52:48.761 INFO  Post /login 
+16:52:48.798 INFO  User login failed. 
+16:52:48.805 INFO  Post /login 
+16:52:48.856 INFO  User login failed. 
+16:52:48.863 INFO  GET /logout 
+16:52:50.888 INFO  Post /login 
+16:52:50.946 INFO  User login: qwe@gmail.com 
+16:52:50.974 INFO  Post /login 
+16:52:50.990 INFO  User login: qwe@gmail.com 
+16:52:51.021 INFO  Ensure authenticated middleware 
+16:52:51.021 INFO  Ensure trainee middleware 
+16:52:51.048 INFO  Post /login 
+16:52:51.086 INFO  User login: qwe@gmail.com 
+16:52:51.111 INFO  Ensure authenticated middleware 
+16:52:51.111 INFO  Ensure trainee middleware 
+16:52:51.137 INFO  Post /login 
+16:52:51.153 INFO  User login: qwe@gmail.com 
+16:52:51.216 INFO  Ensure authenticated middleware 
+16:52:51.216 INFO  Ensure trainee middleware 
+16:52:51.235 INFO  Post /login 
+16:52:51.252 INFO  User login: qwe@gmail.com 
+16:52:51.274 INFO  Ensure authenticated middleware 
+16:52:51.274 INFO  Ensure trainee middleware 
+16:52:51.301 INFO  Post /login 
+16:52:51.320 INFO  User login: qwe@gmail.com 
+16:52:51.346 INFO  Ensure authenticated middleware 
+16:52:51.346 INFO  Ensure trainee middleware 
+16:52:51.388 INFO  Post /login 
+16:52:51.421 INFO  User login: qwe@gmail.com 
+16:52:51.445 INFO  Ensure authenticated middleware 
+16:52:51.445 INFO  Ensure trainee middleware 
+16:52:51.504 INFO  Post /login 
+16:52:51.517 INFO  User login: qwe@gmail.com 
+16:52:51.552 INFO  Ensure authenticated middleware 
+16:52:51.552 INFO  Ensure trainee middleware 
+16:52:51.592 INFO  Post /login 
+16:52:51.665 INFO  User login: qwe@gmail.com 
+16:52:51.884 INFO  Ensure authenticated middleware 
+16:52:51.884 INFO  Ensure trainee middleware 
+16:52:52.285 INFO  Post /login 
+16:52:52.344 INFO  User login: qwe@gmail.com 
+16:52:52.588 INFO  Ensure authenticated middleware 
+16:52:52.588 INFO  Ensure trainee middleware 
+16:52:52.693 INFO  Post /login 
+16:52:52.841 INFO  User login: qwe@gmail.com 
+16:52:52.866 INFO  Ensure authenticated middleware 
+16:52:52.866 INFO  Ensure trainee middleware 
+16:52:52.919 INFO  Post /login 
+16:52:52.946 INFO  User login: qwe@gmail.com 
+16:52:53.007 INFO  Ensure authenticated middleware 
+16:52:53.007 INFO  Ensure trainee middleware 
+16:52:53.073 INFO  Post /login 
+16:52:53.164 INFO  User login: qwe@gmail.com 
+16:52:53.221 INFO  Ensure authenticated middleware 
+16:52:53.221 INFO  Ensure trainee middleware 
+16:52:53.259 INFO  Post /login 
+16:52:53.288 INFO  User login: qwe@gmail.com 
+16:52:53.322 INFO  Ensure authenticated middleware 
+16:52:53.322 INFO  Ensure trainee middleware 
+16:52:53.420 INFO  Post /login 
+16:52:53.489 INFO  User login: qwe@gmail.com 
+16:52:53.539 INFO  Ensure authenticated middleware 
+16:52:53.539 INFO  Ensure trainee middleware 
+16:52:53.571 INFO  Post /login 
+16:52:53.591 INFO  User login: qwe@gmail.com 
+16:52:53.624 INFO  Ensure authenticated middleware 
+16:52:53.624 INFO  Ensure trainee middleware 
+16:52:53.677 INFO  Post /login 
+16:52:53.771 INFO  User login: thach@gmail.com 
+16:52:53.819 INFO  Ensure authenticated middleware 
+16:52:53.819 INFO  Ensure trainee middleware 
+16:52:53.854 INFO  Post /login 
+16:52:53.897 INFO  User login: qwe@gmail.com 
+16:52:53.926 INFO  Ensure authenticated middleware 
+16:52:53.927 INFO  GET /users/getUserInfo 
+16:52:53.955 INFO  Post /login 
+16:52:53.982 INFO  User login: qwe@gmail.com 
+16:52:54.018 INFO  Ensure authenticated middleware 
+16:52:54.018 INFO  GET /users/getUserInfo 
+16:52:54.033 INFO  Post /login 
+16:52:54.078 INFO  User login: qwe@gmail.com 
+16:52:54.120 INFO  Ensure authenticated middleware 
+16:52:54.120 INFO  GET /users/getUserInfo 
+16:52:54.136 INFO  Post /login 
+16:52:54.179 INFO  User login: qwe@gmail.com 
+16:52:54.213 INFO  Ensure authenticated middleware 
+16:52:54.213 INFO  /routes/users: Save edit userprofile 
+16:52:54.237 INFO  Post /login 
+16:52:54.282 INFO  User login: qwe@gmail.com 
+16:52:54.347 INFO  Ensure authenticated middleware 
+16:52:54.347 INFO  /routes/users: Upload avatar 
+16:52:54.395 INFO  Post /login 
+16:52:54.422 INFO  User login: qwe@gmail.com 
+16:52:54.463 INFO  Ensure authenticated middleware 
+16:52:54.504 INFO  Post /login 
+16:52:54.521 INFO  User login: qwe@gmail.com 
+16:52:54.590 INFO  Ensure authenticated middleware 
+16:52:54.614 INFO  Post /login 
+16:52:54.639 INFO  User login: qwe@gmail.com 
+16:52:54.691 INFO  Ensure authenticated middleware 
+16:52:54.691 INFO  /routes/users: Save edit userprofile 
+16:52:54.712 INFO  Post /login 
+16:52:54.729 INFO  User login: qwe@gmail.com 
+16:52:54.784 INFO  Ensure authenticated middleware 
+16:52:54.802 INFO  Post /login 
+16:52:54.822 INFO  User login: qwe@gmail.com 
+16:52:54.851 INFO  Ensure authenticated middleware 
+16:52:54.851 INFO  /routes/users: Save edit userprofile 
+16:52:54.954 INFO  Post /login 
+16:52:54.990 INFO  User login: tranhoangnam3108@gmail.com 
+16:52:54.996 INFO  Ensure authenticated middleware 
+16:52:54.996 INFO  /routes/users: Save edit userprofile 
+16:54:54.743 INFO  Post /login 
+16:54:54.839 INFO  User login: qwe@gmail.com 
+16:54:54.938 INFO  Ensure authenticated middleware 
+16:54:54.939 INFO  Ensure admin middleware 
+16:54:54.980 INFO  Post /login 
+16:54:54.992 INFO  User login: qwe@gmail.com 
+16:54:55.030 INFO  Ensure authenticated middleware 
+16:54:55.030 INFO  Ensure admin middleware 
+16:54:55.101 INFO  Post /login 
+16:54:55.117 INFO  User login: qwe@gmail.com 
+16:54:55.151 INFO  Ensure authenticated middleware 
+16:54:55.151 INFO  Ensure admin middleware 
+16:54:55.198 INFO  Post /login 
+16:54:55.231 INFO  User login: qwe@gmail.com 
+16:54:55.273 INFO  Ensure authenticated middleware 
+16:54:55.273 INFO  Ensure admin middleware 
+16:54:55.329 INFO  Post /login 
+16:54:55.342 INFO  User login: qwe@gmail.com 
+16:54:55.362 INFO  Ensure authenticated middleware 
+16:54:55.362 INFO  Ensure admin middleware 
+16:54:55.393 INFO  Post /login 
+16:54:55.403 INFO  User login: qwe@gmail.com 
+16:54:55.434 INFO  Ensure authenticated middleware 
+16:54:55.434 INFO  Ensure admin middleware 
+16:54:55.464 INFO  Post /login 
+16:54:55.480 INFO  User login: qwe@gmail.com 
+16:54:55.519 INFO  Ensure authenticated middleware 
+16:54:55.519 INFO  Ensure admin middleware 
+16:54:55.571 INFO  Post /login 
+16:54:55.591 INFO  User login: qwe@gmail.com 
+16:54:55.637 INFO  Ensure authenticated middleware 
+16:54:55.637 INFO  Ensure admin middleware 
+16:54:55.645 INFO  /admin/courses/addTrainingProgram: Add Training Program :test creat name of new training program 
+16:54:55.676 INFO  Post /login 
+16:54:55.750 INFO  User login: qwe@gmail.com 
+16:54:55.815 INFO  Ensure authenticated middleware 
+16:54:55.815 INFO  Ensure admin middleware 
+16:54:55.825 INFO  /admin/courses/addTrainingProgram: Add Training Program :Linux Programming 
+16:54:55.841 INFO  Post /login 
+16:54:55.887 INFO  User login: qwe@gmail.com 
+16:54:55.946 INFO  Ensure authenticated middleware 
+16:54:55.946 INFO  Ensure admin middleware 
+16:54:55.959 INFO  /admin/updateTrainingProgram: Update Training Program :test update name of new training program 
+16:54:55.991 INFO  Post /login 
+16:54:56.012 INFO  User login: qwe@gmail.com 
+16:54:56.042 INFO  Ensure authenticated middleware 
+16:54:56.042 INFO  Ensure admin middleware 
+16:54:56.047 INFO  Get Delete Command 
+16:54:56.064 INFO  Post /login 
+16:54:56.080 INFO  User login: qwe@gmail.com 
+16:54:56.119 INFO  Ensure authenticated middleware 
+16:54:56.119 INFO  Ensure admin middleware 
+16:54:56.149 INFO  Post /login 
+16:54:56.162 INFO  User login: qwe@gmail.com 
+16:54:56.189 INFO  Ensure authenticated middleware 
+16:54:56.189 INFO  Ensure admin middleware 
+16:54:56.195 INFO  /admin/courses/addClass: Add Class :test creat loc 
+16:54:56.238 INFO  Post /login 
+16:54:56.265 INFO  User login: qwe@gmail.com 
+16:54:56.296 INFO  Ensure authenticated middleware 
+16:54:56.296 INFO  Ensure admin middleware 
+16:54:56.313 INFO  /admin/updateClass: update Class :1 
+16:54:56.347 INFO  Post /login 
+16:54:56.362 INFO  User login: qwe@gmail.com 
+16:54:56.398 INFO  Ensure authenticated middleware 
+16:54:56.398 INFO  Ensure admin middleware 
+16:54:56.413 INFO  Get Delete Command 
+16:54:56.425 INFO  Post /login 
+16:54:56.442 INFO  User login: qwe@gmail.com 
+16:54:56.475 INFO  Ensure authenticated middleware 
+16:54:56.475 INFO  Ensure admin middleware 
+16:54:56.499 INFO  Post /login 
+16:54:56.545 INFO  User login: qwe@gmail.com 
+16:54:56.573 INFO  Ensure authenticated middleware 
+16:54:56.573 INFO  Ensure admin middleware 
+16:54:56.610 INFO  Post /login 
+16:54:56.657 INFO  User login: qwe@gmail.com 
+16:54:56.690 INFO  Post /login 
+16:54:56.721 INFO  User login: qwe@gmail.com 
+16:54:56.745 INFO  /common/course/getClassByCourseID:  
+16:54:56.770 INFO  Post /login 
+16:54:56.787 INFO  User login: qwe@gmail.com 
+16:54:56.822 INFO  Post /login 
+16:54:56.867 INFO  User login failed. 
+16:54:56.874 INFO  Post /login 
+16:54:56.886 INFO  User login: qwe@gmail.com 
+16:54:56.911 INFO  Post /login 
+16:54:56.940 INFO  User login failed. 
+16:54:56.948 INFO  Post /login 
+16:54:56.964 INFO  User login failed. 
+16:54:56.976 INFO  Post /login 
+16:54:56.989 INFO  User login failed. 
+16:54:57.007 INFO  Post /login 
+16:54:57.035 INFO  User login: bqd@gmail.com 
+16:54:57.043 INFO  Post /login 
+16:54:57.064 INFO  User login failed. 
+16:54:57.073 INFO  Post /login 
+16:54:57.097 INFO  User login failed. 
+16:54:57.103 INFO  Post /login 
+16:54:57.141 INFO  User login failed. 
+16:54:57.150 INFO  GET /logout 
+16:54:58.175 INFO  Post /login 
+16:54:58.210 INFO  User login: qwe@gmail.com 
+16:54:58.242 INFO  Post /login 
+16:54:58.274 INFO  User login: qwe@gmail.com 
+16:54:58.300 INFO  Ensure authenticated middleware 
+16:54:58.300 INFO  Ensure trainee middleware 
+16:54:58.333 INFO  Post /login 
+16:54:58.402 INFO  User login: qwe@gmail.com 
+16:54:58.426 INFO  Ensure authenticated middleware 
+16:54:58.426 INFO  Ensure trainee middleware 
+16:54:58.454 INFO  Post /login 
+16:54:58.475 INFO  User login: qwe@gmail.com 
+16:54:58.512 INFO  Ensure authenticated middleware 
+16:54:58.512 INFO  Ensure trainee middleware 
+16:54:58.532 INFO  Post /login 
+16:54:58.545 INFO  User login: qwe@gmail.com 
+16:54:58.610 INFO  Ensure authenticated middleware 
+16:54:58.610 INFO  Ensure trainee middleware 
+16:54:58.626 INFO  Post /login 
+16:54:58.751 INFO  User login: qwe@gmail.com 
+16:54:58.796 INFO  Ensure authenticated middleware 
+16:54:58.796 INFO  Ensure trainee middleware 
+16:54:58.844 INFO  Post /login 
+16:54:58.870 INFO  User login: qwe@gmail.com 
+16:54:58.929 INFO  Ensure authenticated middleware 
+16:54:58.929 INFO  Ensure trainee middleware 
+16:54:59.001 INFO  Post /login 
+16:54:59.030 INFO  User login: qwe@gmail.com 
+16:54:59.054 INFO  Ensure authenticated middleware 
+16:54:59.054 INFO  Ensure trainee middleware 
+16:54:59.108 INFO  Post /login 
+16:54:59.195 INFO  User login: qwe@gmail.com 
+16:54:59.237 INFO  Ensure authenticated middleware 
+16:54:59.237 INFO  Ensure trainee middleware 
+16:54:59.261 INFO  Post /login 
+16:54:59.317 INFO  User login: qwe@gmail.com 
+16:54:59.392 INFO  Ensure authenticated middleware 
+16:54:59.392 INFO  Ensure trainee middleware 
+16:54:59.433 INFO  Post /login 
+16:54:59.492 INFO  User login: qwe@gmail.com 
+16:54:59.552 INFO  Ensure authenticated middleware 
+16:54:59.552 INFO  Ensure trainee middleware 
+16:54:59.699 INFO  Post /login 
+16:54:59.780 INFO  User login: qwe@gmail.com 
+16:54:59.859 INFO  Ensure authenticated middleware 
+16:54:59.859 INFO  Ensure trainee middleware 
+16:54:59.932 INFO  Post /login 
+16:54:59.944 INFO  User login: qwe@gmail.com 
+16:54:59.978 INFO  Ensure authenticated middleware 
+16:54:59.978 INFO  Ensure trainee middleware 
+16:55:00.010 INFO  Post /login 
+16:55:00.028 INFO  User login: qwe@gmail.com 
+16:55:00.052 INFO  Ensure authenticated middleware 
+16:55:00.052 INFO  Ensure trainee middleware 
+16:55:00.070 INFO  Post /login 
+16:55:00.085 INFO  User login: qwe@gmail.com 
+16:55:00.119 INFO  Ensure authenticated middleware 
+16:55:00.119 INFO  Ensure trainee middleware 
+16:55:00.139 INFO  Post /login 
+16:55:00.154 INFO  User login: qwe@gmail.com 
+16:55:00.209 INFO  Ensure authenticated middleware 
+16:55:00.209 INFO  Ensure trainee middleware 
+16:55:00.227 INFO  Post /login 
+16:55:00.240 INFO  User login: thach@gmail.com 
+16:55:00.258 INFO  Ensure authenticated middleware 
+16:55:00.258 INFO  Ensure trainee middleware 
+16:55:00.289 INFO  Post /login 
+16:55:00.381 INFO  User login: qwe@gmail.com 
+16:55:00.425 INFO  Ensure authenticated middleware 
+16:55:00.425 INFO  GET /users/getUserInfo 
+16:55:00.438 INFO  Post /login 
+16:55:00.447 INFO  User login: qwe@gmail.com 
+16:55:00.469 INFO  Ensure authenticated middleware 
+16:55:00.469 INFO  GET /users/getUserInfo 
+16:55:00.481 INFO  Post /login 
+16:55:00.494 INFO  User login: qwe@gmail.com 
+16:55:00.559 INFO  Ensure authenticated middleware 
+16:55:00.559 INFO  GET /users/getUserInfo 
+16:55:00.585 INFO  Post /login 
+16:55:00.627 INFO  User login: qwe@gmail.com 
+16:55:00.661 INFO  Ensure authenticated middleware 
+16:55:00.661 INFO  /routes/users: Save edit userprofile 
+16:55:00.689 INFO  Post /login 
+16:55:00.702 INFO  User login: qwe@gmail.com 
+16:55:00.746 INFO  Ensure authenticated middleware 
+16:55:00.746 INFO  /routes/users: Upload avatar 
+16:55:00.796 INFO  Post /login 
+16:55:00.822 INFO  User login: qwe@gmail.com 
+16:55:00.844 INFO  Ensure authenticated middleware 
+16:55:00.876 INFO  Post /login 
+16:55:00.888 INFO  User login: qwe@gmail.com 
+16:55:00.927 INFO  Ensure authenticated middleware 
+16:55:00.946 INFO  Post /login 
+16:55:00.955 INFO  User login: qwe@gmail.com 
+16:55:00.976 INFO  Ensure authenticated middleware 
+16:55:00.976 INFO  /routes/users: Save edit userprofile 
+16:55:00.999 INFO  Post /login 
+16:55:01.020 INFO  User login: qwe@gmail.com 
+16:55:01.038 INFO  Ensure authenticated middleware 
+16:55:01.057 INFO  Post /login 
+16:55:01.080 INFO  User login: qwe@gmail.com 
+16:55:01.104 INFO  Ensure authenticated middleware 
+16:55:01.104 INFO  /routes/users: Save edit userprofile 
+16:55:01.140 INFO  Post /login 
+16:55:01.168 INFO  User login: tranhoangnam3108@gmail.com 
+16:55:01.174 INFO  Ensure authenticated middleware 
+16:55:01.174 INFO  /routes/users: Save edit userprofile 

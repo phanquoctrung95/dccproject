@@ -1,0 +1,56 @@
+<!-- <div ng-include="'partials/notification/notification.html'"></div> -->
+
+<nav class="navbar navbar-fixed-top " style="position: fixed; background-color: #000a15 " role="navigation">
+    <div class="container container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-home" href="/#home">
+                <img id="logo_homepageid" class="navbar-logo img-responsive" ng-src="/img/logo/DCC-icon.png" alt="DCC Logo" width="95px">
+                <a id="homepageid" class="navbar-name" href="/#home" style="color: white">DEK<br>Competence Center</a>
+            </a>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<!--Login pop-up modal-->
+<div ng-controller="login">
+    <!-- <div class="modal fade" id="loginModal" role="dialog"> -->
+        <div class="modal-dialog" >
+            <!-- Modal content-->
+            <div class="modal-content" class="container ">
+                <form name="loginForm" role="form" class="form-horizontal" novalidate>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Account Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--Enter email-->
+                        <div class="form-group" ng-class="{ 'has-error' : loginForm.$error.email || loginForm.email.$invalid && !loginForm.email.$pristine }">
+                            <label class="col-xs-3 control-label">Email or Username</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" name="email" ng-model="login.username" placeholder="Email or Username" required>
+                                <p ng-show="loginForm.$error.email || loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Email invalid or null!</p>
+                            </div>
+                        </div>
+                        <!--Enter password-->
+                        <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+                            <label class="col-xs-3 control-label">Password</label>
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" name="password" ng-model="login.password" placeholder="Password" required>
+                                <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">Password is required!</p>
+                            </div>
+                        </div>
+                        <!--Remember account option-->
+                        <div class="form-group">
+                            <div class="col-xs-8 col-xs-offset-3">
+                                <div style="display: inline-block"><input type="checkbox" name="loginCookie" ng-model="RememberMe" value="">&nbsp Remember me</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-click="doLogin()" data-dismiss="modal" ng-disabled="loginForm.$invalid">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

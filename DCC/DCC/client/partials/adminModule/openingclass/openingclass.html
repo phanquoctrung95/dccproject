@@ -1,0 +1,129 @@
+<div ng-include="'partials/adminModule/openingclass/editClassModal.html'"></div>
+<div ng-include="'partials/adminModule/openingclass/deleteClassModal.html'"></div>
+
+<head>
+    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+</head>
+<div class="container">
+    <div class="widget widget-nopad">
+        <div class="widget-header">
+            <h3 class="col-xs-7 col-md-8 col-sm-6">Class list</h3>
+            <!-- Search box -->
+            <div class="col-xs-5 col-md-4 col-sm-6">
+                <input ng-model="userSearchKey" class="box-group col-xs-6 col-md-6 col-sm-6" type="text" placeholder="Search" name="ng-srch-term"
+                    id="ng-srch-term">
+
+                <div class="col-xs-6 col-md-6" uib-dropdown>
+                    <select class="box-group col-xs-12 col-md-12" ng-model="opt">                            
+                        <option value="1" selected="selected">Opening</option>
+                        <option value="2">Closed</option>
+                        <option value="3">Incoming</option>
+                        <option value="4">All</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--Tab header-->
+
+        <div id="table_report" style="display: none;"></div>
+        <div class="widget-content">
+            <br>
+            <br>
+            <div class="row" style="word-wrap: normal; font-size: 16px;cursor: pointer; margin: 0;">
+                <div class="col-md-3 col-xs-3" style="text-indent: 0.7em;">
+                    <a ng-click="sortbyClassName()"><i class="	glyphicon glyphicon-list-alt"></i><b>&nbsp Class Name</b></a>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a ng-click="sortbyStartTime()"><i class="glyphicon glyphicon-flag"></i><b>&nbsp Start Time</b></a>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a ng-click="sortbyEndTime()"><i class="glyphicon glyphicon-play-circle"></i><b>&nbsp End Time</b></a>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <a ng-click="sortbyLocation()"><i class="fa fa-users"></i><b>&nbsp Location</b></a>
+                </div>
+                <div class="col-md-1.5 col-xs-1.5">
+                    <a ng-click="sortbyStatus()"><i class="glyphicon glyphicon-ok"></i><b>&nbsp Status</b></a>
+                </div>
+            </div>
+            <!--trainer list-->
+            <div ng-repeat="trainer in classListDetails" style="margin-top: 5px;">
+                <!--class list-->
+                <div ng-repeat="class in trainer.Classes" style="margin-top: 5px;">
+                    <div class="round-wrap" ng-show="classListFilterCondition(class)" style="cursor: pointer;">
+                        <div class="row" id="shady-lady" style="padding: 0.7em; margin: 0;">
+                            <div class="col-md-3 col-xs-3" data-toggle="collapse" data-target="#collapse{{class.id}}" ng-click="class.collapsed = !class.collapsed">
+                                <font ng-bind-html="highlight(class.Course.name, userSearchKey)"></font>
+                            </div>
+                            <div class="col-md-3 col-xs-3" style="display: flex; align-items: center;" data-toggle="collapse" data-target="#collapse{{class.id}}"
+                                ng-click="class.collapsed = !class.collapsed">
+                                <i aria-hidden="true"></i><span>&nbsp {{class.startTime| date:"MMM d, y h:mm a"}}</span>
+                            </div>
+                            <div class="col-md-3 col-xs-3" data-toggle="collapse" data-target="#collapse{{class.id}}" ng-click="class.collapsed = !class.collapsed">
+                                <i aria-hidden="true"></i><span>&nbsp {{class.endTime| date:"MMM d, y h:mm a"}}</span>
+                            </div>
+                            <div class="col-md-2 col-xs-2" data-toggle="collapse" data-target="#collapse{{class.id}}" ng-click="class.collapsed = !class.collapsed">
+                                <font ng-bind-html="highlight(class.location, userSearchKey)"></font>
+                            </div>
+                            <div class="col-md-1.5 col-xs-1.5" data-toggle="collapse" data-target="#collapse{{class.id}}" ng-click="class.collapsed = !class.collapsed">
+                                <font ng-bind-html="setStatus(class.endTime, class.startTime)"></font>
+                            </div>
+                        </div>
+                    </div>
+                    <!--class full information-->
+                    <div id="collapse{{class.id}}" class="panel-collapse collapse">
+                        <div class="row" ng-show="classListFilterCondition(class)">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-9 col-sm-8" style="border-left:2px none;" class="row" style="padding-bottom:10px; margin-left: 90px;
+                            margin-right: 10px; border: 2px solid; border-radius: 100px 5px 5px 100px; background-color: #f7f7f7;">
+                                <div class="panel-body">
+                                    <div class=" col-md-8 col-lg-8 col-sm-7" style="border-left: 4px solid #D3D3D3">
+                                        <table class="table " id="shady-lady">
+                                            <tbody>
+                                                <tr style="border: hidden">
+                                                    <td>
+                                                        <b>Trainer Name: &nbsp&nbsp&nbsp 
+                                                            <font ng-bind-html="highlight(trainer.username, userSearchKey)"></font>    
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border: hidden">
+                                                    <td>
+                                                        <b>Trainer Phone: &nbsp&nbsp
+                                                                <font ng-bind-html="highlight(trainer.phone, userSearchKey)"></font>
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border: hidden">
+                                                    <td><b>Num of trainee: &nbsp {{getNumOfTrainee(class)}}</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-md-1 col-lg-1 col-sm-1" ng-show="1">
+                                        <button type="button" class="btn btn-success" ng-click="exportClassDetailsToExcel(class,trainer)">Export Details</button>
+                                        </br>
+                                        </br>
+                                        <div ng-if="opt==3||flagCanEdit==1">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editClassModal" ng-click="showEditClassForm(class, trainer.username)">&nbsp&nbsp&nbspEdit Class&nbsp&nbsp&nbsp&nbsp</button>
+                                            <br>
+                                            <br>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteClassModal" ng-click="getDeleteClass(class)">&nbsp&nbspDelete Class&nbsp</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <center>
+                    <div ng-bind-html="showEmptyNoti()"></div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+</div>

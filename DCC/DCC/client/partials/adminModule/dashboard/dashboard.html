@@ -1,0 +1,30 @@
+<div class="container">
+    <!-- SEARCH BOX -->
+    <div class="widget widget-nopad" ng-controller="adminDashboardCtrl">
+        <div class="widget-header">
+            <h3>Request Open Courses</h3>
+        </div>
+        <div class="widget-content" style="background-color: #f0c37c">
+            <div class="panel panel-default" style="margin-bottom: 5px" ng-repeat="adminRequestOpenCourse in adminRequestOpenCourseList" id="{{adminRequestOpenCourse.course.name}}">
+                <div class="row" style="padding-bottom:10px; margin: 0px">
+                    <div class="col-sm-10 col-xs-9">
+                        <blockquote class="blockquote" style="border-left: none; padding-left:0px;">
+                            <a ui-sref="courseDetail({courseId: adminRequestOpenCourse.course.id})">
+                                <img style="float:left; clear:both; margin:8px;" alt="course-icon" class="img-responsive"
+                                     ng-src="{{adminRequestOpenCourse.course.imgLink}}" width="70px"> {{adminRequestOpenCourse.course.name}}
+                                <p class="crop" style="color: black;" ng-bind-html="adminRequestOpenCourse.course.description"></p>
+                            </a>
+                        </blockquote>
+                    </div>
+                    <div class="col-sm-2 col-xs-3">
+                        <center>
+                            <br>
+                            <div>{{adminRequestOpenCourse.numberOfRequest}} <i class="glyphicon glyphicon-user"></i></div>                            
+                            <br>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

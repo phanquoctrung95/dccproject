@@ -1,0 +1,119 @@
+body {
+    background-color: ghostwhite;
+}
+
+.fc-widget-content {
+    background-color: #fff;
+}
+
+.fc-day-header {
+    font-size: 15px;
+}
+
+.fc-axis {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.round-wrap {
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.container-resize {
+    margin-top: -25px;
+}
+
+fieldset.content-border {
+    background-color: #fff;
+    border: 1px solid #d3d3d3 !important;
+    padding: 10px 10px 10px 35px;
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+legend.content-border {
+    width: auto !important;
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: orange;
+}
+
+.sub-round-wrap-1 {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: -23px;
+}
+
+.sub-round-wrap-2 {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding-bottom: 36px;
+    padding-top: 10px;
+}
+
+.admin-dashboard-content {
+    width: 64%;
+    float:left;
+}
+
+.list-content {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 65px;
+    margin-top: 8px;
+}
+
+.mostRequestedCourses {
+    background: url(/img/dashboard/most_rq_courses.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-top: -10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.trainingProgramOverview {
+    background: url(/img/dashboard/tp_overview.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.classManagement {
+    background: url(/img/dashboard/class_management.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.employeeManagement {
+    background: url(/img/dashboard/employee_management.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.addTPAndCourse {
+    background: url(/img/dashboard/add_tp_course.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.addClass {
+    background: url(/img/dashboard/add_class.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.footer-inner {
+    padding: 15px 0px 6px 0px;
+}

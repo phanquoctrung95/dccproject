@@ -1,0 +1,59 @@
+<div class="container profile">
+    <div class="widget widget-nopad">
+        <div class="widget-header">
+            <h3>Edit User Profile</h3>
+        </div>
+        <div class="widget-content">
+            <div class="widget big-stats-container">
+                <div class="widget-content">
+                    <div class="col-xs-12 col-sm-12 ">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 ">
+                                    <img alt="User Picture" ng-src="{{ userDetail.avatar }}" class="img-responsive">
+                                    <form id="uploadForm" ng-submit="uploadAvatar()">
+                                        <input class="btn btn-default col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px"
+                                               type="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*" name="userPhoto" file-model="userImage" />
+                                        <input class="btn btn-primary col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px" type="submit" value="Upload Image" name="submit">
+                                    </form>
+                                </div>
+                                <div class=" col-md-9 col-lg-9 ">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td><input id="username" type="text" ng-model="userDetail.username"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Area</td>
+                                                <td><input id="userType" type="text" ng-model="userDetail.userType"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Date of Birth</td>
+                                                <td><input id="dob" type="text" ng-model="userDetail.dob"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td><input id="phone" type="text" ng-model="userDetail.phone"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team</td>
+                                                <td><input id="belong2Team" type="text" ng-model="userDetail.belong2Team"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><a>{{ userDetail.email }}</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button ng-click="updateUserProfile()" class="btn btn-primary pull-right">Save</button>
+                                    <button ng-click="cancel()" class="btn pull-right" style="margin-right: 10px">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

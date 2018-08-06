@@ -1,0 +1,5 @@
+16:30:06.669 INFO  GET /logout 
+16:30:24.178 INFO  Post /login 
+16:30:24.228 INFO  User login: qwe@gmail.com 
+16:37:32.623 INFO  Post /login 
+16:37:32.760 INFO  User login: qwe@gmail.com 

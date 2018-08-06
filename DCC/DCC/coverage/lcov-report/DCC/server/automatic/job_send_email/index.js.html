@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for DCC/server/automatic/job_send_email/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">DCC/server/automatic/job_send_email</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>44/112</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.44% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">29.63% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.29% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>44/112</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">var schedule = require('node-schedule');
+var sendEmail = require('../../notification/email');
+var models = require('../../models');
+var Jobs;
+var os = require('os');
+var fs = require('fs');
+var CronJob = require('cron').CronJob;
+var settings;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync('settings.js') == true)
+<span class="cstat-no" title="statement not covered" >    settings = require('../../../settings.js');</span>
+else
+    settings = require('../../../settingsDefault.js');
+&nbsp;
+var sendNewNotificationToEmail = <span class="fstat-no" title="function not covered" >fu</span>nction (email, EmailPeriod) {
+<span class="cstat-no" title="statement not covered" >    models.Notifications.getAllNewNotificationsByEmail(email, <span class="fstat-no" title="function not covered" >no</span>tifications =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (notifications.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            models.Notifications.update({</span>
+                status: 0
+            }, {
+                    where: {
+                        email: email,
+                        status: {
+                            $ne: 0
+                        },
+                    }
+                });
+            var noti = <span class="cstat-no" title="statement not covered" >{</span>
+                subject: '[DEK] In this ' + EmailPeriod + 'new notifications ',
+                content: '[DEK] In this ' + EmailPeriod + 'new notifications ' + os.EOL
+            }
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; notifications.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                noti.content += (i + 1) + '. ' + notifications[i].title + ' : ' + notifications[i].content + os.EOL;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            noti.content += 'Regards,';</span>
+<span class="cstat-no" title="statement not covered" >            sendEmail([email], noti.subject, noti.content);</span>
+        }
+    });
+}
+var sortJobByEmail = <span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >    Jobs.sort(<span class="fstat-no" title="function not covered" >fu</span>nction (prev, next) {</span>
+        var upper_prev = <span class="cstat-no" title="statement not covered" >prev.email.toUpperCase();</span>
+        var upper_next = <span class="cstat-no" title="statement not covered" >next.email.toUpperCase();</span>
+<span class="cstat-no" title="statement not covered" >        return upper_prev &lt; upper_next ? -1 :</span>
+            upper_prev &gt; upper_next ? 1 : 0;
+    });
+}
+&nbsp;
+function binarySearch(email) {
+    email = email.toUpperCase();
+    var mid, first, last;
+    first = 0;
+    last = Jobs.length - 1;
+    while (first &lt;= last) {
+        mid = Math.floor((last + first) / 2);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (email === Jobs[mid].email)
+<span class="cstat-no" title="statement not covered" >            return mid;</span>
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (email &gt; Jobs[mid].email)
+<span class="cstat-no" title="statement not covered" >            first = mid + 1;</span>
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (email &lt; Jobs[mid].email)
+            last = mid - 1;
+    }
+    return -1;
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >insertItem(</span>item) {
+    var i = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >    while (Jobs[i].email &lt; item.email)</span>
+<span class="cstat-no" title="statement not covered" >        i++;</span>
+<span class="cstat-no" title="statement not covered" >    Jobs.splice(i, 0, item);</span>
+}
+&nbsp;
+function createRule(date, EmailPeriod) {
+    var rule = new schedule.RecurrenceRule();
+    const EmailTime = settings.NotificationEmailTime.split(':');
+    rule.hour = parseInt(EmailTime[0]);
+    rule.minute = parseInt(EmailTime[1]);
+    switch (EmailPeriod) {
+<span class="branch-0 cbranch-no" title="branch not covered" >        case 'Daily':</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+<span class="branch-1 cbranch-no" title="branch not covered" >        case 'Weekly':</span>
+<span class="cstat-no" title="statement not covered" >            rule.dayOfWeek = [date.getDay()];</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >        case 'Monthly':</span>
+<span class="cstat-no" title="statement not covered" >            rule.date = date.getDate();</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        default:
+    }
+    return rule;
+}
+var automatic = {
+    createJobSendEmail: function () {
+        Jobs = [];
+        models.User.getEmailUsers(users =&gt; {
+            for (let i = 0; i &lt; users.length; i++) {
+                const date = new Date(users[i].TimeOption);
+                const rule = createRule(date, users[i].EmailPeriod);
+                const j = schedule.scheduleJob(rule, <span class="fstat-no" title="function not covered" >fu</span>nction (email, EmailPeriod) {
+<span class="cstat-no" title="statement not covered" >                    sendNewNotificationToEmail(email, EmailPeriod);</span>
+                }.bind(null, users[i].email, users[i].EmailPeriod));
+                const item = {
+                    email: users[i].email.toUpperCase(),
+                    job: j,
+                    EmailPeriod: users[i].EmailPeriod
+                }
+                Jobs.push(item);
+            }
+        });
+    },
+    updateJobs: function (email) {
+        const index = binarySearch(email);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (index !== -1) {
+<span class="cstat-no" title="statement not covered" >            models.User.getUserByEmail(email, <span class="fstat-no" title="function not covered" >us</span>er =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (user.isNotificationEmail === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    Jobs[index].job.cancel();</span>
+<span class="cstat-no" title="statement not covered" >                    Jobs.splice(index, 1);</span>
+                } else {
+                    const date = <span class="cstat-no" title="statement not covered" >new Date(user.TimeOption);</span>
+                    const rule = <span class="cstat-no" title="statement not covered" >createRule(date, user.EmailPeriod);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    Jobs[index].job.cancel();</span>
+<span class="cstat-no" title="statement not covered" >                    Jobs[index].job = schedule.scheduleJob(rule, <span class="fstat-no" title="function not covered" >fu</span>nction (email) {</span>
+<span class="cstat-no" title="statement not covered" >                        sendNewNotificationToEmail(email, user.EmailPeriod);</span>
+                    }.bind(null, user.email, user.EmailPeriod));
+                }
+            });
+        } else {
+            models.User.getUserByEmail(email, user =&gt; {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (user.isNotificationEmail === 1) {
+                    const date = <span class="cstat-no" title="statement not covered" >new Date(user.TimeOption);</span>
+                    const rule = <span class="cstat-no" title="statement not covered" >createRule(date, user.EmailPeriod);</span>
+                    const j = <span class="cstat-no" title="statement not covered" >schedule.scheduleJob(rule, <span class="fstat-no" title="function not covered" >fu</span>nction (email, EmailPeriod) {</span>
+<span class="cstat-no" title="statement not covered" >                        sendNewNotificationToEmail(email, EmailPeriod);</span>
+                    }.bind(null, user.email, user.EmailPeriod));
+                    const item = <span class="cstat-no" title="statement not covered" >{</span>
+                        email: user.email.toUpperCase(),
+                        job: j,
+                        EmailPeriod: user.EmailPeriod
+                    }
+<span class="cstat-no" title="statement not covered" >                    insertItem(item);</span>
+&nbsp;
+                }
+            });
+        }
+    },
+&nbsp;
+    // send email feed back in here
+    // this function use libary cron-job of node-js
+    sendMailFeedbackJob: function () {
+        var arrUser;
+        var job = new CronJob({
+            // It mean send from monday to sunday at 10 AM
+            cronTime: '*/30 * * * *',
+            onTick: <span class="fstat-no" title="function not covered" >fu</span>nction () {
+                // Cron job function start here
+<span class="cstat-no" title="statement not covered" >                models.emailFeedback.getAllInfoAboutUserDontFeedback(<span class="fstat-no" title="function not covered" >fu</span>nction (rs) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (rs !== null) {</span>
+                        let l = <span class="cstat-no" title="statement not covered" >rs.length;</span>
+                        //Get all infomation of user, but only sent 15 man because it is limited by GOOGLE
+<span class="cstat-no" title="statement not covered" >                        if (l &gt; 15) {</span>
+<span class="cstat-no" title="statement not covered" >                            arrUser = [];</span>
+<span class="cstat-no" title="statement not covered" >                            for (let i = 0; i &lt; 15; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                arrUser[i] = rs[i];</span>
+                            }
+                        }
+                        else {
+<span class="cstat-no" title="statement not covered" >                            arrUser = rs;</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        arrUser.forEach(<span class="fstat-no" title="function not covered" >us</span>er =&gt; {</span>
+                            // Two function below use class ID to get ness info
+                            // Get content email array by class id, call function
+<span class="cstat-no" title="statement not covered" >                            models.Class.getContentEmailFeedBackByClassID(user.classId, <span class="fstat-no" title="function not covered" >(a</span>rrContentEmail) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                                if (arrContentEmail !== null) {</span>
+                                    // Get course naem by class ID
+<span class="cstat-no" title="statement not covered" >                                    models.Course.getCourseNameByClassId(user.classId, <span class="fstat-no" title="function not covered" >(a</span>rrCourseName) =&gt; {</span>
+                                        // add email info to email_feedback in sql
+<span class="cstat-no" title="statement not covered" >                                        models.emailFeedback.create({</span>
+                                            email_user: user.email,
+                                            userID: user.traineeId,
+                                            class_id_not_feedback: user.classId,
+                                            lastdate_sent_emailfeedback: new Date()
+                                        });
+<span class="cstat-no" title="statement not covered" >                                        sendEmail.send(user.email, arrCourseName[0].name, arrContentEmail[0], 7);</span>
+                                    })
+                                }
+                            })
+                        });
+                    }
+                });
+            },
+            start: false,
+            timeZone: 'Asia/Ho_Chi_Minh'
+        });
+        job.start();
+    },
+&nbsp;
+    sendMailReminderFeedback: function () {
+        var arrUser;
+        var job = new CronJob({
+            // It mean send from monday to sunday at 10 AM
+            cronTime: '*/59 * * * *',
+            onTick: <span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >                models.emailFeedback.getAllInfoAboutUserIsSentEmailFeedbacMoreThreeDays(<span class="fstat-no" title="function not covered" >fu</span>nction (rs) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (rs !== null) {</span>
+                        let l = <span class="cstat-no" title="statement not covered" >rs.length;</span>
+                        //Get all infomation of user, but only sent 15 man because it is limited by GOOGLE
+<span class="cstat-no" title="statement not covered" >                        if (l &gt; 15) {</span>
+<span class="cstat-no" title="statement not covered" >                            arrUser = [];</span>
+<span class="cstat-no" title="statement not covered" >                            for (let i = 0; i &lt; 15; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                arrUser[i] = rs[i];</span>
+                            }
+                        }
+                        else {
+<span class="cstat-no" title="statement not covered" >                            arrUser = rs;</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        arrUser.forEach(<span class="fstat-no" title="function not covered" >us</span>er =&gt; {</span>
+                            // Two function below use class ID to get ness info
+                            // Get content email array by class id, call function
+<span class="cstat-no" title="statement not covered" >                            models.Class.getContentEmailFeedBackByClassID(user.class_id_not_feedback, <span class="fstat-no" title="function not covered" >(a</span>rrContentEmail) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                                if (arrContentEmail !== null) {</span>
+                                    // Get course naem by class ID
+<span class="cstat-no" title="statement not covered" >                                    models.Course.getCourseNameByClassId(user.class_id_not_feedback, <span class="fstat-no" title="function not covered" >(a</span>rrCourseName) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                                        models.emailFeedback.update(</span>
+                                            { lastdate_sent_emailfeedback: new Date() },
+                                            {
+                                                where: {
+                                                    email_user: user.email_user,
+                                                    userID: user.userID,
+                                                    class_id_not_feedback: user.class_id_not_feedback
+                                                }
+                                            })
+<span class="cstat-no" title="statement not covered" >                                        sendEmail.send(user.email_user, arrCourseName[0].name, arrContentEmail[0], 7);</span>
+                                    })
+                                }
+                            })
+                        });
+                    }
+                })
+            },
+            start: false,
+            timeZone: 'Asia/Ho_Chi_Minh'
+        });
+        job.start();
+    },
+}
+module.exports = automatic;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 13:43:40 GMT+0700 (SE Asia Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

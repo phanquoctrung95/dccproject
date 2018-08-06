@@ -1,0 +1,118 @@
+<div class="modal fade" id="feedbackModal" role="dialog" ng-controller="MyCoursesCtrl">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="text-align: center;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Give Feedback </h4>
+            </div>
+            <form name="giveFeedbackForm" role="form" class="form-horizontal" novalidate>
+                <div class="modal-body" style="text-align: center;">
+                    <div class="form-group">
+                        <p style="font-size:20px;">
+                            1. How happy are you with the course, overall?
+                        </p>
+                        <div>
+                            <font size="6px">
+                                <div>
+                                    <span uib-rating ng-model="courseFeedbackModel.happy_rating" max="5" read-only="false" on-hover="hoveringOver(courseFeedbackModel.happy_rating)"
+                                        on-leave="overStar = null" aria-labelledby="default-rating"></span>
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p style="font-size:20px;">
+                            2. How do you think about the content of the course?
+                        </p>
+                        <div>
+                            <font size="6px">
+                                <div>
+                                    <span uib-rating ng-model="courseFeedbackModel.content_rating" max="5" read-only="false" on-hover="hoveringOver(courseFeedbackModel.content_rating)"
+                                        on-leave="overStar = null" aria-labelledby="default-rating"></span>
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p style="font-size:20px;">
+                            3. How do you think about the training skill of the trainer?
+                        </p>
+                        <div>
+                            <font size="6px">
+                                <div>
+                                    <span uib-rating ng-model="courseFeedbackModel.trainer_rating" max="5" read-only="false" on-hover="hoveringOver(courseFeedbackModel.trainer_rating)"
+                                        on-leave="overStar = null" aria-labelledby="default-rating"></span>
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p style="font-size:20px;">4. What can we do to improve the course?</p>
+                        <div style="margin-left: 20px; margin-right: 20px;">
+                            <textarea placeholder="Give feedback here" ng-model="courseFeedbackModel.improve_comments"
+                            type="text"
+                            class="form-control"></textarea>        
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                </div>
+                <div class="modal-footer" ng-model="isDeleteFeedbackBtn">
+                    <!-- <button type="submit" class="btn btn-danger" ng-click="deleteFeedbackClick()" ng-disabled="isDeleteFeedbackBtn" data-dismiss="modal">Delete feedback</button> -->
+                    <button type="submit" class="btn btn-success" ng-click="ensureFeedback()" data-dismiss="modal" ng-model="feedbackBtn" ng-disabled="feedBackbtn">{{feedbackBtn}}</button>
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="feedbackModal12" role="dialog" ng-controller="MyCoursesCtrl">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center">Are you sure? </h3>
+            </div>
+            <div class="modal-body">
+                <h4>Once you click "Apply", the result will not be changed.</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="btnApplyDate(courseFeedbackModel)">Apply</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Show View Schedule -->
+
+
+
+<!-- Show View Schedule -->
+<!-- <div ng-show="feedbackAndSchfeedbackAndScheduleedule" class="ng-hide">
+    <div class="modal-dialog"> -->
+        <!-- Modal content-->
+        <!-- <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">View Course Schedule </h4>
+            </div>
+            <form name="giveFeedbackForm" role="form" class="form-horizontal" novalidate>
+                <div class="modal-body">
+                    This is page for show Course Schedule
+                
+                </div>
+                <div class="modal-footer" ng-model="isDeleteFeedbackBtn"> -->
+                    <!-- <button type="submit" class="btn btn-danger" ng-click="deleteFeedbackClick()" ng-disabled="isDeleteFeedbackBtn">Delete feedback</button> -->
+                    <!-- <button type="submit" class="btn btn-danger" ng-click="giveFeedbackClick(courseFeedbackModel)" data-dismiss="modal">Send Feedback</button>
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div> -->
+<!-- </div> -->

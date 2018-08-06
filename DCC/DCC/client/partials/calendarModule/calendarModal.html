@@ -1,0 +1,80 @@
+<div ng-controller="calendarController">
+    <div id="calendarModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h3 style="text-align: center;" class="title-items">Training Calendar</h3>
+                <p></p>
+                <div class="widget-content">
+                    <div class="widget big-stats-container">
+                        <div class="widget-content">
+                            <br/>
+                            <div id="mCalendar" ui-calendar="uiConfig.calendar" class="container-fluid calendar" ng-model="eventSources" calendar="myCalendar"></div>
+                            <div ng-show="data.error" class="alert">
+                                <strong>Error!</strong> {{data.errorMsg}}
+                            </div>
+                        </div>
+                        <div style="padding-left:300px; width: 1100px;padding-top: 10px;">
+                            <div style=" width: 200px;">
+                                    <div style="width:40px;height:10px;border:1px; background: #337ab7; float: left;margin-top: 7px"></div>
+                                    <div style="width: 100px; float: left; padding-left: 5px">Not Join in</div>
+                            </div>
+                            
+                            <div style=" width: 300px;">
+                                    <div style="width:40px;height:10px;border:1px; background: red; float: left;margin-top: 7px"></div>
+                                    <div style="width: 100px; float: left; padding-left: 5px">Learning</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- xem info attendee -->
+    <div class="modal fade" id="infoClassAttendee" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title" style="text-align: center">Class Attendee </h3>
+                </div>
+                <!-- đổ dữ liệu vô đây -->
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Confirm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="attendee in attendeeList track by attendee.id">
+                            <th scope="row" style="size: 5px;">{{attendee.id}}</th>
+                            <td>{{attendee.username}}</td>
+                            <td>{{attendee.email}}</td>
+                            <td>
+                                <label class="switch" ng-model="confirmChecked">
+                                    <input id="checkYes" ng-if="attendee.status == 'YES'" type="checkbox" checked>
+                                    <input id="checkNo" ng-if="attendee.status == 'NO'" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> OK </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //render calendar's events in modal
+    $('#calendarModal').on('shown.bs.modal', function () {
+        $("#mCalendar").fullCalendar('render');
+    });
+</script>

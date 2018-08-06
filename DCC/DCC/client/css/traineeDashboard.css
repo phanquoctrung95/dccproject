@@ -1,0 +1,145 @@
+body {
+    background-color: ghostwhite;
+}
+
+.fc-widget-content {
+    background-color: #fff;
+}
+
+.fc-day-header {
+    font-size: 15px;
+}
+
+.fc-axis {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.round-wrap {
+  border-radius: 10px;
+  margin-top: -10px;
+}
+
+.sub-round-wrap-1 {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: -20px;
+}
+
+.sub-round-wrap-2 {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding-bottom: 36px;
+    padding-top: 10px;
+}
+
+fieldset.content-border {
+    background-color: #fff;
+    border: 1px solid #d3d3d3 !important;
+    padding: 10px 10px 10px 35px;
+    border-radius: 10px;
+    margin-top: -20px;
+    border-bottom: none;
+}
+
+legend.content-border {
+    width: auto !important;
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: orange;
+}
+
+.tas {
+    background-color: green;
+}
+
+.container-resize {
+    margin-top: -15px;
+}
+
+.trainee-dashboard-content {
+    width: 64%;
+    float:left;
+    padding-bottom: 64px;
+}
+
+.list-content {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 65px;
+    margin-top: 8px;
+}
+
+.myClassThisWeek {
+    background: url(/img/dashboard/class_week.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.courseRegistration {
+    background: url(/img/dashboard/course_regis.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.myRequests {
+    background: url(/img/dashboard/my_request.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.trainingProgramOverview {
+    background: url(/img/dashboard/tp_overview.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.highDemandCourses {
+    background: url(/img/dashboard/high_demand.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.needFeedbackCourses {
+    background: url(/img/dashboard/feedback.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.needPrepareClass {
+    background: url(/img/dashboard/prepare.png) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+
+.needExerciseCourses {
+    background: url(/img/dashboard/submit.jpg) no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+.footer-inner {
+    padding: 15px 0px 6px 0px;
+}
+
+#my_request{
+ overflow:auto !important;
+}
